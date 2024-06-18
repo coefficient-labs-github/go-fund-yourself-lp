@@ -123,7 +123,8 @@ const IndexPage = ({
   return (
     <div>
       <CustomHead />
-      <Script
+      <div>Go Fund Yourself Home page</div>
+      {/* <Script
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -152,14 +153,14 @@ const IndexPage = ({
       {/* {featuredBrands && featuredBrands[1] && (
         <FeaturedBrand brand={featuredBrands[1]} direction="right" />
       )} */}
-      <MarketGirl />
+      {/* <MarketGirl />
       <Footer />
       <noscript
         dangerouslySetInnerHTML={{
           __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2TF5L6"
               height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
         }}
-      />
+      />  */}
     </div>
   );
 };
