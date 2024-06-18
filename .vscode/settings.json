@@ -1,0 +1,14 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "aaxijkzguflsvr.c36uzcid8vm0.us-east-1.rds.amazonaws.com",
+      "port": 5432,
+      "askForPassword": true,
+      "driver": "PostgreSQL",
+      "username": "colabs",
+      "database": "ebdb",
+      "name": "prod-platform"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: 255 255 255; /* Text, buttons, etc. */
+  --color-secondary: 252 232 232; /* Backgrounds, borders, etc. */
+  --color-typeBlack: 26 26 26; /* Text, buttons, etc. */
+  --color-accentRed: 224 108 115; /* Labels like "On sale" */
+  --color-accentOrange: 224 108 115; /* Labels like "On sale" */
+  --font-size-fine: 0.75rem; /* text-xs */
+  --font-size-copy: 1rem; /* text-base */
+  --font-size-lead: 1.125rem; /* text-lg */
+  --font-size-heading: 2rem; /* text-xl */
+  --font-size-display: 3rem; /* text-3xl */
+  --color-shop-pay: #5a31f4;
+  --shop-pay-button--width: 100%; /* Sets the width for the shop-pay-button web component */
+  --height-nav: 3rem;
+  --screen-height: 100vh;
+  --screen-height-dynamic: 100vh;
+  --dotted-bottom-border: linear-gradient(270deg, black 2px, transparent 2px) 0
+    100% / 10px 2px repeat-x;
+  scroll-behavior: smooth;
+  @media (min-width: 32em) {
+    --height-nav: 4rem;
+  }
+  @media (min-width: 48em) {
+    --font-size-heading: 2.25rem; /* text-3xl */
+    --font-size-display: 3.75rem; /* text-6xl */
+  }
+  @supports (height: 100svh) {
+    --screen-height: 100svh;
+  }
+  @supports (height: 100dvh) {
+    --screen-height-dynamic: 100dvh;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@layer base {
+  body {
+    @apply font-light font-body text-typeBlack balance;
+  }
+}
+
+/* components */
+@layer components {
+  .slide-animation {
+    animation: slide linear infinite;
+  }
+  .cta-btn {
+    @apply inline-block px-8 py-4 text-lg text-white underline transition-all transform rounded-lg cursor-pointer lg:text-xl hover:scale-110 hover:opacity-90 bg-accentRed w-fit;
+  }
+  .cta-btn-inverted {
+    @apply inline-block px-8 py-4 text-lg underline transition-all transform bg-transparent bg-white rounded-lg cursor-pointer lg:text-xl hover:scale-110 hover:opacity-90 w-fit text-accentRed;
+  }
+  .accent-gradient {
+    background: linear-gradient(180deg, #e08a6c 0%, #e06c73 117.21%);
+  }
+  .heading {
+    @apply uppercase font-heading tracking-tighter-heading;
+  }
+}
+
+@layer utilities {
+  .balance {
+    text-wrap: balance;
+  }
+  .avoidwrap {
+    display: inline-block;
+  }
+  .bosr {
+    border: 1px solid red;
+  }
+  .scrollbar::-webkit-scrollbar {
+    height: 12px;
+  }
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(47, 59, 69, 0.2);
+    border-radius: 9999px;
+  }
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(47, 59, 69, 0.4);
+  }
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 9999px;
+  }
+}
