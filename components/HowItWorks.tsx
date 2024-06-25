@@ -5,13 +5,13 @@ const HowItWorks = () => {
     <div className="py-16 bg-white">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="text-sm font-semibold tracking-wide text-gray-600 uppercase">
+          <p className="text-lg font-semibold tracking-widest text-gray-600 uppercase">
             Real-Time Interactive Investing
           </p>
-          <h2 className="mt-2 text-6xl font-extrabold leading-8 tracking-tight text-gray-900">
+          <h2 className="mt-6 text-6xl font-extrabold tracking-tight text-gray-900">
             How Does It Work?
           </h2>
-          <p className="max-w-2xl mx-auto mt-4 text-xl text-gray-500">
+          <p className="max-w-2xl mx-auto mt-8 text-lg text-gray-500">
             A Simple, Engaging, and Interactive Investment Experience
           </p>
         </div>
@@ -24,10 +24,10 @@ const HowItWorks = () => {
               height={200}
               className="object-cover mb-8"
             />
-            <h3 className="mt-4 text-3xl font-medium leading-6 text-gray-900">
+            <h3 className="mt-4 text-3xl font-medium text-gray-900">
               Watch the 5-Minute Pitches
             </h3>
-            <p className="mt-2 text-base leading-6 text-gray-500">
+            <p className="mt-2 text-base text-gray-500">
               Business owners present their innovative ideas in a concise,
               5-minute pitch, showcasing their products and potential.
             </p>
@@ -40,10 +40,10 @@ const HowItWorks = () => {
               height={200}
               className="object-cover mb-8"
             />
-            <h3 className="mt-4 text-3xl font-medium leading-6 text-gray-900">
+            <h3 className="mt-4 text-3xl font-medium text-gray-900">
               CEOs Ask the Tough Questions
             </h3>
-            <p className="mt-2 text-base leading-6 text-gray-500">
+            <p className="mt-2 text-base text-gray-500">
               Our seasoned CEOs dive deep, asking the hard-hitting questions
               that matter most to investors, ensuring transparency and clarity.
             </p>
@@ -56,10 +56,10 @@ const HowItWorks = () => {
               height={200}
               className="object-cover mb-8"
             />
-            <h3 className="mt-4 text-3xl font-medium leading-6 text-gray-900">
+            <h3 className="mt-4 text-3xl font-medium text-gray-900">
               You Make the Investment Choice
             </h3>
-            <p className="mt-2 text-base leading-6 text-gray-500">
+            <p className="mt-2 text-base text-gray-500">
               Engage in real-time, vote for your favorites, and decide where to
               invest. Your participation can help shape the future of these
               businesses.

@@ -44,7 +44,7 @@ const HeroSection = () => {
             <a
               key={index}
               href={item.link}
-              className="text-sm font-semibold tracking-wide uppercase hover:underline"
+              className="text-sm font-semibold tracking-widest uppercase hover:underline"
             >
               {item.name}
             </a>

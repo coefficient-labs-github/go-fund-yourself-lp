@@ -50,13 +50,13 @@ const MeetTheJudges = () => {
     <div className="py-16 bg-white">
       <div className="px-4 mx-auto max-w-8xl sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="text-sm font-semibold tracking-wide text-gray-600 uppercase">
+          <p className="text-lg font-semibold tracking-widest text-gray-600 uppercase">
             Our Expert Panel
           </p>
-          <h2 className="mt-2 text-6xl font-extrabold leading-8 tracking-tight text-gray-900">
+          <h2 className="mt-6 text-6xl font-extrabold tracking-tight text-gray-900">
             Meet the <span className="text-purple-600">Judges</span>
           </h2>
-          <p className="max-w-2xl mx-auto mt-4 text-xl text-gray-500">
+          <p className="max-w-2xl mx-auto mt-8 text-lg text-gray-500">
             Seasoned CEOs Guiding You Through Every Investment Opportunity
           </p>
         </div>
@@ -97,7 +97,7 @@ const MeetTheJudges = () => {
                 <h3 className="text-6xl font-bold text-gray-900">
                   {judge.title}
                 </h3>
-                <p className="mt-3 text-base text-gray-500">
+                <p className="mt-4 text-lg text-gray-500">
                   {judge.description}
                 </p>
                 <div className="flex mt-6 space-x-4">

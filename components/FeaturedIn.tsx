@@ -5,7 +5,7 @@ const FeaturedIn = () => {
     <div className="py-8 bg-white">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="text-sm font-semibold tracking-wide text-gray-600 uppercase">
+          <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase">
             As featured in
           </p>
         </div>

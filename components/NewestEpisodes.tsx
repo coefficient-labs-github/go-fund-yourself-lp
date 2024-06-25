@@ -45,41 +45,40 @@ const episodes = [
 
 const NewestEpisodes = () => {
   return (
-    <div className="py-16 bg-white">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          <h2 className="text-4xl font-extrabold leading-8 tracking-tight text-gray-900">
-            Newest Episodes
-          </h2>
-          <div className="relative inline-block text-left">
-            <div>
-              <button
-                type="button"
-                className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50"
-              >
-                Season 1
-                <svg
-                  className="w-5 h-5 ml-2 -mr-1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
+    <section className="flex flex-col items-center justify-center py-10 lg:py-12">
+      <div className="flex justify-between w-full max-w-6xl px-4 mb-4 2xl:max-w-7xl">
+        <h2 className="text-4xl font-extrabold tracking-tight text-gray-900">
+          Newest Episodes
+        </h2>
+        <div className="relative inline-block text-left">
+          <button
+            type="button"
+            className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50"
+          >
+            Season 1
+            <svg
+              className="w-5 h-5 ml-2 -mr-1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fillRule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
         </div>
-        <div className="grid gap-8 mt-6 lg:grid-cols-3 xl:grid-cols-5">
+      </div>
+      <div className="overflow-x-scroll max-w-[calc(100vw_-_2rem)] scrollbar">
+        <div className="grid grid-flow-col pb-0 gap-x-4 snap-x">
+          {/* <div className="w-64 overflow-hidden" /> */}
           {episodes.map((episode, index) => (
             <div
               key={index}
-              className="overflow-hidden bg-white rounded-lg shadow-lg"
+              className="overflow-hidden bg-white rounded-lg shadow-lg w-72"
             >
               <div className="relative">
                 <Image
@@ -127,7 +126,7 @@ const NewestEpisodes = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -60,8 +60,7 @@ module.exports = {
         "tighter-heading": "-0.1em",
       },
       fontFamily: {
-        body: ["Roboto", "sans-serif"],
-        heading: ["Lexend Exa", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       display: ["group-hover", "group-focus"],
       fontSize: {

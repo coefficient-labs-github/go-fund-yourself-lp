@@ -9,7 +9,7 @@ const ApplySection = () => {
             <h2 className="text-sm font-semibold text-yellow-300 uppercase">
               Ready to showcase your business
             </h2>
-            <h1 className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-white">
+            <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-white">
               Apply to Pitch On GoFundYourself!
             </h1>
             <p className="mt-4 text-lg text-white">
