@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const navItems = [
   {
-    name: "Meet the Judges",
+    name: "Judges",
     link: "#judges",
   },
   {

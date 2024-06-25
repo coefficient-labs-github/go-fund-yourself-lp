@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const links = [
   { text: "Back to Top", href: "#hero" },
-  { text: "Meet The Judges", href: "#judges" },
+  { text: "Judges", href: "#judges" },
   { text: "Episodes", href: "#episodes" },
   { text: "Companies", href: "#companies" },
   { text: "Reviews", href: "#reviews" },
