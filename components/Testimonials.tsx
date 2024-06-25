@@ -45,20 +45,23 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="flex flex-col items-center justify-center py-10 lg:py-12">
-      <div className="flex flex-col justify-between w-full max-w-6xl px-4 mb-4 text-center 2xl:max-w-7xl">
+    <section
+      id="reviews"
+      className="flex flex-col items-center justify-center py-10 lg:py-12"
+    >
+      <div className="flex flex-col justify-between w-full max-w-6xl px-4 text-center 2xl:max-w-7xl">
         <p className="text-lg font-semibold tracking-widest text-gray-600 uppercase">
           What Our Viewers Are Saying
         </p>
-        <h2 className="mt-6 text-6xl font-extrabold tracking-tight text-gray-900">
-          What Companies <span className="text-purple-600">Are Saying</span>
+        <h2 className="mt-6 text-6xl font-extrabold text-gray-900">
+          What Companies <span className="text-violet-600">Are Saying</span>
         </h2>
-        <p className="max-w-2xl mx-auto mt-8 text-lg text-gray-500">
+        <p className="max-w-2xl mx-auto mt-6 text-lg text-gray-500">
           Discover why “Go Fund Yourself!” is revolutionizing the investment
           world through the voices of our enthusiastic community.
         </p>
       </div>
-      <div className="max-w-[calc(100vw_-_2rem)] overflow-x-hidden">
+      <div className="max-w-[100vw] overflow-x-hidden mt-6">
         {[1, 2].map((_, i) => (
           <div
             key={i}

@@ -65,9 +65,6 @@
   .accent-gradient {
     background: linear-gradient(180deg, #e08a6c 0%, #e06c73 117.21%);
   }
-  .heading {
-    @apply uppercase font-heading tracking-tighter-heading;
-  }
 }
 
 @layer utilities {

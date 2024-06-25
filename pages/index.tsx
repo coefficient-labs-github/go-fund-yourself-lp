@@ -1,6 +1,7 @@
 import { GetStaticProps } from "next";
 import dynamic from "next/dynamic";
 import Script from "next/script";
+import ApplySection from "../components/Apply";
 import Banner from "../components/Banner";
 import CustomHead from "../components/CustomHead";
 import FeaturedCompanies from "../components/FeaturedCompanies";
@@ -136,6 +137,7 @@ const IndexPage = ({
       <NewestEpisodes />
       <FeaturedCompanies />
       <Testimonials />
+      <ApplySection />
       <Footer />
       {/* <noscript
         dangerouslySetInnerHTML={{

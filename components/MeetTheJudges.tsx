@@ -36,7 +36,7 @@ const judges = [
     description:
       "CEO of multiple multi-million dollar companies, motivational speaker, Jayson Waller Unleashed Podcast host, entrepreneur, and author of Own Your Power, Jayson Waller has learned through trial and error the keys to being successful in this dynamic business environment.",
     imageSrc: "/imgs/jayson.png",
-    labelColor: "bg-purple-500",
+    labelColor: "bg-violet-600",
     social: [
       { platform: "facebook", url: "#", icon: "fab fa-facebook-f" },
       { platform: "instagram", url: "#", icon: "fab fa-instagram" },
@@ -47,20 +47,20 @@ const judges = [
 
 const MeetTheJudges = () => {
   return (
-    <div className="py-16 bg-white">
+    <section id="judges" className="py-16 bg-white">
       <div className="px-4 mx-auto max-w-8xl sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="text-lg font-semibold tracking-widest text-gray-600 uppercase">
             Our Expert Panel
           </p>
-          <h2 className="mt-6 text-6xl font-extrabold tracking-tight text-gray-900">
-            Meet the <span className="text-purple-600">Judges</span>
+          <h2 className="mt-6 text-6xl font-extrabold text-gray-900">
+            Meet the <span className="text-violet-600">Judges</span>
           </h2>
-          <p className="max-w-2xl mx-auto mt-8 text-lg text-gray-500">
+          <p className="max-w-2xl mx-auto mt-6 text-lg text-gray-500">
             Seasoned CEOs Guiding You Through Every Investment Opportunity
           </p>
         </div>
-        <div className="flex flex-col gap-8 mt-12">
+        <div className="flex flex-col gap-6 mt-6">
           {judges.map((judge, index) => (
             <div
               key={index}
@@ -116,7 +116,7 @@ const MeetTheJudges = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

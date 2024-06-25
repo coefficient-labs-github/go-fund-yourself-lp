@@ -45,9 +45,12 @@ const episodes = [
 
 const NewestEpisodes = () => {
   return (
-    <section className="flex flex-col items-center justify-center py-10 lg:py-12">
+    <section
+      id="episodes"
+      className="flex flex-col items-center justify-center py-10 lg:py-12"
+    >
       <div className="flex justify-between w-full max-w-6xl px-4 mb-4 2xl:max-w-7xl">
-        <h2 className="text-4xl font-extrabold tracking-tight text-gray-900">
+        <h2 className="text-4xl font-extrabold text-gray-900">
           Newest Episodes
         </h2>
         <div className="relative inline-block text-left">
