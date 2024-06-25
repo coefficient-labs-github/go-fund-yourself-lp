@@ -1,51 +1,86 @@
-import React, { useState } from "react";
-import { HeroType } from "../pages";
+import Image from "next/image";
 
-const Hero = ({ heroes }: { heroes?: HeroType[] }) => {
-  const [heroStep, setHeroStep] = useState(0);
-  const hero = heroes?.[heroStep];
+const navItems = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Episodes",
+    link: "/episodes",
+  },
+  {
+    name: "Companies",
+    link: "/companies",
+  },
+  {
+    name: "Meet the Judges",
+    link: "/judges",
+  },
+  {
+    name: "Reviews",
+    link: "/reviews",
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+  },
+];
 
-  if (heroes && heroes.length > 1) {
-    setTimeout(() => {
-      setHeroStep((heroStep + 1) % heroes.length);
-    }, 12 * 1000);
-  }
-
+const HeroSection = () => {
   return (
-    <section
-      className="relative flex items-center justify-center px-4 mt-8 transition-all xl:py-4"
-      style={{
-        background: hero?.color || "#fce8e8",
-        color: hero?.lightordark === "dark" ? "#1a1a1a" : "#ffffff",
-      }}
-    >
-      <div className="grid w-full max-w-4xl grid-cols-1 grid-rows-1 xl:grid-cols-2 xl:max-w-8xl min-h-[44rem] md:min-h-[30rem]">
-        <img
-          src={hero?.image || "/imgs/hero.jpg"}
-          className="absolute xl:left-0 -top-12 object-cover h-80 w-5/6 max-w-xl xl:max-w-none object-center xl:w-1/2 xl:h-[calc(100%_+_64px)] xl:-top-8"
-        />
-        <div className="flex flex-col justify-center pb-8 pt-72 md:pt-80 xl:pt-0 xl:pb-0 xl:pl-24 md:text-left xl:col-start-2">
-          <span className="block mb-2 text-xl uppercase md:text-xl">
-            {hero?.eyebrow}
-          </span>
-          <h1 className="mb-2 text-5xl font-thin uppercase xl:mb-4 lg:text-7xl xl:text-8xl">
-            {hero ? hero.headline : "NEW YEAR, NEW FITS"}
-          </h1>
-          <div className="mb-4 text-lg md:text-xl xl:mb-6">
-            {hero ? hero.subheadline : "Shop the latest trends and essentials."}
-          </div>
-          <a href={hero?.link || "#"} target="_blank" rel="noreferrer">
-            <span
-              style={{ color: hero?.color || "#fce8e8" }}
-              className="inline-block px-8 py-4 mb-6 text-lg underline uppercase transition-all transform bg-white rounded-lg lg:text-xl hover:scale-110 hover:opacity-90 w-fit"
+    <section className="relative text-white">
+      <Image
+        src="/imgs/hero-bg.svg"
+        alt="Background Image"
+        layout="fill"
+        objectFit="cover"
+        objectPosition="bottom"
+        className="absolute w-full pb-64 h-1/2 -z-10"
+      />
+      <div className="flex flex-col items-center px-4 py-12 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
+        <nav className="flex justify-between max-w-5xl gap-4 mb-4">
+          {navItems.map((item, index) => (
+            <a
+              key={index}
+              href={item.link}
+              className="text-sm font-semibold tracking-wide uppercase hover:underline"
             >
-              {hero?.cta}
-            </span>
-          </a>
+              {item.name}
+            </a>
+          ))}
+        </nav>
+        <Image
+          src="/imgs/logo.svg"
+          alt="Go Fund Yourself Logo"
+          width={370}
+          height={370}
+          className="mb-4"
+        />
+        <p className="max-w-4xl mx-auto mb-4 text-lg">
+          Join the ultimate interactive show where entertainment meets
+          opportunity. Engage with top CEOs, discover innovative startups, and
+          invest in real-time—all from the comfort of your home.
+        </p>
+        <div className="flex justify-center mb-4 space-x-4">
+          <button className="px-4 py-2 font-bold text-pink-500 bg-white rounded-full">
+            Watch Live Now
+          </button>
+          <button className="px-4 py-2 font-bold border border-white rounded-full">
+            Explore Companies
+          </button>
         </div>
+        <video
+          src="https://client-lp-assets.s3.amazonaws.com/2305_Verb_Go+Fund+Yourself+Promo_24-05-17_v03_DB_v1+(1).mp4"
+          className="z-20 w-full max-w-6xl bg-white cursor-pointer rounded-3xl"
+          poster="/imgs/hero-poster.png"
+          preload="none"
+          controls
+          onClick={(e) => (e.target as HTMLVideoElement).play()}
+        />
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default HeroSection;

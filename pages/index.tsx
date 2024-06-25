@@ -2,17 +2,15 @@ import { GetStaticProps } from "next";
 import dynamic from "next/dynamic";
 import Script from "next/script";
 import Banner from "../components/Banner";
-import Categories from "../components/Categories";
-import CollectionGrid from "../components/CollectionGrid";
-import CollectionRow from "../components/CollectionRow";
 import CustomHead from "../components/CustomHead";
-import FeaturedBrand from "../components/FeaturedBrand";
+import FeaturedCompanies from "../components/FeaturedCompanies";
+import FeaturedIn from "../components/FeaturedIn";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
-import LogoRow from "../components/LogoRow";
-import MarketGirl from "../components/MarketGirl";
-import Nav from "../components/Nav";
-import Shows from "../components/Shows";
+import HowItWorks from "../components/HowItWorks";
+import MeetTheJudges from "../components/MeetTheJudges";
+import NewestEpisodes from "../components/NewestEpisodes";
+import Testimonials from "../components/Testimonials";
 import { fetchSpreadsheetData } from "./api/sheets";
 
 export interface Product {
@@ -102,10 +100,6 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 };
 
-const TikTokEmbed = dynamic(() => import("../components/TikTokEmbed"), {
-  ssr: false,
-});
-
 const IndexPage = ({
   products,
   shows,
@@ -123,7 +117,6 @@ const IndexPage = ({
   return (
     <div>
       <CustomHead />
-      <div>Go Fund Yourself Home page</div>
       {/* <Script
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
@@ -133,34 +126,22 @@ const IndexPage = ({
                   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                   })(window,document,'script','dataLayer','GTM-M2TF5L6');`,
         }}
-      />
+      /> */}
       <Banner />
-      <Nav />
-      <Hero heroes={heroes} />
-      {logos && <LogoRow logos={logos} />}
-      <TikTokEmbed />
-      {trendingListProducts && (
-        <CollectionGrid products={trendingListProducts.slice(0, 12)} />
-      )}
-      {featuredBrands && featuredBrands[0] && (
-        <FeaturedBrand brand={featuredBrands[0]} direction="left" />
-      )}
-      {discountListProducts && discountListProducts.length > 0 && (
-        <CollectionRow products={discountListProducts.slice(0, 12)} />
-      )}
-      {shows && <Shows shows={shows} />}
-      <Categories />
-      {/* {featuredBrands && featuredBrands[1] && (
-        <FeaturedBrand brand={featuredBrands[1]} direction="right" />
-      )} */}
-      {/* <MarketGirl />
+      <Hero />
+      <FeaturedIn />
+      <HowItWorks />
+      <MeetTheJudges />
+      <NewestEpisodes />
+      <FeaturedCompanies />
+      <Testimonials />
       <Footer />
-      <noscript
+      {/* <noscript
         dangerouslySetInnerHTML={{
           __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2TF5L6"
               height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
         }}
-      />  */}
+      /> */}
     </div>
   );
 };

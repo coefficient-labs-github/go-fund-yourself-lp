@@ -1,0 +1,134 @@
+import Image from "next/image";
+
+const episodes = [
+  {
+    date: "STREAMED FRIDAY, JUNE 21ST",
+    title: "The Businesses & Products from Season 15, Episode 4",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imageSrc: "https://picsum.photos/500/300",
+    buttonText: "Watch Episode",
+    buttonType: "primary",
+  },
+  {
+    date: "UPCOMING • FRIDAY, JUNE 28TH",
+    title: "The Businesses & Products from Season 15, Episode 4",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imageSrc: "https://picsum.photos/500/300",
+    buttonText: "Coming Soon",
+    buttonType: "secondary",
+  },
+  {
+    date: "UPCOMING • FRIDAY, JULY 5TH",
+    title: "The Businesses & Products from Season 15, Episode 4",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imageSrc: "https://picsum.photos/500/300",
+    buttonText: "Coming Soon",
+    buttonType: "secondary",
+  },
+  {
+    date: "UPCOMING • FRIDAY, JULY 12TH",
+    title: "The Businesses & Products from Season 15, Episode 4",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imageSrc: "https://picsum.photos/500/300",
+    buttonText: "Coming Soon",
+    buttonType: "secondary",
+  },
+  {
+    date: "UPCOMING • FRIDAY, JULY 19TH",
+    title: "The Businesses & Products from Season 15, Episode 4",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imageSrc: "https://picsum.photos/500/300",
+    buttonText: "Coming Soon",
+    buttonType: "secondary",
+  },
+];
+
+const NewestEpisodes = () => {
+  return (
+    <div className="py-16 bg-white">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
+          <h2 className="text-4xl font-extrabold leading-8 tracking-tight text-gray-900">
+            Newest Episodes
+          </h2>
+          <div className="relative inline-block text-left">
+            <div>
+              <button
+                type="button"
+                className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50"
+              >
+                Season 1
+                <svg
+                  className="w-5 h-5 ml-2 -mr-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="grid gap-8 mt-6 lg:grid-cols-3 xl:grid-cols-5">
+          {episodes.map((episode, index) => (
+            <div
+              key={index}
+              className="overflow-hidden bg-white rounded-lg shadow-lg"
+            >
+              <div className="relative">
+                <Image
+                  src={episode.imageSrc}
+                  alt={episode.title}
+                  width={500}
+                  height={300}
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+                  <button className="text-4xl text-white">
+                    <i className="fas fa-play-circle"></i>
+                  </button>
+                </div>
+              </div>
+              <div className="p-6">
+                <p
+                  className={`text-sm ${
+                    episode.buttonType === "primary"
+                      ? "text-red-600"
+                      : "text-gray-500"
+                  }`}
+                >
+                  {episode.date}
+                </p>
+                <h3 className="mt-2 text-lg font-bold text-gray-900">
+                  {episode.title}
+                </h3>
+                <p className="mt-3 text-base text-gray-500">
+                  {episode.description}
+                </p>
+                <div className="mt-6">
+                  {episode.buttonType === "primary" ? (
+                    <button className="px-4 py-2 font-bold text-white bg-red-500 rounded-full">
+                      {episode.buttonText}
+                    </button>
+                  ) : (
+                    <button className="px-4 py-2 font-bold text-gray-700 bg-gray-200 rounded-full">
+                      {episode.buttonText}
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NewestEpisodes;
