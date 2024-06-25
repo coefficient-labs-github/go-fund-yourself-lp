@@ -129,13 +129,14 @@ const IndexPage = ({
       /> */}
       <Banner />
       <Hero />
-      <FeaturedIn />
-      <HowItWorks />
-      <MeetTheJudges />
-      <NewestEpisodes />
-      <FeaturedCompanies />
-      <Testimonials />
-      <Footer />
+      <div className="pb-12 text-3xl text-center">Show Coming Soon!</div>
+      {/* <FeaturedIn /> */}
+      {/* <HowItWorks /> */}
+      {/* <MeetTheJudges /> */}
+      {/* <NewestEpisodes /> */}
+      {/* <FeaturedCompanies /> */}
+      {/* <Testimonials /> */}
+      {/* <Footer /> */}
       {/* <noscript
         dangerouslySetInnerHTML={{
           __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2TF5L6"
