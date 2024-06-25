@@ -115,11 +115,11 @@ const NewestEpisodes = () => {
                 </p>
                 <div className="mt-6">
                   {episode.buttonType === "primary" ? (
-                    <button className="px-4 py-2 font-bold text-white bg-red-500 rounded-full">
+                    <button className="px-4 py-3 text-white bg-red-500 rounded-full">
                       {episode.buttonText}
                     </button>
                   ) : (
-                    <button className="px-4 py-2 font-bold text-gray-700 bg-gray-200 rounded-full">
+                    <button className="px-4 py-3 text-gray-700 bg-gray-200 rounded-full">
                       {episode.buttonText}
                     </button>
                   )}

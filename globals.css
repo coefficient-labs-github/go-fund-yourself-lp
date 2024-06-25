@@ -71,6 +71,9 @@
   .balance {
     text-wrap: balance;
   }
+  .not-balanced {
+    text-wrap: initial;
+  }
   .avoidwrap {
     display: inline-block;
   }

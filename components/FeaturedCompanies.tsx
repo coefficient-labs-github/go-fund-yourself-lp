@@ -49,7 +49,7 @@ const FeaturedCompanies = () => {
       id="companies"
       className="flex flex-col items-center justify-center py-10 lg:py-12"
     >
-      <div className="flex flex-col justify-between w-full max-w-6xl px-4 mb-4 2xl:max-w-7xl">
+      <div className="flex flex-col justify-between w-full px-4 mb-4 max-w-7xl 2xl:max-w-8xl">
         <div className="flex items-center justify-between">
           <h2 className="text-4xl font-extrabold text-gray-900">
             Companies Featured This Season So Far
@@ -86,7 +86,7 @@ const FeaturedCompanies = () => {
                   className="object-cover"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-900">
                   {company.name}
                 </h3>
@@ -94,10 +94,10 @@ const FeaturedCompanies = () => {
                   {company.description}
                 </p>
                 <div className="flex mt-6 space-x-4">
-                  <button className="px-4 py-2 font-bold text-white bg-red-500 rounded-full">
+                  <button className="px-4 py-3 text-sm text-red-500 bg-white border border-red-500 rounded-full whitespace-nowrap">
                     Watch Episode
                   </button>
-                  <button className="px-4 py-2 font-bold text-red-500 bg-white border border-red-500 rounded-full">
+                  <button className="px-4 py-3 text-sm text-white bg-red-500 rounded-full whitespace-nowrap">
                     Learn More
                   </button>
                 </div>

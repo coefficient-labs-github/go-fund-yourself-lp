@@ -67,12 +67,14 @@ const HowItWorks = () => {
           </div>
         </div>
         <div className="flex justify-center mt-10 space-x-4">
-          <button className="px-4 py-2 font-bold text-white bg-red-500 rounded-full">
+          <button className="px-6 py-4 text-white bg-red-500 rounded-full">
             Watch Show
           </button>
-          <button className="px-4 py-2 font-bold text-red-500 bg-white border border-red-500 rounded-full">
-            Explore Companies
-          </button>
+          <a href="#companies">
+            <button className="px-6 py-4 text-red-500 bg-white border border-red-500 rounded-full">
+              Explore Companies
+            </button>
+          </a>
         </div>
       </div>
     </section>

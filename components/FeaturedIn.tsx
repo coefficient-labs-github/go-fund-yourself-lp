@@ -12,7 +12,7 @@ const FeaturedIn = () => {
         <div className="flex justify-center mt-6 space-x-8">
           <div className="flex items-center">
             <Image
-              src="/path/to/jpmorgan.png"
+              src="/imgs/Netflix.svg"
               alt="J.P. Morgan"
               width={150}
               height={50}
@@ -21,7 +21,7 @@ const FeaturedIn = () => {
           </div>
           <div className="flex items-center">
             <Image
-              src="/path/to/youtube.png"
+              src="/imgs/Netflix.svg"
               alt="YouTube"
               width={150}
               height={50}
@@ -30,7 +30,7 @@ const FeaturedIn = () => {
           </div>
           <div className="flex items-center">
             <Image
-              src="/path/to/spectrum.png"
+              src="/imgs/Netflix.svg"
               alt="Spectrum"
               width={150}
               height={50}
@@ -39,7 +39,7 @@ const FeaturedIn = () => {
           </div>
           <div className="flex items-center">
             <Image
-              src="/path/to/netflix.png"
+              src="/imgs/Netflix.svg"
               alt="Netflix"
               width={150}
               height={50}
@@ -48,7 +48,7 @@ const FeaturedIn = () => {
           </div>
           <div className="flex items-center">
             <Image
-              src="/path/to/apple.png"
+              src="/imgs/Netflix.svg"
               alt="Apple"
               width={150}
               height={50}

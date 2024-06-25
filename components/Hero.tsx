@@ -62,9 +62,11 @@ const HeroSection = () => {
           <button className="px-6 py-4 font-bold text-red-500 bg-white rounded-full">
             Watch Live Now
           </button>
-          <button className="px-6 py-4 font-bold border border-white rounded-full">
-            Explore Companies
-          </button>
+          <a href="#companies">
+            <button className="px-6 py-4 font-bold border border-white rounded-full">
+              Explore Companies
+            </button>
+          </a>
         </div>
         <video
           src="https://client-lp-assets.s3.amazonaws.com/2305_Verb_Go+Fund+Yourself+Promo_24-05-17_v03_DB_v1+(1).mp4"
