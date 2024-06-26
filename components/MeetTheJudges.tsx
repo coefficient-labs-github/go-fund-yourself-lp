@@ -48,7 +48,7 @@ const judges = [
 const MeetTheJudges = () => {
   return (
     <section id="judges" className="py-16 bg-white">
-      <div className="px-4 mx-auto max-w-8xl sm:px-6 lg:px-8">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="text-lg font-semibold tracking-widest text-gray-600 uppercase">
             Our Expert Panel

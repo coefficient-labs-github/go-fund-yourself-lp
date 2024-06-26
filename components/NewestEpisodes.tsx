@@ -1,55 +1,12 @@
 import Image from "next/image";
 
-const episodes = [
-  {
-    date: "STREAMED FRIDAY, JUNE 21ST",
-    title: "The Businesses & Products from Season 15, Episode 4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-    buttonText: "Watch Episode",
-    buttonType: "primary",
-  },
-  {
-    date: "UPCOMING • FRIDAY, JUNE 28TH",
-    title: "The Businesses & Products from Season 15, Episode 4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-    buttonText: "Coming Soon",
-    buttonType: "secondary",
-  },
-  {
-    date: "UPCOMING • FRIDAY, JULY 5TH",
-    title: "The Businesses & Products from Season 15, Episode 4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-    buttonText: "Coming Soon",
-    buttonType: "secondary",
-  },
-  {
-    date: "UPCOMING • FRIDAY, JULY 12TH",
-    title: "The Businesses & Products from Season 15, Episode 4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-    buttonText: "Coming Soon",
-    buttonType: "secondary",
-  },
-  {
-    date: "UPCOMING • FRIDAY, JULY 19TH",
-    title: "The Businesses & Products from Season 15, Episode 4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-    buttonText: "Coming Soon",
-    buttonType: "secondary",
-  },
-];
-
-const NewestEpisodes = () => {
+const NewestEpisodes = ({ episodes }) => {
   return (
     <section
       id="episodes"
       className="flex flex-col items-center justify-center py-10 lg:py-12"
     >
-      <div className="flex justify-between w-full max-w-6xl px-4 mb-4 2xl:max-w-7xl">
+      <div className="flex justify-between w-full px-4 mb-4 max-w-7xl 2xl:max-w-7xl">
         <h2 className="text-4xl font-extrabold text-gray-900">
           Newest Episodes
         </h2>
@@ -85,7 +42,7 @@ const NewestEpisodes = () => {
             >
               <div className="relative">
                 <Image
-                  src={episode.imageSrc}
+                  src={episode.thumbnail}
                   alt={episode.title}
                   width={500}
                   height={300}
@@ -100,9 +57,7 @@ const NewestEpisodes = () => {
               <div className="p-6">
                 <p
                   className={`text-sm ${
-                    episode.buttonType === "primary"
-                      ? "text-red-600"
-                      : "text-gray-500"
+                    episode.link ? "text-red-600" : "text-gray-500"
                   }`}
                 >
                   {episode.date}
@@ -114,13 +69,15 @@ const NewestEpisodes = () => {
                   {episode.description}
                 </p>
                 <div className="mt-6">
-                  {episode.buttonType === "primary" ? (
-                    <button className="px-4 py-3 text-white bg-red-500 rounded-full">
-                      {episode.buttonText}
-                    </button>
+                  {episode.link ? (
+                    <a href={episode.link}>
+                      <button className="px-4 py-3 text-white bg-red-500 rounded-full">
+                        Watch Now
+                      </button>
+                    </a>
                   ) : (
                     <button className="px-4 py-3 text-gray-700 bg-gray-200 rounded-full">
-                      {episode.buttonText}
+                      Coming Soon
                     </button>
                   )}
                 </div>

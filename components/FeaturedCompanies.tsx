@@ -1,55 +1,12 @@
 import Image from "next/image";
 
-const companies = [
-  {
-    name: "LivingStone",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-  },
-  {
-    name: "Digital Africa",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-  },
-  {
-    name: "Mightly Midwest",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-  },
-  {
-    name: "Surfe",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-  },
-  {
-    name: "Birdbound Music",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-  },
-  {
-    name: "Perch",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-  },
-  {
-    name: "PubFoundry",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-  },
-  {
-    name: "OnPoint Finance",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-  },
-];
-
-const FeaturedCompanies = () => {
+const FeaturedCompanies = ({ companies }) => {
   return (
     <section
       id="companies"
       className="flex flex-col items-center justify-center py-10 lg:py-12"
     >
-      <div className="flex flex-col justify-between w-full px-4 mb-4 max-w-7xl 2xl:max-w-8xl">
+      <div className="flex flex-col justify-between w-full px-4 mb-4 max-w-7xl">
         <div className="flex items-center justify-between">
           <h2 className="text-4xl font-extrabold text-gray-900">
             Companies Featured This Season So Far
@@ -79,7 +36,7 @@ const FeaturedCompanies = () => {
             >
               <div className="relative">
                 <Image
-                  src={company.imageSrc}
+                  src={company.logo}
                   alt={company.name}
                   width={500}
                   height={300}
@@ -94,12 +51,16 @@ const FeaturedCompanies = () => {
                   {company.description}
                 </p>
                 <div className="flex mt-6 space-x-4">
-                  <button className="px-4 py-3 text-sm text-red-500 bg-white border border-red-500 rounded-full whitespace-nowrap">
-                    Watch Episode
-                  </button>
-                  <button className="px-4 py-3 text-sm text-white bg-red-500 rounded-full whitespace-nowrap">
-                    Learn More
-                  </button>
+                  <a href={company.episodeLink}>
+                    <button className="px-4 py-3 text-sm text-red-500 bg-white border border-red-500 rounded-full whitespace-nowrap">
+                      Watch Episode
+                    </button>
+                  </a>
+                  <a href={company.investLink}>
+                    <button className="px-4 py-3 text-sm text-white bg-red-500 rounded-full whitespace-nowrap">
+                      Learn More
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>

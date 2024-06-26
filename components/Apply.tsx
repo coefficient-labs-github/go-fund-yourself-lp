@@ -5,7 +5,7 @@ const ApplySection = () => {
   return (
     <section className="relative pb-32 overflow-hidden" id="apply">
       <div className="absolute bottom-0 w-full bg-black h-1/2 -z-20" />
-      <div className="relative mx-auto text-center max-w-8xl md:text-left">
+      <div className="relative mx-auto text-center max-w-7xl md:text-left">
         <Image
           src="/imgs/footer-shape.svg"
           alt="Apply to Pitch"

@@ -53,68 +53,40 @@ export interface LogoType {
 }
 
 interface Props {
-  products?: Product[];
-  shows?: Show[];
-  featuredBrands?: Brand[];
+  episodes?: Product[];
+  companies?: Show[];
+  testimonials?: Brand[];
   heroes?: HeroType[];
   logos?: LogoType[];
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const sheetId = "1gVk681cZ7Klt70CrGmf0c4TYNGZfc3_BVD9saA7BpLA";
-  const ranges = [
-    "ProductList!A:E",
-    "Shows!A:E",
-    "FeaturedBrands!A:D",
-    "Heroes!A:H",
-    "LogosList!A:A",
-  ];
+  const sheetId = "1a-6KjDAFb6IpHiCIAMz8NiFWaw2IqjSomuUcJn5TEBA";
+  const ranges = ["Episodes!A:E", "Companies!A:E", "Testimonials!A:D"];
   try {
     const rangeData = await fetchSpreadsheetData(sheetId, ranges);
     const getMatchingKeys = (key: string) =>
       Object.keys(rangeData).find((item) => item.startsWith(key));
-    const productKey = getMatchingKeys("ProductList");
-    const showsKey = getMatchingKeys("Shows");
-    const featuredBrandsKey = getMatchingKeys("FeaturedBrands");
-    const logosKey = getMatchingKeys("LogosList");
-    const heroesKey = getMatchingKeys("Heroes");
-    if (
-      !productKey ||
-      !showsKey ||
-      !featuredBrandsKey ||
-      !heroesKey ||
-      !logosKey
-    ) {
+    const episodesKey = getMatchingKeys("Episodes");
+    const companiesKey = getMatchingKeys("Companies");
+    const testimonialsKey = getMatchingKeys("Testimonials");
+    if (!episodesKey || !companiesKey || !testimonialsKey) {
       throw new Error("Expected range keys not found in the data");
     }
-    const products = rangeData[productKey];
-    const shows = rangeData[showsKey];
-    const featuredBrands = rangeData[featuredBrandsKey];
-    const heroes = rangeData[heroesKey];
-    const logos = rangeData[logosKey];
+    const episodes = rangeData[episodesKey];
+    const companies = rangeData[companiesKey];
+    const testimonials = rangeData[testimonialsKey];
     return {
-      props: { products, shows, featuredBrands, heroes, logos },
+      props: { episodes, companies, testimonials },
       revalidate: 3600, // Revalidate after 1 hour (3600 seconds)
     };
   } catch (error) {
+    console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", error);
     return { props: { error: "Failed to fetch data" } };
   }
 };
 
-const IndexPage = ({
-  products,
-  shows,
-  featuredBrands,
-  heroes,
-  logos,
-}: Props) => {
-  const discountListProducts = products?.filter(
-    (p) => p.collection === "discount-list"
-  );
-  const trendingListProducts = products?.filter(
-    (p) => p.collection === "trending"
-  );
-
+const IndexPage = ({ episodes, companies, testimonials }: Props) => {
   return (
     <div>
       <CustomHead />
@@ -134,9 +106,9 @@ const IndexPage = ({
       <FeaturedIn />
       <HowItWorks />
       <MeetTheJudges />
-      <NewestEpisodes />
-      <FeaturedCompanies />
-      <Testimonials />
+      <NewestEpisodes episodes={episodes} />
+      <FeaturedCompanies companies={companies} />
+      <Testimonials testimonials={testimonials} />
       <ApplySection />
       <Footer />
       {/* <noscript
