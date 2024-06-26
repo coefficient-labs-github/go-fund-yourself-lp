@@ -64,6 +64,7 @@ export const getStaticProps: GetStaticProps = async () => {
       revalidate: 3600, // Revalidate after 1 hour (3600 seconds)
     };
   } catch (error) {
+    console.log("Error::", error);
     return { props: { error: "Failed to fetch data" } };
   }
 };
