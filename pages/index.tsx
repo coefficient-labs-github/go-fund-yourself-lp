@@ -41,6 +41,7 @@ interface Props {
   episodes?: Episode[];
   companies?: Company[];
   testimonials?: Testimonial[];
+  error?: Error;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -64,12 +65,15 @@ export const getStaticProps: GetStaticProps = async () => {
       revalidate: 3600, // Revalidate after 1 hour (3600 seconds)
     };
   } catch (error) {
-    console.log("Error::", error);
-    return { props: { error: "Failed to fetch data" } };
+    return { props: { error } };
   }
 };
 
-const IndexPage = ({ episodes, companies, testimonials }: Props) => {
+const IndexPage = ({ episodes, companies, testimonials, error }: Props) => {
+  if (error) {
+    console.log("Error::", error);
+    return <div>500 Server Error</div>;
+  }
   return (
     <div>
       <CustomHead />
