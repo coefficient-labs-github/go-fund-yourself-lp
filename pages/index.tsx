@@ -14,50 +14,33 @@ import NewestEpisodes from "../components/NewestEpisodes";
 import Testimonials from "../components/Testimonials";
 import { fetchSpreadsheetData } from "./api/sheets";
 
-export interface Product {
-  name: string;
-  image: string;
-  price: string;
-  link: string;
-  collection: string;
-}
-
-export interface Show {
-  name: string;
-  releaseddate: string;
-  duration: string;
-  image: string;
-  link: string;
-}
-
-export interface Brand {
-  name: string;
-  image: string;
-  link: string;
+export interface Episode {
+  date: string;
+  title: string;
   description: string;
-}
-
-export interface HeroType {
-  headline: string;
-  subheadline: string;
-  color: string;
-  lightordark: string;
   image: string;
-  cta: string;
   link: string;
-  eyebrow: string;
 }
 
-export interface LogoType {
+export interface Company {
   logo: string;
+  name: string;
+  description: string;
+  episodeLink: string;
+  investLink: string;
+}
+
+export interface Testimonial {
+  picture: string;
+  quote: string;
+  title: string;
+  name: string;
 }
 
 interface Props {
-  episodes?: Product[];
-  companies?: Show[];
-  testimonials?: Brand[];
-  heroes?: HeroType[];
-  logos?: LogoType[];
+  episodes?: Episode[];
+  companies?: Company[];
+  testimonials?: Testimonial[];
 }
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -81,7 +64,6 @@ export const getStaticProps: GetStaticProps = async () => {
       revalidate: 3600, // Revalidate after 1 hour (3600 seconds)
     };
   } catch (error) {
-    console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", error);
     return { props: { error: "Failed to fetch data" } };
   }
 };
@@ -102,7 +84,6 @@ const IndexPage = ({ episodes, companies, testimonials }: Props) => {
       /> */}
       <Banner />
       <Hero />
-      {/* <div className="pb-12 text-3xl text-center">Show Coming Soon!</div> */}
       <FeaturedIn />
       <HowItWorks />
       <MeetTheJudges />
