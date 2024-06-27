@@ -7,7 +7,7 @@ const NewestEpisodes = ({ episodes }) => {
       className="flex flex-col items-center justify-center py-10 lg:py-12"
     >
       <div className="flex justify-between w-full px-4 mb-4 max-w-7xl 2xl:max-w-7xl">
-        <h2 className="text-xl font-extrabold  md:text-3xl xl:text-4xl">
+        <h2 className="text-xl font-extrabold md:text-3xl xl:text-4xl">
           Newest Episodes
         </h2>
         <div className="relative inline-block text-left">
@@ -41,13 +41,14 @@ const NewestEpisodes = ({ episodes }) => {
               className="overflow-hidden bg-white rounded-lg shadow-lg w-72"
             >
               <div className="relative">
-                <Image
-                  src={episode.thumbnail}
-                  alt={episode.title}
-                  width={500}
-                  height={300}
-                  className="object-cover"
-                />
+                <div className="aspect-video">
+                  <Image
+                    src={episode.image || "/imgs/episode-coming-soon.png"}
+                    alt={episode.title}
+                    className="object-cover"
+                    fill
+                  />
+                </div>
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
                   <button className="text-4xl text-white">
                     <i className="fas fa-play-circle"></i>
@@ -62,7 +63,7 @@ const NewestEpisodes = ({ episodes }) => {
                 >
                   {episode.date}
                 </p>
-                <h3 className="mt-2 font-bold  md:text-lg">{episode.title}</h3>
+                <h3 className="mt-2 font-bold md:text-lg">{episode.title}</h3>
                 <p className="mt-3 text-gray-500">{episode.description}</p>
                 <div className="mt-6">
                   {episode.link ? (

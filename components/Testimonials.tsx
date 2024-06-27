@@ -35,20 +35,20 @@ const Testimonials = ({ testimonials }) => {
           world through the voices of our enthusiastic community.
         </p>
       </div>
-      <div className="max-w-[100vw] overflow-x-hidden mt-6 flex-col flex gap-6">
+      <div className="max-w-[100vw] overflow-x-hidden mt-6 flex-col flex gap-y-4">
         {[0, 1].map((_, idx) => {
           return (
             <div
               key={idx}
               data-index={idx}
-              className="flex justify-center gap-x-6 testimonial-row"
+              className="flex justify-center gap-x-4 testimonial-row"
             >
               {testimonials
                 .filter((_, i) => i % 2 === idx)
                 .map((testimonial, index) => (
                   <div
                     key={index}
-                    className="grid w-full gap-6 max-w-sm lg:max-w-xl xl:max-w-2xl grid-cols-1 lg:grid-cols-[auto_1fr] p-6 bg-white rounded-lg shadow-lg shrink-0"
+                    className="grid w-full gap-4 max-w-sm lg:max-w-xl xl:max-w-2xl grid-cols-1 lg:grid-cols-[auto_1fr] p-6 bg-white rounded-lg shadow-lg shrink-0"
                   >
                     <div className="lg:block hidden relative w-32 lg:w-48 aspect-[200_/_236]">
                       <Image
