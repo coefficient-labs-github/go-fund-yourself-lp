@@ -22,9 +22,9 @@ const HowItWorks = () => {
               alt="Watch the 5-Minute Pitches"
               width={400}
               height={200}
-              className="object-cover mb-8"
+              className="object-cover"
             />
-            <h3 className="text-2xl font-medium md:text-3xl md:mt-4">
+            <h3 className="mt-4 text-2xl font-medium">
               Watch the 5-Minute Pitches
             </h3>
             <p className="mt-2 text-base text-gray-500">
@@ -38,9 +38,9 @@ const HowItWorks = () => {
               alt="CEOs Ask the Tough Questions"
               width={400}
               height={200}
-              className="object-cover mb-8"
+              className="object-cover"
             />
-            <h3 className="text-2xl font-medium md:text-3xl md:mt-4">
+            <h3 className="mt-4 text-2xl font-medium">
               CEOs Ask the Tough Questions
             </h3>
             <p className="mt-2 text-base text-gray-500">
@@ -54,9 +54,9 @@ const HowItWorks = () => {
               alt="You Make the Investment Choice"
               width={400}
               height={200}
-              className="object-cover mb-8"
+              className="object-cover"
             />
-            <h3 className="text-2xl font-medium md:text-3xl md:mt-4">
+            <h3 className="mt-4 text-2xl font-medium">
               You Make the Investment Choice
             </h3>
             <p className="mt-2 text-base text-gray-500">

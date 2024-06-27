@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 const judges = [
   {
@@ -45,6 +46,83 @@ const judges = [
   },
 ];
 
+const Judge = ({ judge, index }) => {
+  // const labelRef = useRef(null);
+
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           entry.target.classList.add(
+  //             index % 2 !== 0 ? "animate-swingRight" : "animate-swingLeft"
+  //           );
+  //           observer.unobserve(entry.target); // Stop observing after the animation has played
+  //         }
+  //       });
+  //     },
+  //     { threshold: 1.0 }
+  //   );
+
+  //   if (labelRef.current) {
+  //     observer.observe(labelRef.current);
+  //   }
+
+  //   return () => {
+  //     if (labelRef.current) {
+  //       observer.unobserve(labelRef.current);
+  //     }
+  //   };
+  // }, []);
+
+  return (
+    <div
+      className={`flex flex-col px-6 py-6 md:px-12 md:py-12 gap-y-10 gap-x-16 bg-white shadow-xl items-center rounded-2xl ${
+        index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
+      }`}
+    >
+      <div
+        className={`relative flex-shrink-0 rounded-xl w-full md:max-w-xs lg:max-w-lg aspect-square`}
+      >
+        <Image src={judge.imageSrc} alt={judge.name} fill />
+        <div
+          // ref={labelRef}
+          className={`absolute text-center justify-center rounded-xl py-4 px-8 -translate-y-4 bottom-0 ${
+            judge.labelColor
+          } ${
+            index % 2 !== 0
+              ? "left-0 rotate-[24deg] -translate-x-8 "
+              : "right-0 -rotate-[24deg] translate-x-8 "
+          }`}
+        >
+          <span className={`font-bold text-xl lg:text-3xl text-white block`}>
+            {judge.name}
+          </span>
+          <span className={`font-bold text-white block whitespace-nowrap`}>
+            {judge.position}
+          </span>
+        </div>
+      </div>
+      <div className="flex-1">
+        <h3 className="text-2xl font-bold md:text-3xl xl:text-5xl">
+          {judge.title}
+        </h3>
+        <p className="mt-4 text-gray-500 lg:text-lg">{judge.description}</p>
+        <div className="flex mt-6 start gap-x-2">
+          {judge.social.map((social, idx) => (
+            <a key={idx} href={social.url} className="text-gray-500 ">
+              <img
+                src={`/svgs/${social.platform}.svg`}
+                className="w-8 lg:w-10 aspect-square"
+              />
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const MeetTheJudges = () => {
   return (
     <section id="judges" className="py-16 bg-white">
@@ -62,56 +140,7 @@ const MeetTheJudges = () => {
         </div>
         <div className="flex flex-col gap-6 mt-6">
           {judges.map((judge, index) => (
-            <div
-              key={index}
-              className={`flex flex-col px-6 py-6 md:px-12 md:py-12 gap-y-10 gap-x-16 bg-white shadow-xl items-center rounded-2xl ${
-                index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
-              }`}
-            >
-              <div
-                className={`relative flex-shrink-0 rounded-xl w-full md:max-w-xs lg:max-w-lg aspect-square`}
-              >
-                <Image src={judge.imageSrc} alt={judge.name} fill />
-                <div
-                  className={`absolute text-center justify-center rounded-xl py-4 px-8 -translate-y-4 bottom-0 ${
-                    judge.labelColor
-                  } ${
-                    index % 2 !== 0
-                      ? "left-0 rotate-[24deg] -translate-x-8"
-                      : "right-0 -rotate-[24deg] translate-x-8"
-                  }`}
-                >
-                  <span
-                    className={`font-bold text-xl lg:text-3xl text-white block`}
-                  >
-                    {judge.name}
-                  </span>
-                  <span
-                    className={`font-bold text-white block whitespace-nowrap`}
-                  >
-                    {judge.position}
-                  </span>
-                </div>
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold md:text-3xl xl:text-5xl">
-                  {judge.title}
-                </h3>
-                <p className="mt-4 text-gray-500 md:text-lg">
-                  {judge.description}
-                </p>
-                <div className="flex mt-6 start gap-x-2">
-                  {judge.social.map((social, idx) => (
-                    <a key={idx} href={social.url} className="text-gray-500 ">
-                      <img
-                        src={`/svgs/${social.platform}.svg`}
-                        className="w-8 lg:w-10 aspect-square"
-                      />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <Judge judge={judge} index={index} key={index} />
           ))}
         </div>
       </div>
