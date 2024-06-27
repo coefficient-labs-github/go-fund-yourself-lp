@@ -7,13 +7,13 @@ const Testimonials = ({ testimonials }) => {
       className="flex flex-col items-center justify-center py-10 lg:py-12"
     >
       <div className="flex flex-col justify-between w-full px-6 text-center max-w-7xl 2xl:max-w-7xl">
-        <p className="font-semibold tracking-widest text-gray-600 uppercase md:text-lg">
+        <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase md:text-lg">
           What Our Viewers Are Saying
         </p>
-        <h2 className="mt-4 text-4xl font-extrabold text-gray-900 md:mt-6 md:text-5xl lg:text-6xl">
+        <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
           What Companies <span className="text-violet-600">Are Saying</span>
         </h2>
-        <p className="max-w-2xl mx-auto mt-6 text-lg text-gray-500">
+        <p className="max-w-2xl mx-auto mt-6 text-gray-500 md:text-lg">
           Discover why “Go Fund Yourself!” is revolutionizing the investment
           world through the voices of our enthusiastic community.
         </p>
@@ -31,15 +31,16 @@ const Testimonials = ({ testimonials }) => {
               .map((testimonial, index) => (
                 <div
                   key={index}
-                  className="grid w-full gap-6 max-w-2xl grid-cols-[auto_1fr] p-6 bg-white rounded-lg shadow-lg shrink-0"
+                  className="grid w-full gap-6 max-w-sm lg:max-w-xl xl:max-w-2xl grid-cols-1 lg:grid-cols-[auto_1fr] p-6 bg-white rounded-lg shadow-lg shrink-0"
                 >
-                  <Image
-                    src={testimonial.picture}
-                    alt={testimonial.name}
-                    width={236}
-                    height={236}
-                    className="rounded-lg object-cover aspect-[200_/_236]"
-                  />
+                  <div className="relative w-32 lg:w-52 aspect-[200_/_236]">
+                    <Image
+                      src={testimonial.picture}
+                      alt={testimonial.name}
+                      fill
+                      className="object-cover rounded-lg"
+                    />
+                  </div>
                   <div className="flex flex-col">
                     <div className="flex items-center gap-1">
                       {[...Array(5)].map((_, i) => (
@@ -58,7 +59,7 @@ const Testimonials = ({ testimonials }) => {
                     <p className="mt-4 text-lg text-gray-500 not-balanced">
                       “{testimonial.quote}”
                     </p>
-                    <h3 className="mt-4 text-2xl font-bold text-gray-900">
+                    <h3 className="mt-4 text-lg font-bold text-gray-900 xl:text-2xl">
                       {testimonial.name}
                     </h3>
                     <p className="text-base text-gray-500">

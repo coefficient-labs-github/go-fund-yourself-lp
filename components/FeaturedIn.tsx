@@ -5,7 +5,7 @@ const FeaturedIn = () => {
     <div className="py-8 bg-white">
       <div className="px-6 mx-auto max-w-7xl">
         <div className="text-center">
-          <p className="font-semibold tracking-widest text-gray-600 uppercase md:text-lg">
+          <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase md:text-lg">
             As featured in
           </p>
         </div>
@@ -14,7 +14,7 @@ const FeaturedIn = () => {
             <Image
               src="/imgs/Netflix.svg"
               alt="J.P. Morgan"
-              width={150}
+              width={125}
               height={50}
               className="object-contain"
             />
@@ -23,7 +23,7 @@ const FeaturedIn = () => {
             <Image
               src="/imgs/Netflix.svg"
               alt="YouTube"
-              width={150}
+              width={125}
               height={50}
               className="object-contain"
             />
@@ -32,7 +32,7 @@ const FeaturedIn = () => {
             <Image
               src="/imgs/Netflix.svg"
               alt="Spectrum"
-              width={150}
+              width={125}
               height={50}
               className="object-contain"
             />
@@ -41,7 +41,7 @@ const FeaturedIn = () => {
             <Image
               src="/imgs/Netflix.svg"
               alt="Netflix"
-              width={150}
+              width={125}
               height={50}
               className="object-contain"
             />
@@ -50,7 +50,7 @@ const FeaturedIn = () => {
             <Image
               src="/imgs/Netflix.svg"
               alt="Apple"
-              width={150}
+              width={125}
               height={50}
               className="object-contain"
             />

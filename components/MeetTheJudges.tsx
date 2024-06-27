@@ -50,13 +50,13 @@ const MeetTheJudges = () => {
     <section id="judges" className="py-16 bg-white">
       <div className="px-6 mx-auto max-w-7xl">
         <div className="text-center">
-          <p className="font-semibold tracking-widest text-gray-600 uppercase md:text-lg">
+          <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase md:text-lg">
             Our Expert Panel
           </p>
-          <h2 className="mt-4 text-4xl font-extrabold text-gray-900 md:mt-6 md:text-5xl lg:text-6xl">
+          <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
             Meet the <span className="text-violet-600">Judges</span>
           </h2>
-          <p className="max-w-2xl mx-auto mt-6 text-lg text-gray-500">
+          <p className="max-w-2xl mx-auto mt-6 text-gray-500 md:text-lg">
             Seasoned CEOs Guiding You Through Every Investment Opportunity
           </p>
         </div>
@@ -81,16 +81,20 @@ const MeetTheJudges = () => {
                       : "right-0 -rotate-[24deg] translate-x-8"
                   }`}
                 >
-                  <span className={`font-bold text-3xl text-white block`}>
+                  <span
+                    className={`font-bold text-xl lg:text-3xl text-white block`}
+                  >
                     {judge.name}
                   </span>
-                  <span className={`font-bold text-white block`}>
+                  <span
+                    className={`font-bold text-white block whitespace-nowrap`}
+                  >
                     {judge.position}
                   </span>
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-4xl font-bold text-gray-900 lg:text-5xl xl:text-6xl">
+                <h3 className="text-2xl font-bold text-gray-900 md:text-4xl xl:text-6xl">
                   {judge.title}
                 </h3>
                 <p className="mt-4 text-lg text-gray-500">

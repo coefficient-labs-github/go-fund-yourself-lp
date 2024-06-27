@@ -5,10 +5,10 @@ const HowItWorks = () => {
     <section className="py-16 bg-white">
       <div className="px-6 mx-auto max-w-7xl">
         <div className="text-center">
-          <p className="font-semibold tracking-widest text-gray-600 uppercase md:text-lg">
+          <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase md:text-lg">
             Real-Time Interactive Investing
           </p>
-          <h2 className="mt-4 text-4xl font-extrabold text-gray-900 md:mt-6 md:text-5xl lg:text-6xl">
+          <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
             How Does It Work?
           </h2>
           <p className="max-w-2xl mx-auto mt-6 text-lg text-gray-500">

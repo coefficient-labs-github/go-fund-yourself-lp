@@ -7,7 +7,7 @@ const NewestEpisodes = ({ episodes }) => {
       className="flex flex-col items-center justify-center py-10 lg:py-12"
     >
       <div className="flex justify-between w-full px-4 mb-4 max-w-7xl 2xl:max-w-7xl">
-        <h2 className="text-4xl font-extrabold text-gray-900">
+        <h2 className="text-xl font-extrabold text-gray-900 md:text-3xl xl:text-4xl">
           Newest Episodes
         </h2>
         <div className="relative inline-block text-left">
@@ -62,12 +62,10 @@ const NewestEpisodes = ({ episodes }) => {
                 >
                   {episode.date}
                 </p>
-                <h3 className="mt-2 text-lg font-bold text-gray-900">
+                <h3 className="mt-2 font-bold text-gray-900 md:text-lg">
                   {episode.title}
                 </h3>
-                <p className="mt-3 text-base text-gray-500">
-                  {episode.description}
-                </p>
+                <p className="mt-3 text-gray-500">{episode.description}</p>
                 <div className="mt-6">
                   {episode.link ? (
                     <a href={episode.link}>

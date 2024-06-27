@@ -15,14 +15,14 @@ const ApplySection = () => {
         />
         <div className="relative grid grid-cols-1 grid-rows-[1.3fr_1fr] lg:grid-rows-1 lg:grid-cols-[1.3fr_1fr] lg:gap-16 ">
           <div className="absolute w-full lg:h-[calc(100%-3rem)] h-full bottom-0 bg-violet-600 rounded-xl" />
-          <div className="z-10 px-12 py-12 lg:px-20 lg:pb-20 lg:pt-36">
-            <p className="font-semibold tracking-widest text-yellow-300 uppercase md:text-lg">
+          <div className="z-10 px-8 py-8 md:px-12 md:py-12 lg:px-20 lg:pb-20 lg:pt-36">
+            <p className="text-sm font-semibold tracking-widest text-yellow-300 uppercase md:text-lg">
               Ready to showcase your business
             </p>
-            <h2 className="mt-4 text-4xl font-extrabold text-white md:mt-6 md:text-5xl lg:text-6xl">
+            <h2 className="mt-4 text-2xl font-extrabold text-white md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
               Apply to Pitch On Go Fund Yourself!
             </h2>
-            <p className="mt-4 text-lg text-white not-balanced">
+            <p className="mt-4 text-white md:text-lg not-balanced">
               Seize the opportunity to present your startup to a global audience
               and gain invaluable exposure, feedback, and potential investment
               from our panel of seasoned CEOs.
