@@ -29,10 +29,8 @@ const HeroSection = () => {
       <Image
         src="/imgs/hero-bg.svg"
         alt="Background Image"
-        layout="fill"
-        objectFit="cover"
-        objectPosition="bottom"
-        className="absolute w-full pb-64 h-1/2 -z-10"
+        fill
+        className="object-cover object-bottom w-full pb-24 sm:pb-40 md:pb-64 -z-10"
       />
       <div className="flex flex-col items-center px-6 mx-auto text-center max-w-7xl">
         <nav className="flex flex-wrap justify-center max-w-5xl mt-10 md:mt-12 gap-y-4 gap-x-12">
