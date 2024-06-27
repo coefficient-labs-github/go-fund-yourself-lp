@@ -1,8 +1,20 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const FeaturedCompanies = ({ companies }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [maxHeight, setMaxHeight] = useState("500px");
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (isExpanded && containerRef.current) {
+      const container = containerRef.current as HTMLElement; // Add type assertion
+      setMaxHeight(`${container.scrollHeight}px`); // Fix the problem
+    } else {
+      setMaxHeight("500px");
+    }
+  }, [isExpanded]);
+
   return (
     <section
       id="companies"
@@ -15,9 +27,9 @@ const FeaturedCompanies = ({ companies }) => {
           </h2>
         </div>
         <div
-          className={`grid gap-4 mt-6 lg:grid-cols-3 md:grid-cols-2 overflow-y-hidden transition-all xl:grid-cols-4 ${
-            isExpanded ? "max-h-[999px]" : "max-h-[500px]"
-          }`}
+          ref={containerRef}
+          className={`grid gap-4 mt-6 lg:grid-cols-3 md:grid-cols-2 overflow-hidden transition-max-height duration-500 ease-in-out xl:grid-cols-4`}
+          style={{ maxHeight }}
         >
           {companies.map((company, index) => (
             <div
@@ -59,7 +71,9 @@ const FeaturedCompanies = ({ companies }) => {
         >
           {isExpanded ? "Show Less" : "Show More"}
           <svg
-            className={"w-5 h-5 ml-2 -mr-1" + (isExpanded ? " rotate-180" : "")}
+            className={`w-5 h-5 ml-2 -mr-1 transition-transform ${
+              isExpanded ? "rotate-180" : ""
+            }`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
