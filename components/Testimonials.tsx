@@ -50,7 +50,7 @@ const Testimonials = ({ testimonials }) => {
                     key={index}
                     className="grid w-full gap-6 max-w-sm lg:max-w-xl xl:max-w-2xl grid-cols-1 lg:grid-cols-[auto_1fr] p-6 bg-white rounded-lg shadow-lg shrink-0"
                   >
-                    <div className="relative w-32 lg:w-52 aspect-[200_/_236]">
+                    <div className="lg:block hidden relative w-32 lg:w-48 aspect-[200_/_236]">
                       <Image
                         src={testimonial.picture}
                         alt={testimonial.name}
@@ -76,12 +76,24 @@ const Testimonials = ({ testimonials }) => {
                       <p className="mt-4 text-gray-500 md:text-lg not-balanced">
                         “{testimonial.quote}”
                       </p>
-                      <h3 className="mt-4 text-lg font-bold xl:text-2xl">
-                        {testimonial.name}
-                      </h3>
-                      <p className="text-base text-gray-500">
-                        {testimonial.title}
-                      </p>
+                      <div className="flex gap-4 mt-4">
+                        <div className="relative w-16 lg:hidden aspect-square">
+                          <Image
+                            src={testimonial.picture}
+                            alt={testimonial.name}
+                            fill
+                            className="object-cover rounded-lg"
+                          />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-bold xl:text-2xl">
+                            {testimonial.name}
+                          </h3>
+                          <p className="text-base text-gray-500">
+                            {testimonial.title}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ))}
