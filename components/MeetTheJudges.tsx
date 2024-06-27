@@ -10,9 +10,9 @@ const judges = [
     imageSrc: "/imgs/rory.png",
     labelColor: "bg-yellow-400",
     social: [
-      { platform: "facebook", url: "#", icon: "fab fa-facebook-f" },
-      { platform: "instagram", url: "#", icon: "fab fa-instagram" },
-      { platform: "linkedin", url: "#", icon: "fab fa-linkedin-in" },
+      { platform: "facebook", url: "#" },
+      { platform: "instagram", url: "#" },
+      { platform: "linkedin", url: "#" },
     ],
   },
   {
@@ -24,9 +24,9 @@ const judges = [
     imageSrc: "/imgs/david.png",
     labelColor: "bg-red-400",
     social: [
-      { platform: "facebook", url: "#", icon: "fab fa-facebook-f" },
-      { platform: "instagram", url: "#", icon: "fab fa-instagram" },
-      { platform: "linkedin", url: "#", icon: "fab fa-linkedin-in" },
+      { platform: "facebook", url: "#" },
+      { platform: "instagram", url: "#" },
+      { platform: "linkedin", url: "#" },
     ],
   },
   {
@@ -38,9 +38,9 @@ const judges = [
     imageSrc: "/imgs/jayson.png",
     labelColor: "bg-violet-600",
     social: [
-      { platform: "facebook", url: "#", icon: "fab fa-facebook-f" },
-      { platform: "instagram", url: "#", icon: "fab fa-instagram" },
-      { platform: "linkedin", url: "#", icon: "fab fa-linkedin-in" },
+      { platform: "facebook", url: "#" },
+      { platform: "instagram", url: "#" },
+      { platform: "linkedin", url: "#" },
     ],
   },
 ];
@@ -100,10 +100,13 @@ const MeetTheJudges = () => {
                 <p className="mt-4 text-gray-500 md:text-lg">
                   {judge.description}
                 </p>
-                <div className="flex mt-6 space-x-4">
+                <div className="flex mt-6 start gap-x-2">
                   {judge.social.map((social, idx) => (
                     <a key={idx} href={social.url} className="text-gray-500 ">
-                      <i className={social.icon}></i>
+                      <img
+                        src={`/svgs/${social.platform}.svg`}
+                        className="w-8 lg:w-10 aspect-square"
+                      />
                     </a>
                   ))}
                 </div>
