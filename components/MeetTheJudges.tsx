@@ -56,7 +56,7 @@ const MeetTheJudges = () => {
           <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
             Meet the <span className="text-violet-600">Judges</span>
           </h2>
-          <p className="max-w-2xl mx-auto mt-6 text-gray-500 md:text-lg">
+          <p className="max-w-2xl mx-auto mt-4 text-gray-500 md:mt-6 md:text-lg">
             Seasoned CEOs Guiding You Through Every Investment Opportunity
           </p>
         </div>
@@ -64,7 +64,7 @@ const MeetTheJudges = () => {
           {judges.map((judge, index) => (
             <div
               key={index}
-              className={`flex flex-col px-6 py-6 md:px-12 md:py-12 gap-16 bg-white shadow-xl items-center rounded-2xl ${
+              className={`flex flex-col px-6 py-6 md:px-12 md:py-12 gap-y-10 gap-x-16 bg-white shadow-xl items-center rounded-2xl ${
                 index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
               }`}
             >
@@ -73,7 +73,7 @@ const MeetTheJudges = () => {
               >
                 <Image src={judge.imageSrc} alt={judge.name} fill />
                 <div
-                  className={`absolute justify-center rounded-xl py-4 px-8 -translate-y-4 bottom-0 ${
+                  className={`absolute text-center justify-center rounded-xl py-4 px-8 -translate-y-4 bottom-0 ${
                     judge.labelColor
                   } ${
                     index % 2 !== 0

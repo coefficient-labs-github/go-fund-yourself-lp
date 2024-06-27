@@ -29,7 +29,7 @@ const ApplySection = () => {
             </p>
             <LeadForm
               trigger={
-                <button className="px-6 py-4 mt-6 text-white bg-red-500 rounded-full">
+                <button className="px-5 py-3 md:px-6 md:py-4 mt-6 text-white bg-red-500 rounded-full">
                   Apply Now
                 </button>
               }

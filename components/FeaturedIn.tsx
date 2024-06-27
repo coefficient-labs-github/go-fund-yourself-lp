@@ -9,7 +9,7 @@ const FeaturedIn = () => {
             As featured in
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-8 mt-6 space-x-8">
+        <div className="flex flex-wrap justify-center gap-8 mt-6 gap-y-6 gap-x-8">
           <div className="flex items-center">
             <Image
               src="/imgs/Netflix.svg"

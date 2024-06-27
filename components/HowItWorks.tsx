@@ -8,10 +8,10 @@ const HowItWorks = () => {
           <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase md:text-lg">
             Real-Time Interactive Investing
           </p>
-          <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
+          <h2 className="mt-4 text-2xl font-extrabold text-gray-900 md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
             How Does It Work?
           </h2>
-          <p className="max-w-2xl mx-auto mt-6 text-lg text-gray-500">
+          <p className="max-w-2xl mx-auto mt-4 text-gray-500 md:mt-6 md:text-lg">
             A Simple, Engaging, and Interactive Investment Experience
           </p>
         </div>
@@ -24,7 +24,7 @@ const HowItWorks = () => {
               height={200}
               className="object-cover mb-8"
             />
-            <h3 className="text-3xl font-medium text-gray-900 md:mt-4">
+            <h3 className="text-2xl font-medium text-gray-900 md:text-3xl md:mt-4">
               Watch the 5-Minute Pitches
             </h3>
             <p className="mt-2 text-base text-gray-500">
@@ -40,7 +40,7 @@ const HowItWorks = () => {
               height={200}
               className="object-cover mb-8"
             />
-            <h3 className="text-3xl font-medium text-gray-900 md:mt-4">
+            <h3 className="text-2xl font-medium text-gray-900 md:text-3xl md:mt-4">
               CEOs Ask the Tough Questions
             </h3>
             <p className="mt-2 text-base text-gray-500">
@@ -56,7 +56,7 @@ const HowItWorks = () => {
               height={200}
               className="object-cover mb-8"
             />
-            <h3 className="text-3xl font-medium text-gray-900 md:mt-4">
+            <h3 className="text-2xl font-medium text-gray-900 md:text-3xl md:mt-4">
               You Make the Investment Choice
             </h3>
             <p className="mt-2 text-base text-gray-500">
@@ -66,12 +66,12 @@ const HowItWorks = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-center mt-10 space-x-4">
-          <button className="px-6 py-4 text-white bg-red-500 rounded-full">
+        <div className="flex flex-col items-center justify-center mt-10 gap-y-2 gap-x-4 md:flex-row">
+          <button className="px-5 py-3 text-white bg-red-500 rounded-full md:px-6 md:py-4">
             Watch Show
           </button>
           <a href="#companies">
-            <button className="px-6 py-4 text-red-500 bg-white border border-red-500 rounded-full">
+            <button className="px-5 py-3 text-red-500 bg-white border border-red-500 rounded-full md:px-6 md:py-4">
               Explore Companies
             </button>
           </a>

@@ -58,12 +58,12 @@ const HeroSection = () => {
           opportunity. Engage with top CEOs, discover innovative startups, and
           invest in real-time—all from the comfort of your home.
         </p>
-        <div className="flex justify-center mt-6 space-x-4">
-          <button className="px-6 py-4 font-bold text-red-500 bg-white rounded-full">
+        <div className="flex flex-col justify-center mt-6 gap-y-2 gap-x-4 md:flex-row">
+          <button className="px-5 py-3 font-bold text-red-500 bg-white rounded-full md:px-6 md:py-4">
             Watch Live Now
           </button>
           <a href="#companies">
-            <button className="px-6 py-4 font-bold border border-white rounded-full">
+            <button className="px-5 py-3 font-bold border border-white rounded-full md:px-6 md:py-4">
               Explore Companies
             </button>
           </a>

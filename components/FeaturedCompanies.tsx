@@ -60,12 +60,12 @@ const FeaturedCompanies = ({ companies }) => {
                   </p>
                   <div className="flex mt-6 space-x-4">
                     <a href={company.episodeLink}>
-                      <button className="px-4 py-3 text-sm text-red-500 bg-white border border-red-500 rounded-full whitespace-nowrap">
+                      <button className="px-4 py-2 text-sm text-red-500 bg-white border border-red-500 rounded-full whitespace-nowrap">
                         Watch Episode
                       </button>
                     </a>
                     <a href={company.investLink}>
-                      <button className="px-4 py-3 text-sm text-white bg-red-500 rounded-full whitespace-nowrap">
+                      <button className="px-4 py-2 text-sm text-white bg-red-500 rounded-full whitespace-nowrap">
                         Learn More
                       </button>
                     </a>

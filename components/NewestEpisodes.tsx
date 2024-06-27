@@ -69,12 +69,12 @@ const NewestEpisodes = ({ episodes }) => {
                 <div className="mt-6">
                   {episode.link ? (
                     <a href={episode.link}>
-                      <button className="px-4 py-3 text-white bg-red-500 rounded-full">
+                      <button className="px-4 py-2 text-white bg-red-500 rounded-full">
                         Watch Now
                       </button>
                     </a>
                   ) : (
-                    <button className="px-4 py-3 text-gray-700 bg-gray-200 rounded-full">
+                    <button className="px-4 py-2 text-gray-700 bg-gray-200 rounded-full">
                       Coming Soon
                     </button>
                   )}
