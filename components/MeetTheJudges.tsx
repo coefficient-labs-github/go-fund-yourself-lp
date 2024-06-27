@@ -94,10 +94,10 @@ const MeetTheJudges = () => {
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-2xl font-bold text-gray-900 md:text-4xl xl:text-6xl">
+                <h3 className="text-2xl font-bold text-gray-900 md:text-4xl xl:text-5xl">
                   {judge.title}
                 </h3>
-                <p className="mt-4 text-lg text-gray-500">
+                <p className="mt-4 text-gray-500 md:text-lg">
                   {judge.description}
                 </p>
                 <div className="flex mt-6 space-x-4">

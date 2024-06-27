@@ -1,6 +1,23 @@
 import Image from "next/image";
+import { useEffect } from "react";
 
 const Testimonials = ({ testimonials }) => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.pageYOffset;
+      const rows = document.querySelectorAll(".testimonial-row");
+      rows.forEach((row, index) => {
+        const direction = index % 2 === 0 ? 1 : -1;
+        const transformValue = `translateX(calc(-50% - ${
+          scrollPosition * 0.1 * direction * 0.5
+        }px))`;
+        (row as HTMLElement).style.transform = transformValue;
+      });
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section
       id="reviews"
@@ -18,17 +35,16 @@ const Testimonials = ({ testimonials }) => {
           world through the voices of our enthusiastic community.
         </p>
       </div>
-      <div className="max-w-[100vw] overflow-x-hidden mt-6">
-        {[0, 1].map((val) => {
+      <div className="max-w-[100vw] overflow-x-hidden mt-6 flex-col flex gap-6">
+        {[0, 1].map((_, idx) => {
           return (
             <div
-              key={val}
-              className={`flex gap-x-8 ${
-                val % 2 !== 0 ? "translate-x-[-330px]" : ""
-              }`}
+              key={idx}
+              data-index={idx}
+              className="flex justify-center gap-x-6 testimonial-row"
             >
               {testimonials
-                .filter((_, i) => i % 2 === val)
+                .filter((_, i) => i % 2 === idx)
                 .map((testimonial, index) => (
                   <div
                     key={index}
