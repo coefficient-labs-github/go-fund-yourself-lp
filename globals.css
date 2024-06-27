@@ -47,7 +47,7 @@
 
 @layer base {
   body {
-    @apply font-montserrat text-typeBlack balance;
+    @apply text-gray-800 font-montserrat balance;
   }
 }
 

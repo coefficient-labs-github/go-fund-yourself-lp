@@ -12,7 +12,7 @@ const links = [
 const Footer = () => {
   return (
     <footer className="pt-8 pb-12 text-white bg-black md:py-24">
-      <ul className="flex flex-wrap justify-center px-6 mx-auto list-none md:text-lg gap-y-4 gap-x-20">
+      <ul className="flex flex-wrap justify-center px-6 mx-auto list-none lg:text-lg gap-y-4 gap-x-20">
         {links.map((link, index) => (
           <li key={index} className="mx-0">
             <a href={link.href} className="hover:underline">

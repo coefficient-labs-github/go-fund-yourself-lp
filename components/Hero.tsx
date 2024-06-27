@@ -40,7 +40,7 @@ const HeroSection = () => {
             <a
               key={index}
               href={item.link}
-              className="text-sm font-semibold tracking-widest uppercase md:text-lg hover:underline"
+              className="text-sm font-semibold tracking-widest uppercase md:text-base lg:text-lg hover:underline"
             >
               {item.name}
             </a>

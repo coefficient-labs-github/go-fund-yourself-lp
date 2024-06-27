@@ -50,10 +50,10 @@ const MeetTheJudges = () => {
     <section id="judges" className="py-16 bg-white">
       <div className="px-6 mx-auto max-w-7xl">
         <div className="text-center">
-          <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase md:text-lg">
+          <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase md:text-base lg:text-lg">
             Our Expert Panel
           </p>
-          <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
+          <h2 className="mt-4 text-3xl font-extrabold md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
             Meet the <span className="text-violet-600">Judges</span>
           </h2>
           <p className="max-w-2xl mx-auto mt-4 text-gray-500 md:mt-6 md:text-lg">
@@ -94,7 +94,7 @@ const MeetTheJudges = () => {
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-2xl font-bold text-gray-900 md:text-4xl xl:text-5xl">
+                <h3 className="text-2xl font-bold md:text-3xl xl:text-5xl">
                   {judge.title}
                 </h3>
                 <p className="mt-4 text-gray-500 md:text-lg">
@@ -102,11 +102,7 @@ const MeetTheJudges = () => {
                 </p>
                 <div className="flex mt-6 space-x-4">
                   {judge.social.map((social, idx) => (
-                    <a
-                      key={idx}
-                      href={social.url}
-                      className="text-gray-500 hover:text-gray-900"
-                    >
+                    <a key={idx} href={social.url} className="text-gray-500 ">
                       <i className={social.icon}></i>
                     </a>
                   ))}

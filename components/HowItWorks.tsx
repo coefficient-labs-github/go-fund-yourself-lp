@@ -5,10 +5,10 @@ const HowItWorks = () => {
     <section className="py-16 bg-white">
       <div className="px-6 mx-auto max-w-7xl">
         <div className="text-center">
-          <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase md:text-lg">
+          <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase md:text-base lg:text-lg">
             Real-Time Interactive Investing
           </p>
-          <h2 className="mt-4 text-2xl font-extrabold text-gray-900 md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
+          <h2 className="mt-4 text-2xl font-extrabold md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
             How Does It Work?
           </h2>
           <p className="max-w-2xl mx-auto mt-4 text-gray-500 md:mt-6 md:text-lg">
@@ -24,7 +24,7 @@ const HowItWorks = () => {
               height={200}
               className="object-cover mb-8"
             />
-            <h3 className="text-2xl font-medium text-gray-900 md:text-3xl md:mt-4">
+            <h3 className="text-2xl font-medium md:text-3xl md:mt-4">
               Watch the 5-Minute Pitches
             </h3>
             <p className="mt-2 text-base text-gray-500">
@@ -40,7 +40,7 @@ const HowItWorks = () => {
               height={200}
               className="object-cover mb-8"
             />
-            <h3 className="text-2xl font-medium text-gray-900 md:text-3xl md:mt-4">
+            <h3 className="text-2xl font-medium md:text-3xl md:mt-4">
               CEOs Ask the Tough Questions
             </h3>
             <p className="mt-2 text-base text-gray-500">
@@ -56,7 +56,7 @@ const HowItWorks = () => {
               height={200}
               className="object-cover mb-8"
             />
-            <h3 className="text-2xl font-medium text-gray-900 md:text-3xl md:mt-4">
+            <h3 className="text-2xl font-medium md:text-3xl md:mt-4">
               You Make the Investment Choice
             </h3>
             <p className="mt-2 text-base text-gray-500">

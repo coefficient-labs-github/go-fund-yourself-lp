@@ -8,7 +8,7 @@ const Testimonials = ({ testimonials }) => {
       const rows = document.querySelectorAll(".testimonial-row");
       rows.forEach((row, index) => {
         const direction = index % 2 === 0 ? 1 : -1;
-        const transformValue = `translateX(calc(-50% - ${
+        const transformValue = `translateX(calc(${
           scrollPosition * 0.1 * direction * 0.5
         }px))`;
         (row as HTMLElement).style.transform = transformValue;
@@ -24,10 +24,10 @@ const Testimonials = ({ testimonials }) => {
       className="flex flex-col items-center justify-center py-10 lg:py-12"
     >
       <div className="flex flex-col justify-between w-full px-6 text-center max-w-7xl 2xl:max-w-7xl">
-        <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase md:text-lg">
+        <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase md:text-base lg:text-lg">
           What Our Viewers Are Saying
         </p>
-        <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
+        <h2 className="mt-4 text-3xl font-extrabold md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
           What Companies <span className="text-violet-600">Are Saying</span>
         </h2>
         <p className="max-w-2xl mx-auto mt-4 text-gray-500 md:mt-6 md:text-lg">
@@ -76,7 +76,7 @@ const Testimonials = ({ testimonials }) => {
                       <p className="mt-4 text-gray-500 md:text-lg not-balanced">
                         “{testimonial.quote}”
                       </p>
-                      <h3 className="mt-4 text-lg font-bold text-gray-900 xl:text-2xl">
+                      <h3 className="mt-4 text-lg font-bold xl:text-2xl">
                         {testimonial.name}
                       </h3>
                       <p className="text-base text-gray-500">

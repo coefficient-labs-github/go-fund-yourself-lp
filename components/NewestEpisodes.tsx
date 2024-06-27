@@ -7,13 +7,13 @@ const NewestEpisodes = ({ episodes }) => {
       className="flex flex-col items-center justify-center py-10 lg:py-12"
     >
       <div className="flex justify-between w-full px-4 mb-4 max-w-7xl 2xl:max-w-7xl">
-        <h2 className="text-xl font-extrabold text-gray-900 md:text-3xl xl:text-4xl">
+        <h2 className="text-xl font-extrabold  md:text-3xl xl:text-4xl">
           Newest Episodes
         </h2>
         <div className="relative inline-block text-left">
           <button
             type="button"
-            className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50"
+            className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50"
           >
             Season 1
             <svg
@@ -62,9 +62,7 @@ const NewestEpisodes = ({ episodes }) => {
                 >
                   {episode.date}
                 </p>
-                <h3 className="mt-2 font-bold text-gray-900 md:text-lg">
-                  {episode.title}
-                </h3>
+                <h3 className="mt-2 font-bold  md:text-lg">{episode.title}</h3>
                 <p className="mt-3 text-gray-500">{episode.description}</p>
                 <div className="mt-6">
                   {episode.link ? (
@@ -74,7 +72,7 @@ const NewestEpisodes = ({ episodes }) => {
                       </button>
                     </a>
                   ) : (
-                    <button className="px-4 py-2 text-gray-700 bg-gray-200 rounded-full">
+                    <button className="px-4 py-2 text-gray-500 bg-gray-200 rounded-full">
                       Coming Soon
                     </button>
                   )}

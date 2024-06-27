@@ -10,12 +10,12 @@ const FeaturedCompanies = ({ companies }) => {
     >
       <div className="flex flex-col justify-between w-full px-6 mb-4 max-w-7xl">
         <div className="flex items-center justify-between">
-          <h2 className="text-xl font-extrabold text-gray-900 md:text-3xl xl:text-4xl">
+          <h2 className="text-xl font-extrabold md:text-3xl xl:text-4xl">
             Companies Featured This Season So Far
           </h2>
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50"
           >
             {isExpanded ? "Show Less" : "Show More"}
             <svg
@@ -52,9 +52,7 @@ const FeaturedCompanies = ({ companies }) => {
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-bold text-gray-900">
-                    {company.name}
-                  </h3>
+                  <h3 className="text-lg font-bold">{company.name}</h3>
                   <p className="mt-2 text-base text-gray-500">
                     {company.description}
                   </p>
