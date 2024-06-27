@@ -3,20 +3,20 @@ import Image from "next/image";
 const HowItWorks = () => {
   return (
     <section className="py-16 bg-white">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className="px-6 mx-auto max-w-7xl">
         <div className="text-center">
-          <p className="text-lg font-semibold tracking-widest text-gray-600 uppercase">
+          <p className="font-semibold tracking-widest text-gray-600 uppercase md:text-lg">
             Real-Time Interactive Investing
           </p>
-          <h2 className="mt-6 text-6xl font-extrabold text-gray-900">
+          <h2 className="mt-4 text-4xl font-extrabold text-gray-900 md:mt-6 md:text-5xl lg:text-6xl">
             How Does It Work?
           </h2>
           <p className="max-w-2xl mx-auto mt-6 text-lg text-gray-500">
             A Simple, Engaging, and Interactive Investment Experience
           </p>
         </div>
-        <div className="grid grid-cols-1 mt-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 gap-x-6">
-          <div className="p-8 overflow-hidden text-center rounded-lg shadow-lg">
+        <div className="grid grid-cols-1 mt-6 justify-items-center gap-y-10 lg:grid-cols-3 gap-x-6">
+          <div className="flex flex-col items-center max-w-xl p-6 overflow-hidden text-center rounded-lg shadow-lg md:p-8">
             <Image
               src="/imgs/step-1.png"
               alt="Watch the 5-Minute Pitches"
@@ -24,7 +24,7 @@ const HowItWorks = () => {
               height={200}
               className="object-cover mb-8"
             />
-            <h3 className="mt-4 text-3xl font-medium text-gray-900">
+            <h3 className="text-3xl font-medium text-gray-900 md:mt-4">
               Watch the 5-Minute Pitches
             </h3>
             <p className="mt-2 text-base text-gray-500">
@@ -32,7 +32,7 @@ const HowItWorks = () => {
               5-minute pitch, showcasing their products and potential.
             </p>
           </div>
-          <div className="p-8 overflow-hidden text-center rounded-lg shadow-lg">
+          <div className="flex flex-col items-center max-w-xl p-6 overflow-hidden text-center rounded-lg shadow-lg md:p-8">
             <Image
               src="/imgs/step-2.png"
               alt="CEOs Ask the Tough Questions"
@@ -40,7 +40,7 @@ const HowItWorks = () => {
               height={200}
               className="object-cover mb-8"
             />
-            <h3 className="mt-4 text-3xl font-medium text-gray-900">
+            <h3 className="text-3xl font-medium text-gray-900 md:mt-4">
               CEOs Ask the Tough Questions
             </h3>
             <p className="mt-2 text-base text-gray-500">
@@ -48,7 +48,7 @@ const HowItWorks = () => {
               that matter most to investors, ensuring transparency and clarity.
             </p>
           </div>
-          <div className="p-8 overflow-hidden text-center rounded-lg shadow-lg">
+          <div className="flex flex-col items-center max-w-xl p-6 overflow-hidden text-center rounded-lg shadow-lg md:p-8">
             <Image
               src="/imgs/step-3.png"
               alt="You Make the Investment Choice"
@@ -56,7 +56,7 @@ const HowItWorks = () => {
               height={200}
               className="object-cover mb-8"
             />
-            <h3 className="mt-4 text-3xl font-medium text-gray-900">
+            <h3 className="text-3xl font-medium text-gray-900 md:mt-4">
               You Make the Investment Choice
             </h3>
             <p className="mt-2 text-base text-gray-500">

@@ -12,7 +12,7 @@ const links = [
 const Footer = () => {
   return (
     <footer className="py-24 text-white bg-black">
-      <ul className="flex flex-wrap justify-center gap-20 px-4 mx-auto text-lg list-none sm:px-6 lg:px-8">
+      <ul className="flex flex-wrap justify-center px-6 mx-auto text-lg list-none gap-y-4 gap-x-20">
         {links.map((link, index) => (
           <li key={index} className="mx-0">
             <a href={link.href} className="hover:underline">
@@ -21,7 +21,7 @@ const Footer = () => {
           </li>
         ))}
       </ul>
-      <div className="flex justify-center gap-20 px-4 mx-auto mt-20 md:grid-cols-2 sm:px-6 lg:px-8">
+      <div className="flex flex-col justify-center gap-20 px-6 mx-auto mt-20 md:flex-row md:grid-cols-2">
         <div>
           <h3 className="">Email</h3>
           <p className="mt-1 text-2xl font-bold">hello@gofundyourself.show</p>

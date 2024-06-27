@@ -48,12 +48,12 @@ const judges = [
 const MeetTheJudges = () => {
   return (
     <section id="judges" className="py-16 bg-white">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className="px-6 mx-auto max-w-7xl">
         <div className="text-center">
-          <p className="text-lg font-semibold tracking-widest text-gray-600 uppercase">
+          <p className="font-semibold tracking-widest text-gray-600 uppercase md:text-lg">
             Our Expert Panel
           </p>
-          <h2 className="mt-6 text-6xl font-extrabold text-gray-900">
+          <h2 className="mt-4 text-4xl font-extrabold text-gray-900 md:mt-6 md:text-5xl lg:text-6xl">
             Meet the <span className="text-violet-600">Judges</span>
           </h2>
           <p className="max-w-2xl mx-auto mt-6 text-lg text-gray-500">
@@ -64,18 +64,14 @@ const MeetTheJudges = () => {
           {judges.map((judge, index) => (
             <div
               key={index}
-              className={`flex flex-col px-12 py-12 gap-16 overflow-hidden bg-white shadow-xl items-center rounded-2xl ${
-                index % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row"
+              className={`flex flex-col px-6 py-6 md:px-12 md:py-12 gap-16 bg-white shadow-xl items-center rounded-2xl ${
+                index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
               }`}
             >
-              <div className={`relative flex-shrink-0 rounded-xl`}>
-                <Image
-                  src={judge.imageSrc}
-                  alt={judge.name}
-                  width={500}
-                  height={500}
-                  className="object-cover "
-                />
+              <div
+                className={`relative flex-shrink-0 rounded-xl w-full md:max-w-xs lg:max-w-lg aspect-square`}
+              >
+                <Image src={judge.imageSrc} alt={judge.name} fill />
                 <div
                   className={`absolute justify-center rounded-xl py-4 px-8 -translate-y-4 bottom-0 ${
                     judge.labelColor
@@ -94,7 +90,7 @@ const MeetTheJudges = () => {
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-6xl font-bold text-gray-900">
+                <h3 className="text-4xl font-bold text-gray-900 lg:text-5xl xl:text-6xl">
                   {judge.title}
                 </h3>
                 <p className="mt-4 text-lg text-gray-500">

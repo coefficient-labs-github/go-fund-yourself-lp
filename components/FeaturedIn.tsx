@@ -3,13 +3,13 @@ import Image from "next/image";
 const FeaturedIn = () => {
   return (
     <div className="py-8 bg-white">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className="px-6 mx-auto max-w-7xl">
         <div className="text-center">
-          <p className="text-lg font-semibold tracking-widest text-gray-600 uppercase">
+          <p className="font-semibold tracking-widest text-gray-600 uppercase md:text-lg">
             As featured in
           </p>
         </div>
-        <div className="flex justify-center mt-6 space-x-8">
+        <div className="flex flex-wrap justify-center gap-8 mt-6 space-x-8">
           <div className="flex items-center">
             <Image
               src="/imgs/Netflix.svg"

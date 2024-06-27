@@ -6,7 +6,7 @@ const FeaturedCompanies = ({ companies }) => {
       id="companies"
       className="flex flex-col items-center justify-center py-10 lg:py-12"
     >
-      <div className="flex flex-col justify-between w-full px-4 mb-4 max-w-7xl">
+      <div className="flex flex-col justify-between w-full px-6 mb-4 max-w-7xl">
         <div className="flex items-center justify-between">
           <h2 className="text-4xl font-extrabold text-gray-900">
             Companies Featured This Season So Far
@@ -28,18 +28,17 @@ const FeaturedCompanies = ({ companies }) => {
             </svg>
           </button>
         </div>
-        <div className="grid gap-8 mt-6 lg:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-8 mt-6 lg:grid-cols-3 md:grid-cols-2 xl:grid-cols-4">
           {companies.map((company, index) => (
             <div
               key={index}
               className="overflow-hidden bg-white rounded-lg shadow-lg"
             >
-              <div className="relative">
+              <div className="relative w-full aspect-video">
                 <Image
                   src={company.logo}
                   alt={company.name}
-                  width={500}
-                  height={300}
+                  fill
                   className="object-cover"
                 />
               </div>

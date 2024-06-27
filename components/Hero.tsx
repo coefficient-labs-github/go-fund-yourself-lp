@@ -34,13 +34,13 @@ const HeroSection = () => {
         objectPosition="bottom"
         className="absolute w-full pb-64 h-1/2 -z-10"
       />
-      <div className="flex flex-col items-center px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
-        <nav className="flex justify-between max-w-5xl gap-8 mt-12">
+      <div className="flex flex-col items-center px-6 mx-auto text-center max-w-7xl">
+        <nav className="flex flex-wrap justify-center max-w-5xl mt-10 md:mt-12 gap-y-4 gap-x-12">
           {navItems.map((item, index) => (
             <a
               key={index}
               href={item.link}
-              className="text-lg font-semibold tracking-widest uppercase hover:underline"
+              className="font-semibold tracking-widest uppercase md:text-lg hover:underline"
             >
               {item.name}
             </a>

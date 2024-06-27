@@ -6,11 +6,11 @@ const Testimonials = ({ testimonials }) => {
       id="reviews"
       className="flex flex-col items-center justify-center py-10 lg:py-12"
     >
-      <div className="flex flex-col justify-between w-full px-4 text-center max-w-7xl 2xl:max-w-7xl">
-        <p className="text-lg font-semibold tracking-widest text-gray-600 uppercase">
+      <div className="flex flex-col justify-between w-full px-6 text-center max-w-7xl 2xl:max-w-7xl">
+        <p className="font-semibold tracking-widest text-gray-600 uppercase md:text-lg">
           What Our Viewers Are Saying
         </p>
-        <h2 className="mt-6 text-6xl font-extrabold text-gray-900">
+        <h2 className="mt-4 text-4xl font-extrabold text-gray-900 md:mt-6 md:text-5xl lg:text-6xl">
           What Companies <span className="text-violet-600">Are Saying</span>
         </h2>
         <p className="max-w-2xl mx-auto mt-6 text-lg text-gray-500">

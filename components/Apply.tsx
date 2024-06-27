@@ -5,7 +5,7 @@ const ApplySection = () => {
   return (
     <section className="relative pb-32 overflow-hidden" id="apply">
       <div className="absolute bottom-0 w-full bg-black h-1/2 -z-20" />
-      <div className="relative mx-auto text-center max-w-7xl md:text-left">
+      <div className="relative px-6 mx-auto text-center max-w-7xl md:text-left">
         <Image
           src="/imgs/footer-shape.svg"
           alt="Apply to Pitch"
@@ -13,13 +13,13 @@ const ApplySection = () => {
           height={400}
           className="absolute bottom-0 right-0 object-cover translate-x-1/3 translate-y-1/3 -z-10"
         />
-        <div className="relative grid grid-cols-[1.3fr_1fr] gap-16 ">
-          <div className="absolute w-full h-[calc(100%-3rem)] bottom-0 bg-violet-600 rounded-xl" />
-          <div className="z-10 px-20 pb-20 pt-36">
-            <p className="text-lg font-semibold tracking-widest text-yellow-300 uppercase">
+        <div className="relative grid grid-cols-1 grid-rows-[1.3fr_1fr] lg:grid-rows-1 lg:grid-cols-[1.3fr_1fr] lg:gap-16 ">
+          <div className="absolute w-full lg:h-[calc(100%-3rem)] h-full bottom-0 bg-violet-600 rounded-xl" />
+          <div className="z-10 px-12 py-12 lg:px-20 lg:pb-20 lg:pt-36">
+            <p className="font-semibold tracking-widest text-yellow-300 uppercase md:text-lg">
               Ready to showcase your business
             </p>
-            <h2 className="mt-6 text-6xl font-extrabold text-white">
+            <h2 className="mt-4 text-4xl font-extrabold text-white md:mt-6 md:text-5xl lg:text-6xl">
               Apply to Pitch On Go Fund Yourself!
             </h2>
             <p className="mt-4 text-lg text-white not-balanced">
