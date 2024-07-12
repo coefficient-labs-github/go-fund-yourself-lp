@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --font-grobold: "Grobold", serif;
   --color-primary: 255 255 255; /* Text, buttons, etc. */
   --color-secondary: 252 232 232; /* Backgrounds, borders, etc. */
   --color-typeBlack: 26 26 26; /* Text, buttons, etc. */
@@ -48,6 +49,10 @@
 @layer base {
   body {
     @apply text-gray-800 font-roboto balance;
+  }
+  h1,
+  h2 {
+    @apply font-grobold;
   }
 }
 

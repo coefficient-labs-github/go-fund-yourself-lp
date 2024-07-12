@@ -22,9 +22,9 @@ const FeaturedCompanies = ({ companies }) => {
     >
       <div className="flex flex-col justify-center w-full px-6 mb-4 max-w-7xl">
         <div className="flex items-center justify-between">
-          <h2 className="text-xl font-extrabold md:text-3xl xl:text-4xl">
+          <h3 className="text-xl font-extrabold md:text-3xl xl:text-4xl">
             Companies Featured This Season So Far
-          </h2>
+          </h3>
         </div>
         <div
           ref={containerRef}

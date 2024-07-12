@@ -27,7 +27,7 @@ const Testimonials = ({ testimonials }) => {
         <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase md:text-base lg:text-lg">
           What Our Viewers Are Saying
         </p>
-        <h2 className="mt-4 text-3xl font-extrabold md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
+        <h2 className="mt-4 text-3xl md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
           What Companies <span className="text-[#0125BD]">Are Saying</span>
         </h2>
         <p className="max-w-2xl mx-auto mt-4 text-gray-500 md:mt-6 md:text-lg">

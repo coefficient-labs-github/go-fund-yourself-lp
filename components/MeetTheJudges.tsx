@@ -74,7 +74,7 @@ const Judge = ({ judge, index }) => {
         </div> */}
       </div>
       <div className="flex-1">
-        <h3 className="text-3xl font-bold md:text-4xl xl:text-5xl">
+        <h3 className="text-3xl md:text-4xl xl:text-5xl font-grobold">
           {judge.name}
         </h3>
         <p className="mt-4 text-gray-500 lg:text-lg">{judge.description}</p>
@@ -101,7 +101,7 @@ const MeetTheJudges = () => {
           <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase md:text-base lg:text-lg">
             Our Expert Panel
           </p>
-          <h2 className="mt-4 text-3xl font-extrabold md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
+          <h2 className="mt-4 text-3xl md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
             Meet the <span className="text-[#0125BD]">Judges</span>
           </h2>
           <p className="max-w-2xl mx-auto mt-4 text-gray-500 md:mt-6 md:text-lg">

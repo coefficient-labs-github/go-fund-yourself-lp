@@ -79,6 +79,7 @@ module.exports = {
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
+        grobold: ["var(--font-grobold)", "serif"],
       },
       display: ["group-hover", "group-focus"],
       fontSize: {

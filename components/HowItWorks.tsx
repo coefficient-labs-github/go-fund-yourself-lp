@@ -8,7 +8,7 @@ const HowItWorks = () => {
           <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase md:text-base lg:text-lg">
             Real-Time Interactive Investing
           </p>
-          <h2 className="mt-4 text-2xl font-extrabold md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
+          <h2 className="mt-4 text-2xl md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
             How Does It Work?
           </h2>
           <p className="max-w-2xl mx-auto mt-4 text-gray-500 md:mt-6 md:text-lg">

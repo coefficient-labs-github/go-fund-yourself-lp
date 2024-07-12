@@ -7,9 +7,9 @@ const NewestEpisodes = ({ episodes }) => {
       className="flex flex-col items-center justify-center py-10 lg:py-12"
     >
       <div className="flex justify-between w-full px-4 mb-4 max-w-7xl 2xl:max-w-7xl">
-        <h2 className="text-xl font-extrabold md:text-3xl xl:text-4xl">
+        <h3 className="text-xl font-extrabold md:text-3xl xl:text-4xl">
           Newest Episodes
-        </h2>
+        </h3>
         <div className="relative inline-block text-left">
           <button
             type="button"
