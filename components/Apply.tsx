@@ -14,7 +14,7 @@ const ApplySection = () => {
           className="absolute bottom-0 right-0 object-cover translate-x-1/3 translate-y-1/3 -z-10"
         />
         <div className="relative grid grid-cols-1 grid-rows-[1.3fr_1fr] lg:grid-rows-1 lg:grid-cols-[1.3fr_1fr] lg:gap-16 ">
-          <div className="absolute w-full lg:h-[calc(100%-3rem)] h-full bottom-0 bg-violet-600 rounded-xl" />
+          <div className="absolute w-full lg:h-[calc(100%-3rem)] h-full bottom-0 bg-[#842DB4] rounded-xl" />
           <div className="z-10 px-8 py-8 md:px-12 md:py-12 lg:px-20 lg:pb-20 lg:pt-36">
             <p className="text-sm font-semibold tracking-widest text-yellow-300 uppercase md:text-base lg:text-lg">
               Ready to showcase your business
@@ -29,7 +29,7 @@ const ApplySection = () => {
             </p>
             <LeadForm
               trigger={
-                <button className="px-5 py-3 mt-6 text-white bg-red-500 rounded-full md:px-6 md:py-4">
+                <button className="px-5 py-3 mt-6 text-white bg-[#FF3352] rounded-full md:px-6 md:py-4">
                   Apply Now
                 </button>
               }

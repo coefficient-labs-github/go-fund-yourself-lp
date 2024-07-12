@@ -78,7 +78,7 @@ module.exports = {
         swingLeft: "swingLeft 1s ease-in-out",
       },
       fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
       display: ["group-hover", "group-focus"],
       fontSize: {

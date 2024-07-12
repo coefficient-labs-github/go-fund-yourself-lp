@@ -92,8 +92,12 @@ const IndexPage = ({ episodes, companies, testimonials, error }: Props) => {
       <FeaturedIn />
       <HowItWorks />
       <MeetTheJudges />
-      <NewestEpisodes episodes={episodes} />
-      <FeaturedCompanies companies={companies} />
+      {episodes && episodes.length > 2 ? (
+        <NewestEpisodes episodes={episodes} />
+      ) : null}
+      {companies && companies.length > 2 ? (
+        <FeaturedCompanies companies={companies} />
+      ) : null}
       <Testimonials testimonials={testimonials} />
       <ApplySection />
       <Footer />

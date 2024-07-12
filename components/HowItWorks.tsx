@@ -68,12 +68,12 @@ const HowItWorks = () => {
         </div>
         <div className="flex flex-col items-center justify-center mt-10 gap-y-2 gap-x-4 md:flex-row">
           <a href="#episodes">
-            <button className="px-5 py-3 text-white bg-red-500 rounded-full md:px-6 md:py-4">
+            <button className="px-5 py-3 text-white bg-[#FF3352] rounded-full md:px-6 md:py-4">
               Watch Show
             </button>
           </a>
           <a href="#companies">
-            <button className="px-5 py-3 text-red-500 bg-white border border-red-500 rounded-full md:px-6 md:py-4">
+            <button className="px-5 py-3 text-[#FF3352] bg-white border border-[#FF3352] rounded-full md:px-6 md:py-4">
               Explore Companies
             </button>
           </a>

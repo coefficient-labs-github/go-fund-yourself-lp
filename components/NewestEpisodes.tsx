@@ -68,7 +68,7 @@ const NewestEpisodes = ({ episodes }) => {
                 <div className="mt-6">
                   {episode.link ? (
                     <a href={episode.link}>
-                      <button className="px-4 py-2 text-white bg-red-500 rounded-full">
+                      <button className="px-4 py-2 text-white bg-[#FF3352] rounded-full">
                         Watch Now
                       </button>
                     </a>

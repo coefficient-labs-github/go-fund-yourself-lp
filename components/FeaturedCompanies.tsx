@@ -50,16 +50,20 @@ const FeaturedCompanies = ({ companies }) => {
                   {company.description}
                 </p>
                 <div className="flex mt-6 space-x-4">
-                  <a href={company.episodeLink}>
-                    <button className="px-4 py-2 text-sm text-red-500 bg-white border border-red-500 rounded-full whitespace-nowrap">
-                      Watch Episode
-                    </button>
-                  </a>
-                  <a href={company.investLink}>
-                    <button className="px-4 py-2 text-sm text-white bg-red-500 rounded-full whitespace-nowrap">
-                      Learn More
-                    </button>
-                  </a>
+                  {company.episodeLink && (
+                    <a href={company.episodeLink}>
+                      <button className="px-4 py-2 text-sm text-[#FF3352] bg-white border border-[#FF3352] rounded-full whitespace-nowrap">
+                        Watch Episode
+                      </button>
+                    </a>
+                  )}
+                  {company.investLink && (
+                    <a href={company.investLink}>
+                      <button className="px-4 py-2 text-sm text-white bg-[#FF3352] rounded-full whitespace-nowrap">
+                        Learn More
+                      </button>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -67,7 +71,7 @@ const FeaturedCompanies = ({ companies }) => {
         </div>
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="flex items-center px-5 py-3 m-auto mt-6 text-sm font-bold text-red-500 bg-white rounded-full whitespace-nowrap w-min md:px-6 md:py-4"
+          className="flex items-center px-5 py-3 m-auto mt-6 text-sm font-bold text-[#FF3352] bg-white rounded-full whitespace-nowrap w-min md:px-6 md:py-4"
         >
           {isExpanded ? "Show Less" : "Show More"}
           <svg

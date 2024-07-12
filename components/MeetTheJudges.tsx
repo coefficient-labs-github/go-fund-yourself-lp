@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useEffect, useRef } from "react";
 
 const judges = [
   {
@@ -37,7 +36,7 @@ const judges = [
     description:
       "CEO of multiple multi-million dollar companies, motivational speaker, Jayson Waller Unleashed Podcast host, entrepreneur, and author of Own Your Power, Jayson Waller has learned through trial and error the keys to being successful in this dynamic business environment.",
     imageSrc: "/imgs/jayson.png",
-    labelColor: "bg-violet-600",
+    labelColor: "bg-[#0125BD]",
     social: [
       { platform: "facebook", url: "#" },
       { platform: "instagram", url: "#" },
@@ -47,34 +46,6 @@ const judges = [
 ];
 
 const Judge = ({ judge, index }) => {
-  // const labelRef = useRef(null);
-
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           entry.target.classList.add(
-  //             index % 2 !== 0 ? "animate-swingRight" : "animate-swingLeft"
-  //           );
-  //           observer.unobserve(entry.target); // Stop observing after the animation has played
-  //         }
-  //       });
-  //     },
-  //     { threshold: 1.0 }
-  //   );
-
-  //   if (labelRef.current) {
-  //     observer.observe(labelRef.current);
-  //   }
-
-  //   return () => {
-  //     if (labelRef.current) {
-  //       observer.unobserve(labelRef.current);
-  //     }
-  //   };
-  // }, []);
-
   return (
     <div
       className={`flex flex-col px-6 py-6 md:px-12 md:py-12 gap-y-10 gap-x-16 bg-white shadow-xl items-center rounded-2xl ${
@@ -85,8 +56,7 @@ const Judge = ({ judge, index }) => {
         className={`relative flex-shrink-0 rounded-xl w-full md:max-w-xs lg:max-w-lg aspect-square`}
       >
         <Image src={judge.imageSrc} alt={judge.name} fill />
-        <div
-          // ref={labelRef}
+        {/* <div
           className={`absolute text-center justify-center rounded-xl py-4 px-8 -translate-y-4 bottom-0 ${
             judge.labelColor
           } ${
@@ -101,11 +71,11 @@ const Judge = ({ judge, index }) => {
           <span className={`font-bold text-white block whitespace-nowrap`}>
             {judge.position}
           </span>
-        </div>
+        </div> */}
       </div>
       <div className="flex-1">
-        <h3 className="text-2xl font-bold md:text-3xl xl:text-5xl">
-          {judge.title}
+        <h3 className="text-3xl font-bold md:text-4xl xl:text-5xl">
+          {judge.name}
         </h3>
         <p className="mt-4 text-gray-500 lg:text-lg">{judge.description}</p>
         <div className="flex mt-6 start gap-x-2">
@@ -132,7 +102,7 @@ const MeetTheJudges = () => {
             Our Expert Panel
           </p>
           <h2 className="mt-4 text-3xl font-extrabold md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
-            Meet the <span className="text-violet-600">Judges</span>
+            Meet the <span className="text-[#0125BD]">Judges</span>
           </h2>
           <p className="max-w-2xl mx-auto mt-4 text-gray-500 md:mt-6 md:text-lg">
             Seasoned CEOs Guiding You Through Every Investment Opportunity

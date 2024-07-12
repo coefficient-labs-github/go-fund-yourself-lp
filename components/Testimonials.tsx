@@ -28,7 +28,7 @@ const Testimonials = ({ testimonials }) => {
           What Our Viewers Are Saying
         </p>
         <h2 className="mt-4 text-3xl font-extrabold md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
-          What Companies <span className="text-violet-600">Are Saying</span>
+          What Companies <span className="text-[#0125BD]">Are Saying</span>
         </h2>
         <p className="max-w-2xl mx-auto mt-4 text-gray-500 md:mt-6 md:text-lg">
           Discover why “Go Fund Yourself!” is revolutionizing the investment
@@ -63,7 +63,7 @@ const Testimonials = ({ testimonials }) => {
                         {[...Array(5)].map((_, i) => (
                           <svg
                             key={i}
-                            className="w-5 h-5 text-red-500"
+                            className="w-5 h-5 text-[#FF3352]"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                             fill="currentColor"
