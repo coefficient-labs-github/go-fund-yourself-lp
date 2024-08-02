@@ -149,4 +149,7 @@ const IndexPage = ({
   );
 };
 
-export default IndexPage;
+const TempIndex = () => <div />;
+
+// export default IndexPage;
+export default TempIndex;
