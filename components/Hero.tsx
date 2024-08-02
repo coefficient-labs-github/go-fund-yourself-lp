@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const navItems = [
   {
-    name: "Meet the Judges",
+    name: "Judges",
     link: "#judges",
   },
   {
@@ -29,18 +29,16 @@ const HeroSection = () => {
       <Image
         src="/imgs/hero-bg.svg"
         alt="Background Image"
-        layout="fill"
-        objectFit="cover"
-        objectPosition="bottom"
-        className="absolute w-full pb-64 h-1/2 -z-10"
+        fill
+        className="object-cover object-bottom w-full pb-24 sm:pb-40 md:pb-64 -z-10"
       />
-      <div className="flex flex-col items-center px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
-        <nav className="flex justify-between max-w-5xl gap-8 mt-12">
+      <div className="flex flex-col items-center px-6 mx-auto text-center max-w-7xl">
+        <nav className="flex flex-wrap justify-center max-w-5xl mt-10 md:mt-12 gap-y-4 gap-x-12">
           {navItems.map((item, index) => (
             <a
               key={index}
               href={item.link}
-              className="text-lg font-semibold tracking-widest uppercase hover:underline"
+              className="text-sm font-semibold tracking-widest uppercase md:text-base lg:text-lg hover:underline"
             >
               {item.name}
             </a>
@@ -58,13 +56,15 @@ const HeroSection = () => {
           opportunity. Engage with top CEOs, discover innovative startups, and
           invest in real-time—all from the comfort of your home.
         </p>
-        <div className="flex justify-center mt-6 space-x-4">
-          <button className="px-6 py-4 font-bold text-red-500 bg-white rounded-full">
+        <div className="flex flex-col justify-center mt-6 gap-y-2 gap-x-4 md:flex-row">
+          <button className="px-5 py-3 font-bold text-[#FF3352] bg-white rounded-full md:px-6 md:py-4">
             Watch Live Now
           </button>
-          <button className="px-6 py-4 font-bold border border-white rounded-full">
-            Explore Companies
-          </button>
+          <a href="#companies">
+            <button className="px-5 py-3 font-bold border border-white rounded-full md:px-6 md:py-4">
+              Explore Companies
+            </button>
+          </a>
         </div>
         <video
           src="https://client-lp-assets.s3.amazonaws.com/2305_Verb_Go+Fund+Yourself+Promo_24-05-17_v03_DB_v1+(1).mp4"

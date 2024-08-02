@@ -9,7 +9,9 @@ declare global {
 const LeadForm = ({ trigger }) => {
   return (
     <Dialog.Root>
-      <Dialog.Trigger asChild>{trigger}</Dialog.Trigger>
+      <Dialog.Trigger className="cursor-pointer" asChild>
+        {trigger}
+      </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 z-50 grid p-0 px-2 overflow-y-auto bg-black bg-opacity-75 place-items-center">
           <Dialog.Content className="overflow-hidden bg-white rounded-lg">

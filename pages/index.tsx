@@ -14,107 +14,66 @@ import NewestEpisodes from "../components/NewestEpisodes";
 import Testimonials from "../components/Testimonials";
 import { fetchSpreadsheetData } from "./api/sheets";
 
-export interface Product {
-  name: string;
-  image: string;
-  price: string;
-  link: string;
-  collection: string;
-}
-
-export interface Show {
-  name: string;
-  releaseddate: string;
-  duration: string;
-  image: string;
-  link: string;
-}
-
-export interface Brand {
-  name: string;
-  image: string;
-  link: string;
+export interface Episode {
+  date: string;
+  title: string;
   description: string;
-}
-
-export interface HeroType {
-  headline: string;
-  subheadline: string;
-  color: string;
-  lightordark: string;
   image: string;
-  cta: string;
   link: string;
-  eyebrow: string;
 }
 
-export interface LogoType {
+export interface Company {
   logo: string;
+  name: string;
+  description: string;
+  episodeLink: string;
+  investLink: string;
+}
+
+export interface Testimonial {
+  picture: string;
+  quote: string;
+  title: string;
+  name: string;
 }
 
 interface Props {
-  products?: Product[];
-  shows?: Show[];
-  featuredBrands?: Brand[];
-  heroes?: HeroType[];
-  logos?: LogoType[];
+  episodes?: Episode[];
+  companies?: Company[];
+  testimonials?: Testimonial[];
+  error?: Error;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const sheetId = "1gVk681cZ7Klt70CrGmf0c4TYNGZfc3_BVD9saA7BpLA";
-  const ranges = [
-    "ProductList!A:E",
-    "Shows!A:E",
-    "FeaturedBrands!A:D",
-    "Heroes!A:H",
-    "LogosList!A:A",
-  ];
+  const sheetId = "1a-6KjDAFb6IpHiCIAMz8NiFWaw2IqjSomuUcJn5TEBA";
+  const ranges = ["Episodes!A:E", "Companies!A:E", "Testimonials!A:D"];
   try {
     const rangeData = await fetchSpreadsheetData(sheetId, ranges);
     const getMatchingKeys = (key: string) =>
       Object.keys(rangeData).find((item) => item.startsWith(key));
-    const productKey = getMatchingKeys("ProductList");
-    const showsKey = getMatchingKeys("Shows");
-    const featuredBrandsKey = getMatchingKeys("FeaturedBrands");
-    const logosKey = getMatchingKeys("LogosList");
-    const heroesKey = getMatchingKeys("Heroes");
-    if (
-      !productKey ||
-      !showsKey ||
-      !featuredBrandsKey ||
-      !heroesKey ||
-      !logosKey
-    ) {
+    const episodesKey = getMatchingKeys("Episodes");
+    const companiesKey = getMatchingKeys("Companies");
+    const testimonialsKey = getMatchingKeys("Testimonials");
+    if (!episodesKey || !companiesKey || !testimonialsKey) {
       throw new Error("Expected range keys not found in the data");
     }
-    const products = rangeData[productKey];
-    const shows = rangeData[showsKey];
-    const featuredBrands = rangeData[featuredBrandsKey];
-    const heroes = rangeData[heroesKey];
-    const logos = rangeData[logosKey];
+    const episodes = rangeData[episodesKey];
+    const companies = rangeData[companiesKey];
+    const testimonials = rangeData[testimonialsKey];
     return {
-      props: { products, shows, featuredBrands, heroes, logos },
+      props: { episodes, companies, testimonials },
       revalidate: 3600, // Revalidate after 1 hour (3600 seconds)
     };
   } catch (error) {
-    return { props: { error: "Failed to fetch data" } };
+    return { props: { error } };
   }
 };
 
-const IndexPage = ({
-  products,
-  shows,
-  featuredBrands,
-  heroes,
-  logos,
-}: Props) => {
-  const discountListProducts = products?.filter(
-    (p) => p.collection === "discount-list"
-  );
-  const trendingListProducts = products?.filter(
-    (p) => p.collection === "trending"
-  );
-
+const IndexPage = ({ episodes, companies, testimonials, error }: Props) => {
+  if (error) {
+    console.log("Error::", error);
+    return <div>500 Server Error</div>;
+  }
   return (
     <div>
       <CustomHead />
@@ -130,13 +89,16 @@ const IndexPage = ({
       /> */}
       <Banner />
       <Hero />
-      {/* <div className="pb-12 text-3xl text-center">Show Coming Soon!</div> */}
       <FeaturedIn />
       <HowItWorks />
       <MeetTheJudges />
-      <NewestEpisodes />
-      <FeaturedCompanies />
-      <Testimonials />
+      {episodes && episodes.length > 2 ? (
+        <NewestEpisodes episodes={episodes} />
+      ) : null}
+      {companies && companies.length > 2 ? (
+        <FeaturedCompanies companies={companies} />
+      ) : null}
+      <Testimonials testimonials={testimonials} />
       <ApplySection />
       <Footer />
       {/* <noscript

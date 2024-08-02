@@ -1,21 +1,22 @@
 import type { AppProps } from "next/app";
-// import { Lexend_Exa, Roboto } from "next/font/google";
+import { Roboto } from "next/font/google";
+import localFont from "next/font/local";
 import "../globals.css";
 
-// const lexendExa = Lexend_Exa({
-//   subsets: ["latin"],
-//   weight: "700",
-// });
+const grobold = localFont({
+  src: "../public/grobold.woff2",
+  variable: "--font-grobold",
+});
 
-// const roboto = Roboto({
-//   subsets: ["latin"],
-//   weight: ["100", "300", "400"],
-// });
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400"],
+});
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div className={`${roboto.className} ${grobold.variable}`}>
       <Component {...pageProps} />
-    </>
+    </div>
   );
 }

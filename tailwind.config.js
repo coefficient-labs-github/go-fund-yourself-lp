@@ -59,8 +59,27 @@ module.exports = {
       letterSpacing: {
         "tighter-heading": "-0.1em",
       },
+      keyframes: {
+        swingRight: {
+          "0%": { transform: "rotate(24deg)" },
+          "25%": { transform: "rotate(15deg)" },
+          "75%": { transform: "rotate(33deg)" },
+          "100%": { transform: "rotate(24deg)" },
+        },
+        swingLeft: {
+          "0%": { transform: "rotate(-24deg)" },
+          "25%": { transform: "rotate(-15deg)" },
+          "75%": { transform: "rotate(-33deg)" },
+          "100%": { transform: "rotate(-24deg)" },
+        },
+      },
+      animation: {
+        swingRight: "swingRight 1s ease-in-out",
+        swingLeft: "swingLeft 1s ease-in-out",
+      },
       fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+        grobold: ["var(--font-grobold)", "serif"],
       },
       display: ["group-hover", "group-focus"],
       fontSize: {

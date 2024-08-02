@@ -1,62 +1,19 @@
 import Image from "next/image";
 
-const episodes = [
-  {
-    date: "STREAMED FRIDAY, JUNE 21ST",
-    title: "The Businesses & Products from Season 15, Episode 4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-    buttonText: "Watch Episode",
-    buttonType: "primary",
-  },
-  {
-    date: "UPCOMING • FRIDAY, JUNE 28TH",
-    title: "The Businesses & Products from Season 15, Episode 4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-    buttonText: "Coming Soon",
-    buttonType: "secondary",
-  },
-  {
-    date: "UPCOMING • FRIDAY, JULY 5TH",
-    title: "The Businesses & Products from Season 15, Episode 4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-    buttonText: "Coming Soon",
-    buttonType: "secondary",
-  },
-  {
-    date: "UPCOMING • FRIDAY, JULY 12TH",
-    title: "The Businesses & Products from Season 15, Episode 4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-    buttonText: "Coming Soon",
-    buttonType: "secondary",
-  },
-  {
-    date: "UPCOMING • FRIDAY, JULY 19TH",
-    title: "The Businesses & Products from Season 15, Episode 4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageSrc: "https://picsum.photos/500/300",
-    buttonText: "Coming Soon",
-    buttonType: "secondary",
-  },
-];
-
-const NewestEpisodes = () => {
+const NewestEpisodes = ({ episodes }) => {
   return (
     <section
       id="episodes"
       className="flex flex-col items-center justify-center py-10 lg:py-12"
     >
-      <div className="flex justify-between w-full max-w-6xl px-4 mb-4 2xl:max-w-7xl">
-        <h2 className="text-4xl font-extrabold text-gray-900">
+      <div className="flex justify-between w-full px-4 mb-4 max-w-7xl 2xl:max-w-7xl">
+        <h3 className="text-xl font-extrabold md:text-3xl xl:text-4xl">
           Newest Episodes
-        </h2>
+        </h3>
         <div className="relative inline-block text-left">
           <button
             type="button"
-            className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50"
+            className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50"
           >
             Season 1
             <svg
@@ -84,13 +41,14 @@ const NewestEpisodes = () => {
               className="overflow-hidden bg-white rounded-lg shadow-lg w-72"
             >
               <div className="relative">
-                <Image
-                  src={episode.imageSrc}
-                  alt={episode.title}
-                  width={500}
-                  height={300}
-                  className="object-cover"
-                />
+                <div className="aspect-video">
+                  <Image
+                    src={episode.image || "/imgs/episode-coming-soon.png"}
+                    alt={episode.title}
+                    className="object-cover"
+                    fill
+                  />
+                </div>
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
                   <button className="text-4xl text-white">
                     <i className="fas fa-play-circle"></i>
@@ -100,27 +58,23 @@ const NewestEpisodes = () => {
               <div className="p-6">
                 <p
                   className={`text-sm ${
-                    episode.buttonType === "primary"
-                      ? "text-red-600"
-                      : "text-gray-500"
+                    episode.link ? "text-red-600" : "text-gray-500"
                   }`}
                 >
                   {episode.date}
                 </p>
-                <h3 className="mt-2 text-lg font-bold text-gray-900">
-                  {episode.title}
-                </h3>
-                <p className="mt-3 text-base text-gray-500">
-                  {episode.description}
-                </p>
+                <h3 className="mt-2 font-bold md:text-lg">{episode.title}</h3>
+                <p className="mt-3 text-gray-500">{episode.description}</p>
                 <div className="mt-6">
-                  {episode.buttonType === "primary" ? (
-                    <button className="px-4 py-2 font-bold text-white bg-red-500 rounded-full">
-                      {episode.buttonText}
-                    </button>
+                  {episode.link ? (
+                    <a href={episode.link}>
+                      <button className="px-4 py-2 text-white bg-[#FF3352] rounded-full">
+                        Watch Now
+                      </button>
+                    </a>
                   ) : (
-                    <button className="px-4 py-2 font-bold text-gray-700 bg-gray-200 rounded-full">
-                      {episode.buttonText}
+                    <button className="px-4 py-2 text-gray-500 bg-gray-200 rounded-full">
+                      Coming Soon
                     </button>
                   )}
                 </div>

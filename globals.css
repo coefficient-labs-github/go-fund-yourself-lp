@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --font-grobold: "Grobold", serif;
   --color-primary: 255 255 255; /* Text, buttons, etc. */
   --color-secondary: 252 232 232; /* Backgrounds, borders, etc. */
   --color-typeBlack: 26 26 26; /* Text, buttons, etc. */
@@ -47,7 +48,11 @@
 
 @layer base {
   body {
-    @apply font-montserrat text-typeBlack balance;
+    @apply text-gray-800 font-roboto balance;
+  }
+  h1,
+  h2 {
+    @apply font-grobold;
   }
 }
 
@@ -56,20 +61,14 @@
   .slide-animation {
     animation: slide linear infinite;
   }
-  .cta-btn {
-    @apply inline-block px-8 py-4 text-lg text-white underline transition-all transform rounded-lg cursor-pointer lg:text-xl hover:scale-110 hover:opacity-90 bg-accentRed w-fit;
-  }
-  .cta-btn-inverted {
-    @apply inline-block px-8 py-4 text-lg underline transition-all transform bg-transparent bg-white rounded-lg cursor-pointer lg:text-xl hover:scale-110 hover:opacity-90 w-fit text-accentRed;
-  }
-  .accent-gradient {
-    background: linear-gradient(180deg, #e08a6c 0%, #e06c73 117.21%);
-  }
 }
 
 @layer utilities {
   .balance {
     text-wrap: balance;
+  }
+  .not-balanced {
+    text-wrap: initial;
   }
   .avoidwrap {
     display: inline-block;
