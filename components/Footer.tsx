@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { platforms } from "./FeaturedIn";
 
 const links = [
   { text: "Back to Top", href: "#hero" },
@@ -11,29 +12,34 @@ const links = [
 
 const Footer = () => {
   return (
-    <footer className="pt-8 pb-12 text-white bg-black md:py-24">
-      <ul className="flex flex-wrap justify-center px-6 mx-auto list-none lg:text-lg gap-y-4 gap-x-20">
-        {links.map((link, index) => (
-          <li key={index} className="mx-0">
-            <a href={link.href} className="hover:underline">
-              {link.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <div className="flex flex-col justify-center gap-12 px-6 mx-auto mt-12 text-center lg:mt-20 lg:gap-20 md:flex-row md:grid-cols-2">
-        <div>
-          <h3 className="">Email</h3>
-          <p className="mt-1 font-bold md:text-lg lg:text-2xl">
-            info@gofundyourself.show
+    <footer className="pt-6 pb-16 text-white bg-black">
+      <div className="grid col-span-1 gap-8 px-6 mx-auto sm:grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr] max-w-7xl">
+        <div className="col-span-1 px-6 sm:col-span-2 md:col-span-1 lg:gap-20 md:flex-row">
+          <p className="mt-2 text-2xl lg:text-3xl font-grobold">
+            GO FUND YOURSELF!
           </p>
+          <p className="mt-2 lg:text-lg">info@gofundyourself.show</p>
+          <p className="mt-2 lg:text-lg">10621 Calle Lee, Suite 153</p>
+          <p className="lg:text-lg">Los Alamitos, CA 90720</p>
         </div>
-        <div>
-          <h3 className="">Address</h3>
-          <p className="mt-1 font-bold md:text-lg lg:text-2xl">
-            10621 Calle Lee, Suite 153. Los Alamitos, CA 90720
-          </p>
-        </div>
+        <ul className="px-6 list-none lg:text-lg gap-y-4 gap-x-20">
+          {links.map((link, index) => (
+            <li key={index} className="mx-0">
+              <a href={link.href} className="hover:underline">
+                {link.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <ul className="px-6 list-none lg:text-lg gap-y-4 gap-x-20">
+          {platforms.map((platform, index) => (
+            <li key={index} className="mx-0">
+              <a href={platform.link} className="hover:underline">
+                {platform.platform}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </footer>
   );
