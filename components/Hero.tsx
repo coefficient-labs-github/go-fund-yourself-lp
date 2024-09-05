@@ -67,7 +67,7 @@ const HeroSection = () => {
           </a>
         </div>
         <video
-          src="https://client-lp-assets.s3.amazonaws.com/2305_Verb_Go+Fund+Yourself+Promo_24-05-17_v03_DB_v1+(1).mp4"
+          src="https://client-lp-assets.s3.amazonaws.com/Sizzle+Reel.mp4"
           className="z-20 w-full max-w-6xl mt-12 bg-white cursor-pointer rounded-3xl"
           poster="/imgs/hero-poster.png"
           preload="none"

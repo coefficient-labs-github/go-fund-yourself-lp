@@ -92,10 +92,10 @@ const IndexPage = ({ episodes, companies, testimonials, error }: Props) => {
       <FeaturedIn />
       <HowItWorks />
       <MeetTheJudges />
-      {episodes && episodes.length > 2 ? (
+      {episodes && episodes.length > 0 ? (
         <NewestEpisodes episodes={episodes} />
       ) : null}
-      {companies && companies.length > 2 ? (
+      {companies && companies.length > 0 ? (
         <FeaturedCompanies companies={companies} />
       ) : null}
       <Testimonials testimonials={testimonials} />
@@ -111,7 +111,4 @@ const IndexPage = ({ episodes, companies, testimonials, error }: Props) => {
   );
 };
 
-const TempIndex = () => <div />;
-
-// export default IndexPage;
-export default TempIndex;
+export default IndexPage;

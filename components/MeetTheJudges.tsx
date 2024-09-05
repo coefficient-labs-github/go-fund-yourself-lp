@@ -1,4 +1,10 @@
 import Image from "next/image";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  YoutubeIcon,
+} from "./Icons";
 
 const judges = [
   {
@@ -8,11 +14,24 @@ const judges = [
     description:
       "Rory J. Cutaia is a trailblazer in the tech and telecom industries. Starting as an attorney for top entrepreneurs, he founded Telx, revolutionizing the data center sector. Under his leadership, Telx grew from a startup to a $1.9 billion industry leader. As the current Founder & CEO of VERB, Rory brings unparalleled expertise in business strategy, innovation, and growth, making him a formidable force on our judging panel.",
     imageSrc: "/imgs/rory.png",
-    labelColor: "bg-yellow-400",
+    color: "#0024be",
     social: [
-      { platform: "facebook", url: "#" },
-      { platform: "instagram", url: "#" },
-      { platform: "linkedin", url: "#" },
+      {
+        platform: "facebook",
+        url: "https://www.facebook.com/profile.php?id=61563865485948",
+      },
+      {
+        platform: "instagram",
+        url: "https://www.instagram.com/gofundyourselfshow?igsh=MTBpMXdpaDV6OGEwZQ==",
+      },
+      {
+        platform: "linkedin",
+        url: "https://www.linkedin.com/company/go-fund-yourself-show",
+      },
+      {
+        platform: "youtube",
+        url: "https://www.youtube.com/@GoFundYourselfShow",
+      },
     ],
   },
   {
@@ -22,11 +41,21 @@ const judges = [
     description:
       "David Meltzer, Co-founder of Sports 1 Marketing and former CEO of Leigh Steinberg Sports & Entertainment, is dedicated to empowering over 1 billion people to find happiness. His mission to deliver value has made him a renowned figure in sports marketing. With his wealth of experience and commitment to positive impact, David offers invaluable insights and guidance to entrepreneurs on “Go Fund Yourself!”",
     imageSrc: "/imgs/david.png",
-    labelColor: "bg-red-400",
+    color: "#fce62c",
     social: [
-      { platform: "facebook", url: "#" },
-      { platform: "instagram", url: "#" },
-      { platform: "linkedin", url: "#" },
+      { platform: "facebook", url: "https://www.facebook.com/davidmeltzer11/" },
+      {
+        platform: "instagram",
+        url: "https://www.instagram.com/davidmeltzer/?hl=en",
+      },
+      {
+        platform: "linkedin",
+        url: "https://www.linkedin.com/in/davidmeltzer2/",
+      },
+      {
+        platform: "youtube",
+        url: "https://www.youtube.com/channel/UCflt1OopRWIApMOjVgZyJ6Q",
+      },
     ],
   },
   {
@@ -36,11 +65,24 @@ const judges = [
     description:
       "CEO of multiple multi-million dollar companies, motivational speaker, Jayson Waller Unleashed Podcast host, entrepreneur, and author of Own Your Power, Jayson Waller has learned through trial and error the keys to being successful in this dynamic business environment.",
     imageSrc: "/imgs/jayson.png",
-    labelColor: "bg-[#0125BD]",
+    color: "#fc3053",
     social: [
-      { platform: "facebook", url: "#" },
-      { platform: "instagram", url: "#" },
-      { platform: "linkedin", url: "#" },
+      {
+        platform: "facebook",
+        url: "https://www.facebook.com/JaysonWallerBAM/",
+      },
+      {
+        platform: "instagram",
+        url: "https://www.instagram.com/jaysonwallerbam/",
+      },
+      {
+        platform: "linkedin",
+        url: "https://www.linkedin.com/in/jayson-waller-/",
+      },
+      {
+        platform: "youtube",
+        url: "https://www.youtube.com/channel/UCwTHT2Q-omcIjTOwOa2imTQ",
+      },
     ],
   },
 ];
@@ -55,36 +97,37 @@ const Judge = ({ judge, index }) => {
       <div
         className={`relative flex-shrink-0 rounded-xl w-full md:max-w-xs lg:max-w-lg aspect-square`}
       >
-        <Image src={judge.imageSrc} alt={judge.name} fill />
-        {/* <div
-          className={`absolute text-center justify-center rounded-xl py-4 px-8 -translate-y-4 bottom-0 ${
-            judge.labelColor
-          } ${
-            index % 2 !== 0
-              ? "left-0 rotate-[24deg] -translate-x-8 "
-              : "right-0 -rotate-[24deg] translate-x-8 "
-          }`}
-        >
-          <span className={`font-bold text-xl lg:text-3xl text-white block`}>
-            {judge.name}
-          </span>
-          <span className={`font-bold text-white block whitespace-nowrap`}>
-            {judge.position}
-          </span>
-        </div> */}
+        <Image
+          src={judge.imageSrc}
+          alt={judge.name}
+          fill
+          className="rounded-xl"
+        />
       </div>
       <div className="flex-1">
         <h3 className="text-3xl md:text-4xl xl:text-5xl font-grobold">
           {judge.name}
         </h3>
         <p className="mt-4 text-gray-500 lg:text-lg">{judge.description}</p>
-        <div className="flex mt-6 start gap-x-2">
+        <div className="flex w-10 h-10 mt-6 start gap-x-2">
           {judge.social.map((social, idx) => (
             <a key={idx} href={social.url} className="text-gray-500 ">
-              <img
-                src={`/svgs/${social.platform}.svg`}
-                className="w-8 lg:w-10 aspect-square"
-              />
+              {
+                {
+                  youtube: (
+                    <YoutubeIcon color={judge.color} height={42} width={42} />
+                  ),
+                  instagram: (
+                    <InstagramIcon color={judge.color} height={42} width={42} />
+                  ),
+                  facebook: (
+                    <FacebookIcon color={judge.color} height={42} width={42} />
+                  ),
+                  linkedin: (
+                    <LinkedInIcon color={judge.color} height={42} width={42} />
+                  ),
+                }[social.platform]
+              }
             </a>
           ))}
         </div>

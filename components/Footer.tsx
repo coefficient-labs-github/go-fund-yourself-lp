@@ -25,13 +25,13 @@ const Footer = () => {
         <div>
           <h3 className="">Email</h3>
           <p className="mt-1 font-bold md:text-lg lg:text-2xl">
-            hello@gofundyourself.show
+            info@gofundyourself.show
           </p>
         </div>
         <div>
-          <h3 className="">Phone Number</h3>
+          <h3 className="">Address</h3>
           <p className="mt-1 font-bold md:text-lg lg:text-2xl">
-            +1 (123) 456 789
+            10621 Calle Lee, Suite 153. Los Alamitos, CA 90720
           </p>
         </div>
       </div>

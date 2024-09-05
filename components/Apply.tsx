@@ -17,7 +17,7 @@ const ApplySection = () => {
           <div className="absolute w-full lg:h-[calc(100%-3rem)] h-full bottom-0 bg-[#842DB4] rounded-xl" />
           <div className="z-10 px-8 py-8 md:px-12 md:py-12 lg:px-20 lg:pb-20 lg:pt-36">
             <p className="text-sm font-semibold tracking-widest text-yellow-300 uppercase md:text-base lg:text-lg">
-              Ready to showcase your business
+              Ready to showcase your business?
             </p>
             <h2 className="mt-4 text-2xl text-white md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
               Apply to Pitch On Go Fund Yourself!
