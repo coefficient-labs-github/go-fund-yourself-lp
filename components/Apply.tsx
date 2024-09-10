@@ -4,7 +4,7 @@ import LeadForm from "./LeadForm";
 const ApplySection = () => {
   return (
     <section className="relative pb-32 overflow-hidden" id="apply">
-      <div className="absolute bottom-0 w-full bg-black h-1/2 -z-20" />
+      <div className="absolute bottom-0 w-full bg-[#842DB4] h-1/2 -z-20" />
       <div className="relative px-6 mx-auto text-center max-w-7xl md:text-left">
         <Image
           src="/imgs/footer-shape.svg"
@@ -13,9 +13,9 @@ const ApplySection = () => {
           height={400}
           className="absolute bottom-0 right-0 object-cover translate-x-1/3 translate-y-1/3 -z-10"
         />
-        <div className="relative grid grid-cols-1 grid-rows-[1.3fr_1fr] lg:grid-rows-1 lg:grid-cols-[1.3fr_1fr] lg:gap-16 ">
-          <div className="absolute w-full lg:h-[calc(100%-3rem)] h-full bottom-0 bg-[#842DB4] rounded-xl" />
-          <div className="z-10 px-8 py-8 md:px-12 md:py-12 lg:px-20 lg:pb-20 lg:pt-36">
+        <div className="relative grid grid-cols-1 grid-rows-[1.3fr_1fr] overflow-hidden lg:grid-rows-1 lg:grid-cols-2 lg:gap-16 ">
+          <div className="absolute bottom-0 w-full h-full bg-black rounded-xl" />
+          <div className="z-10 px-8 py-8 md:px-12 md:py-12 lg:px-20 lg:pb-16 lg:pt-20">
             <p className="text-sm font-semibold tracking-widest text-yellow-300 uppercase md:text-base lg:text-lg">
               Ready to showcase your business?
             </p>
@@ -35,14 +35,11 @@ const ApplySection = () => {
               }
             />
           </div>
-          <div className="relative w-full h-full">
-            <Image
-              src="/imgs/footer-pic.png"
-              alt="Apply to Pitch"
-              fill
-              className="absolute bottom-0 object-contain"
-            />
-          </div>
+          <img
+            src="/imgs/footer-pic.webp"
+            alt="Apply to Pitch"
+            className="absolute bottom-0 right-0 object-cover object-top w-full lg:object-contain lg:object-right-bottom h-[45%] lg:h-full"
+          />
         </div>
       </div>
     </section>

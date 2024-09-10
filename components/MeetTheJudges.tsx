@@ -12,7 +12,7 @@ const judges = [
     title: "Leader in Telecom & Technology",
     position: "Founder & CEO @ Verb",
     description:
-      "Rory J. Cutaia is a trailblazer in the tech and telecom industries. Starting as an attorney for top entrepreneurs, he founded Telx, revolutionizing the data center sector. Under his leadership, Telx grew from a startup to a $1.9 billion industry leader. As the current Founder & CEO of VERB, Rory brings unparalleled expertise in business strategy, innovation, and growth, making him a formidable force on our judging panel.",
+      "Rory J. Cutaia is a trailblazer in the tech and telecom industries. Starting as an attorney for top entrepreneurs, he founded Telx, revolutionizing the data center sector. Telx grew from a startup to a $1.9 billion industry leader. As the current Founder & CEO of VERB, Rory brings unparalleled expertise in business strategy, innovation, and growth, making him a formidable force on our judging panel.",
     imageSrc: "/imgs/rory.png",
     color: "#0024be",
     social: [
@@ -39,7 +39,7 @@ const judges = [
     title: "Leader in Sports Marketing",
     position: "Co-Founder @ Sport 1 Marketing",
     description:
-      "David Meltzer, Co-founder of Sports 1 Marketing and former CEO of Leigh Steinberg Sports & Entertainment, is dedicated to empowering over 1 billion people to find happiness. His mission to deliver value has made him a renowned figure in sports marketing. With his wealth of experience and commitment to positive impact, David offers invaluable insights and guidance to entrepreneurs on “Go Fund Yourself!”",
+      "Co-founder of Sports 1 Marketing and former CEO of Leigh Steinberg Sports & Entertainment, David Meltzer is dedicated to empowering over 1 billion people to find happiness. His mission to deliver value has made him a renowned figure in sports marketing. With his wealth of experience and commitment to positive impact, David offers invaluable insights and guidance to entrepreneurs on “Go Fund Yourself!”",
     imageSrc: "/imgs/david.png",
     color: "#fce62c",
     social: [
@@ -63,7 +63,7 @@ const judges = [
     title: "Account Marketing Leader",
     position: "CEO @ BAM Coaching",
     description:
-      "CEO of multiple multi-million dollar companies, motivational speaker, Jayson Waller Unleashed Podcast host, entrepreneur, and author of Own Your Power, Jayson Waller has learned through trial and error the keys to being successful in this dynamic business environment.",
+      "Jayson Waller is a well-respected thought leader in solar, home services, and digital lead-gen, CEO of multiple multi-million-dollar companies, a successful author, motivational speaker, and host of the popular Jayson Waller Unleashed Podcast, who brings his own brand of BAM to business problem solving.",
     imageSrc: "/imgs/jayson.png",
     color: "#fc3053",
     social: [
@@ -145,7 +145,7 @@ const MeetTheJudges = () => {
             Our Expert Panel
           </p>
           <h2 className="mt-4 text-3xl md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
-            Meet the <span className="text-[#0125BD]">Judges</span>
+            Meet the <span className="text-[#0125BD]">Titans</span>
           </h2>
           <p className="max-w-2xl mx-auto mt-4 text-gray-500 md:mt-6 md:text-lg">
             Seasoned CEOs Guiding You Through Every Investment Opportunity

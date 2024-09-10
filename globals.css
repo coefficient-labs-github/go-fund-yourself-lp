@@ -61,6 +61,10 @@
   .slide-animation {
     animation: slide linear infinite;
   }
+  .image-glow {
+    box-shadow: 0 0 200px 5px rgba(255, 255, 255, 0.7); /* White glow */
+    border-radius: 8px; /* Optional: adjust the radius as needed */
+  }
 }
 
 @layer utilities {

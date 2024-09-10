@@ -12,7 +12,7 @@ const links = [
 
 const Footer = () => {
   return (
-    <footer className="pt-6 pb-16 text-white bg-black">
+    <footer className="pt-6 pb-16 text-white bg-[#842DB4]">
       <div className="grid col-span-1 gap-8 px-6 mx-auto sm:grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr] max-w-7xl">
         <div className="col-span-1 px-6 sm:col-span-2 md:col-span-1 lg:gap-20 md:flex-row">
           <p className="mt-2 text-2xl lg:text-3xl font-grobold">
