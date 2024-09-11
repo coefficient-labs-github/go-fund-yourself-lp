@@ -111,4 +111,6 @@ const IndexPage = ({ episodes, companies, testimonials, error }: Props) => {
   );
 };
 
-export default IndexPage;
+export default () => <div />;
+
+// export default IndexPage;
