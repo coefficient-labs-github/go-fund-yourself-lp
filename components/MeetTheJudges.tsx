@@ -12,7 +12,7 @@ const judges = [
     title: "Leader in Telecom & Technology",
     position: "Founder & CEO @ Verb",
     description:
-      "Rory J. Cutaia is a trailblazer in the tech and telecom industries. Starting as an attorney for top entrepreneurs, he founded Telx, revolutionizing the data center sector. Telx grew from a startup to a $1.9 billion industry leader. As the current Founder & CEO of VERB, Rory brings unparalleled expertise in business strategy, innovation, and growth, making him a formidable force on our judging panel.",
+      "Rory J. Cutaia is a trailblazer in the tech and telecom industries. Starting as an attorney for top entrepreneurs, he founded Telx, revolutionizing the data center sector. Telx grew from a startup to a $1.9 billion industry leader. As the current Founder & CEO of VERB, Rory brings unparalleled expertise in business strategy, innovation, and growth, making him a formidable force on our panel.",
     imageSrc: "/imgs/rory.png",
     color: "#0024be",
     social: [

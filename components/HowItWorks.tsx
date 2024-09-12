@@ -30,9 +30,9 @@ const HowItWorks = () => {
               imgSrc: "/imgs/step-2.webp",
             },
             {
-              headline: "Ready to Invest",
+              headline: "Ready to Invest?",
               description:
-                "Scan the on screen QR code or click the link below to decide for yourself what companies you want to bet on!",
+                "Click the Invest Now button on screen or in the description to decide for yourself what companies you want to bet on!",
               imgSrc: "/imgs/step-3.webp",
             },
           ].map((step, index) => (

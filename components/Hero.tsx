@@ -69,7 +69,7 @@ const HeroSection = () => {
         <video
           src="https://client-lp-assets.s3.amazonaws.com/Sizzle+Reel.mp4"
           className="z-20 w-full max-w-6xl mt-12 bg-white cursor-pointer rounded-3xl"
-          poster="/imgs/GoFundYourself-Thumbnail.webp"
+          poster="/imgs/GoFundYourself-Thumbnail.jpg"
           preload="none"
           controls
           onClick={(e) => (e.target as HTMLVideoElement).play()}

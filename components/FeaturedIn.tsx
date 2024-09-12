@@ -24,7 +24,7 @@ export const platforms = [
   {
     platform: "MARKET.live",
     src: "/svgs/GoFundYourself-Market-Streaming.svg",
-    link: "#",
+    link: "https://www.market.live/portal/s/go-fund-yourself",
   },
   {
     platform: "TikTok",
