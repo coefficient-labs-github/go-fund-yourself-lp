@@ -76,6 +76,7 @@ const IndexPage = ({ episodes, companies, testimonials, error }: Props) => {
   }
   const now = new Date();
   const launchDate = new Date("2024-09-17T11:30:00Z");
+  console.log(process.env.NODE_ENV);
   if (process.env.NODE_ENV === "production" && now < launchDate) {
     const timeLeft = launchDate.getTime() - now.getTime();
     const hoursLeft = Math.floor(timeLeft / 1000 / 60 / 60);
