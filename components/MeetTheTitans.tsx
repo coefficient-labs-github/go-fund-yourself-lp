@@ -144,7 +144,7 @@ const MeetTheTitans = () => {
           <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase md:text-base lg:text-lg">
             Our Expert Panel
           </p>
-          <h2 className="mt-4 text-3xl md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
+          <h2 className="mt-4 text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
             Meet the <span className="text-[#0125BD]">Titans</span>
           </h2>
           <p className="max-w-2xl mx-auto mt-4 text-gray-500 md:mt-6 md:text-lg">

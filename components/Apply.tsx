@@ -19,7 +19,7 @@ const ApplySection = () => {
             <p className="text-sm font-semibold tracking-widest text-yellow-300 uppercase md:text-base lg:text-lg">
               Ready to showcase your business?
             </p>
-            <h2 className="mt-4 text-2xl text-white md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
+            <h2 className="mt-4 text-4xl text-white md:mt-6 lg:text-5xl xl:text-6xl">
               Apply to Pitch On Go Fund Yourself!
             </h2>
             <p className="mt-4 text-white md:text-lg not-balanced">

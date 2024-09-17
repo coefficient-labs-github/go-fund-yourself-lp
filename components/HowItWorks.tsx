@@ -8,7 +8,7 @@ const HowItWorks = () => {
           <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase md:text-base lg:text-lg">
             Real-Time Interactive Investing
           </p>
-          <h2 className="mt-4 text-2xl md:text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
+          <h2 className="mt-4 text-4xl md:mt-6 lg:text-5xl xl:text-6xl">
             How Does It <span className="text-[#ff3352]"> Work</span>?
           </h2>
           <p className="max-w-2xl mx-auto mt-4 text-gray-500 md:mt-6 md:text-lg">
@@ -38,7 +38,7 @@ const HowItWorks = () => {
           ].map((step, index) => (
             <div
               key={index}
-              className="flex flex-col items-center max-w-xl p-6 overflow-hidden text-center rounded-lg shadow-lg md:p-8"
+              className="flex flex-col items-center max-w-xl p-4 overflow-hidden text-center rounded-lg shadow-lg md:p-8"
             >
               <Image
                 src={step.imgSrc}
