@@ -6,8 +6,8 @@ export const YoutubeIcon = ({ color, width = 40, height = 40 }) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_2160_1769)">
-      <g clip-path="url(#clip1_2160_1769)">
+    <g clipPath="url(#clip0_2160_1769)">
+      <g clipPath="url(#clip1_2160_1769)">
         <g filter="url(#filter0_d_2160_1769)">
           <path
             d="M20 40.0544C31.0457 40.0544 40 31.1001 40 20.0544C40 9.00875 31.0457 0.0544434 20 0.0544434C8.9543 0.0544434 0 9.00875 0 20.0544C0 31.1001 8.9543 40.0544 20 40.0544Z"
@@ -30,9 +30,9 @@ export const YoutubeIcon = ({ color, width = 40, height = 40 }) => (
         width="100"
         height="100"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -91,9 +91,9 @@ export const InstagramIcon = ({ color, width = 48, height = 48 }) => (
         width="120"
         height="120"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -134,7 +134,7 @@ export const LinkedInIcon = ({ color, width = 48, height = 48 }) => (
     <g filter="url(#filter0_d_2036_19215)">
       <circle cx="60" cy="56.0652" r="24" fill={color} />
     </g>
-    <g clip-path="url(#clip0_2036_19215)">
+    <g clipPath="url(#clip0_2036_19215)">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -150,9 +150,9 @@ export const LinkedInIcon = ({ color, width = 48, height = 48 }) => (
         width="120"
         height="120"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -213,9 +213,9 @@ export const FacebookIcon = ({ color, width = 48, height = 48 }) => (
         width="120"
         height="120"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
