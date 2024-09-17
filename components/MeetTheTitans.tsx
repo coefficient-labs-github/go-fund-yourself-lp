@@ -6,13 +6,13 @@ import {
   YoutubeIcon,
 } from "./Icons";
 
-const judges = [
+const titans = [
   {
-    name: "Rory J. Cutaia",
+    name: "Rory Cutaia",
     title: "Leader in Telecom & Technology",
     position: "Founder & CEO @ Verb",
     description:
-      "Rory J. Cutaia is a trailblazer in the tech and telecom industries. Starting as an attorney for top entrepreneurs, he founded Telx, revolutionizing the data center sector. Telx grew from a startup to a $1.9 billion industry leader. As the current Founder & CEO of VERB, Rory brings unparalleled expertise in business strategy, innovation, and growth, making him a formidable force on our panel.",
+      "From successful New York City attorney to telecom disruptor, investor, and serial entrepreneur who sold his first start-up for more than $200 million; he's currently founder and CEO of NASDAQ-listed Verb Technology Company, and MARKET.live, a tech start-up disrupting the livestream shopping sector.",
     imageSrc: "/imgs/rory.png",
     color: "#0024be",
     social: [
@@ -39,7 +39,7 @@ const judges = [
     title: "Leader in Sports Marketing",
     position: "Co-Founder @ Sport 1 Marketing",
     description:
-      "Co-founder of Sports 1 Marketing and former CEO of Leigh Steinberg Sports & Entertainment, David Meltzer is dedicated to empowering over 1 billion people to find happiness. His mission to deliver value has made him a renowned figure in sports marketing. With his wealth of experience and commitment to positive impact, David offers invaluable insights and guidance to entrepreneurs on “Go Fund Yourself!”",
+      "From CEO of sports super-agent Leigh Steinberg, to successful founder and CEO of Sports 1 Marketing, David Meltzer is an accomplished author, investor, philanthropist, and business coach and one of the most sought-after inspirational and motivational speakers at the world's biggest business, sports, technology, and motivational events.",
     imageSrc: "/imgs/david.png",
     color: "#fce62c",
     social: [
@@ -63,7 +63,7 @@ const judges = [
     title: "Account Marketing Leader",
     position: "CEO @ BAM Coaching",
     description:
-      "Jayson Waller is a well-respected thought leader in solar, home services, and digital lead-gen, CEO of multiple multi-million-dollar companies, a successful author, motivational speaker, and host of the popular Jayson Waller Unleashed Podcast, who brings his own brand of BAM to business problem solving.",
+      "A well-respected thought leader in solar, home services, and digital lead-gen, CEO of multiple multi-million-dollar companies, a successful author, motivational speaker, and host of the popular Jayson Waller Unleashed Podcast, he brings his own brand of BAM to business problem solving.",
     imageSrc: "/imgs/jayson.png",
     color: "#fc3053",
     social: [
@@ -136,9 +136,9 @@ const Judge = ({ judge, index }) => {
   );
 };
 
-const MeetTheJudges = () => {
+const MeetTheTitans = () => {
   return (
-    <section id="judges" className="py-16 bg-white">
+    <section id="titans" className="py-16 bg-white">
       <div className="px-6 mx-auto max-w-7xl">
         <div className="text-center">
           <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase md:text-base lg:text-lg">
@@ -152,7 +152,7 @@ const MeetTheJudges = () => {
           </p>
         </div>
         <div className="flex flex-col gap-6 mt-6">
-          {judges.map((judge, index) => (
+          {titans.map((judge, index) => (
             <Judge judge={judge} index={index} key={index} />
           ))}
         </div>
@@ -161,4 +161,4 @@ const MeetTheJudges = () => {
   );
 };
 
-export default MeetTheJudges;
+export default MeetTheTitans;

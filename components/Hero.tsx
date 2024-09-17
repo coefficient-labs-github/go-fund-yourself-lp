@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const navItems = [
   {
-    name: "Judges",
-    link: "#judges",
+    name: "Titans",
+    link: "#titans",
   },
   {
     name: "Episodes",
@@ -57,9 +57,11 @@ const HeroSection = () => {
           invest in real-time—all from the comfort of your home.
         </p>
         <div className="flex flex-col justify-center mt-6 gap-y-2 gap-x-4 md:flex-row">
-          <button className="px-5 py-3 font-bold text-[#FF3352] bg-white rounded-full md:px-6 md:py-4">
-            Watch Live Now
-          </button>
+          <a href="#episodes">
+            <button className="px-5 py-3 font-bold text-[#FF3352] bg-white rounded-full md:px-6 md:py-4">
+              Watch Show
+            </button>
+          </a>
           <a href="#companies">
             <button className="px-5 py-3 font-bold border border-white rounded-full md:px-6 md:py-4">
               Explore Companies

@@ -9,7 +9,7 @@ import FeaturedIn from "../components/FeaturedIn";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import HowItWorks from "../components/HowItWorks";
-import MeetTheJudges from "../components/MeetTheJudges";
+import MeetTheTitans from "../components/MeetTheTitans";
 import NewestEpisodes from "../components/NewestEpisodes";
 import Testimonials from "../components/Testimonials";
 import { fetchSpreadsheetData } from "./api/sheets";
@@ -91,7 +91,7 @@ const IndexPage = ({ episodes, companies, testimonials, error }: Props) => {
       <Hero />
       <FeaturedIn />
       <HowItWorks />
-      <MeetTheJudges />
+      <MeetTheTitans />
       {episodes && episodes.length > 0 ? (
         <NewestEpisodes episodes={episodes} />
       ) : null}

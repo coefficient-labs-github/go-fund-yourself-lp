@@ -3,7 +3,7 @@ import { platforms } from "./FeaturedIn";
 
 const links = [
   { text: "Back to Top", href: "#hero" },
-  { text: "Judges", href: "#judges" },
+  { text: "Titans", href: "#titans" },
   { text: "Episodes", href: "#episodes" },
   { text: "Companies", href: "#companies" },
   { text: "Reviews", href: "#reviews" },
