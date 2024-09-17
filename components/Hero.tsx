@@ -58,7 +58,7 @@ const HeroSection = () => {
         </p>
         <div className="flex flex-col justify-center mt-6 gap-y-2 gap-x-4 md:flex-row">
           <a href="#episodes">
-            <button className="px-5 py-3 font-bold text-[#FF3352] bg-white rounded-full md:px-6 md:py-4">
+            <button className="px-5 w-full py-3 font-bold text-[#FF3352] bg-white rounded-full md:px-6 md:py-4">
               Watch Show
             </button>
           </a>
