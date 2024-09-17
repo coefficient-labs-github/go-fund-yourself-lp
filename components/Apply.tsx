@@ -15,7 +15,7 @@ const ApplySection = () => {
         />
         <div className="relative grid grid-cols-1 grid-rows-[1.3fr_1fr] overflow-hidden lg:grid-rows-1 lg:grid-cols-2 lg:gap-16 ">
           <div className="absolute bottom-0 w-full h-full bg-black rounded-xl" />
-          <div className="z-10 px-8 py-8 md:px-12 md:py-12 lg:px-20 lg:pb-16 lg:pt-16">
+          <div className="z-10 flex flex-col items-center px-8 py-8 md:items-start md:px-12 md:py-12 lg:px-20 lg:pb-16 lg:pt-16">
             <p className="text-sm font-semibold tracking-widest text-yellow-300 uppercase md:text-base lg:text-lg">
               Ready to showcase your business?
             </p>
