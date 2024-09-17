@@ -74,22 +74,6 @@ const IndexPage = ({ episodes, companies, testimonials, error }: Props) => {
     console.log("Error::", error);
     return <div>500 Server Error</div>;
   }
-  const now = new Date();
-  const launchDate = new Date("2024-09-16T19:30:00-07:00");
-  if (now < launchDate) {
-    const timeLeft = launchDate.getTime() - now.getTime();
-    const hoursLeft = Math.floor(timeLeft / 1000 / 60 / 60);
-    const minutesLeft = Math.floor(timeLeft / 1000 / 60) - hoursLeft * 60;
-    return (
-      <div>
-        {console.log(`
-          The site is not live yet.
-          Launch Date: ${launchDate}
-          This will be live in ${hoursLeft} hours and ${minutesLeft} minutes.
-        `)}
-      </div>
-    );
-  }
   return (
     <div>
       <CustomHead />
