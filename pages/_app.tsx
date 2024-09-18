@@ -1,3 +1,4 @@
+import { GoogleTagManager } from "@next/third-parties/google";
 import type { AppProps } from "next/app";
 import { Roboto } from "next/font/google";
 import localFont from "next/font/local";
@@ -17,6 +18,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className={`${roboto.className} ${grobold.variable}`}>
       <Component {...pageProps} />
+      <GoogleTagManager gtmId="GTM-W53BNTKL" />
     </div>
   );
 }
