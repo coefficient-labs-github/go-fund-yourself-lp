@@ -1,5 +1,4 @@
 import Image from "next/image";
-import LeadForm from "./LeadForm";
 
 const ApplySection = () => {
   return (
