@@ -39,7 +39,7 @@ const titans = [
     title: "Leader in Sports Marketing",
     position: "Co-Founder @ Sport 1 Marketing",
     description:
-      "From CEO of sports super-agent Leigh Steinberg, to successful founder and CEO of Sports 1 Marketing, David Meltzer is an accomplished author, investor, philanthropist, and business coach and one of the most sought-after inspirational and motivational speakers at the world's biggest business, sports, technology, and motivational events.",
+      "Former CEO of Leigh Steinberg Sports and Entertainment and current Chairman of the Napolean Hill Institute, David Meltzer is an accomplished author, investor, philanthropist, and business coach and one of the most sought-after inspirational and motivational speakers at the world's biggest business, sports, technology, and motivational events.",
     imageSrc: "/imgs/david.png",
     color: "#fce62c",
     social: [
