@@ -11,6 +11,7 @@ import Hero from "../components/Hero";
 import HowItWorks from "../components/HowItWorks";
 import MeetTheTitans from "../components/MeetTheTitans";
 import NewestEpisodes from "../components/NewestEpisodes";
+import StreamingOn from "../components/StreamingOn";
 import Testimonials from "../components/Testimonials";
 import { fetchSpreadsheetData } from "./api/sheets";
 
@@ -90,6 +91,7 @@ const IndexPage = ({ episodes, companies, testimonials, error }: Props) => {
       <Banner />
       <Hero />
       <FeaturedIn />
+      <StreamingOn />
       <HowItWorks />
       <MeetTheTitans />
       {episodes && episodes.length > 0 ? (

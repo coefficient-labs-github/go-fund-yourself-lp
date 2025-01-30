@@ -2,34 +2,9 @@ import Image from "next/image";
 
 export const platforms = [
   {
-    platform: "Facebook",
-    src: "/svgs/GoFundYourself-Facebook-Streaming.svg",
-    link: "https://www.facebook.com/profile.php?id=61563865485948",
-  },
-  {
-    platform: "Instagram",
-    src: "/svgs/GoFundYourself-Instagram-Streaming.svg",
-    link: "https://www.instagram.com/gofundyourselfshow?igsh=MTBpMXdpaDV6OGEwZQ==",
-  },
-  {
-    platform: "LinkedIn",
-    src: "/svgs/GoFundYourself-LinkedIn-Streaming.svg",
-    link: "https://www.linkedin.com/company/go-fund-yourself-show",
-  },
-  {
-    platform: "YouTube",
-    src: "/svgs/GoFundYourself-Streaming-Youtube.svg",
-    link: "https://www.youtube.com/@GoFundYourselfShow",
-  },
-  {
-    platform: "MARKET.live",
-    src: "/svgs/GoFundYourself-Market-Streaming.svg",
-    link: "https://www.market.live/portal/s/go-fund-yourself",
-  },
-  {
-    platform: "TikTok",
-    src: "/svgs/GoFundYourself-TikTok-Streaming.svg",
-    link: "https://www.tiktok.com/@gofundyourselfshow?_t=8p24drjAfzL&_r=1",
+    platform: "La Weekly",
+    src: "/imgs/la-weekly.png",
+    link: "https://www.laweekly.com/go-fund-yourself-where-hollywood-glitz-meets-entrepreneurial-grit/",
   },
 ];
 
@@ -39,7 +14,7 @@ const FeaturedIn = () => {
       <div className="px-6 mx-auto max-w-7xl">
         <div className="text-center">
           <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase md:text-base lg:text-lg">
-            Streaming on
+            Featured in
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-8 mt-2 gap-y-2 gap-x-8">
