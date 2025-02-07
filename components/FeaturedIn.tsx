@@ -6,6 +6,11 @@ export const platforms = [
     src: "/imgs/la-weekly.png",
     link: "https://www.laweekly.com/go-fund-yourself-where-hollywood-glitz-meets-entrepreneurial-grit/",
   },
+  {
+    platform: "Citybiz",
+    src: "/imgs/citybiz.png",
+    link: "https://www.citybiz.co/article/653759/natasha-graziano-interviews-rory-cutaia-founder-of-verb-technology-nasdaq-verb-and-creator-of-go-fund-yourself-show-on-cheddar-tv/",
+  },
 ];
 
 const FeaturedIn = () => {
