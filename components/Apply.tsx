@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ApplyModalContent from "./ApplyModalContent";
 
 const ApplySection = () => {
   return (
@@ -26,14 +27,11 @@ const ApplySection = () => {
               and gain invaluable exposure, feedback, and potential investment
               from our panel of seasoned CEOs.
             </p>
-            <a
-              href="https://info.gofundyourself.show/applications"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-fit px-5 py-3 mt-6 text-white bg-[#FF3352] rounded-full md:px-6 md:py-4"
-            >
-              Apply Now
-            </a>
+            <ApplyModalContent>
+              <button className="block w-fit px-5 py-3 mt-6 text-white bg-[#FF3352] rounded-full md:px-6 md:py-4">
+                Apply Now
+              </button>
+            </ApplyModalContent>
           </div>
           <img
             src="/imgs/footer-pic.jpg"
