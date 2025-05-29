@@ -2,6 +2,11 @@ import Image from "next/image";
 
 export const platforms = [
   {
+    platform: "Cheddar TV",
+    src: "/svgs/cheddar-logo.svg",
+    link: "https://www.youtube.com/playlist?list=PLaK_6SY7ixVQ04RZsdCLtgz64bU0Fazol",
+  },
+  {
     platform: "Facebook",
     src: "/svgs/GoFundYourself-Facebook-Streaming.svg",
     link: "https://www.facebook.com/profile.php?id=61563865485948",
@@ -20,16 +25,6 @@ export const platforms = [
     platform: "YouTube",
     src: "/svgs/GoFundYourself-Streaming-Youtube.svg",
     link: "https://www.youtube.com/@GoFundYourselfShow",
-  },
-  {
-    platform: "MARKET.live",
-    src: "/svgs/GoFundYourself-Market-Streaming.svg",
-    link: "https://www.market.live/portal/s/go-fund-yourself",
-  },
-  {
-    platform: "TikTok",
-    src: "/svgs/GoFundYourself-TikTok-Streaming.svg",
-    link: "https://www.tiktok.com/@gofundyourselfshow?_t=8p24drjAfzL&_r=1",
   },
 ];
 

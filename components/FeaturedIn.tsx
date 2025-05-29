@@ -4,12 +4,37 @@ export const platforms = [
   {
     platform: "La Weekly",
     src: "/imgs/la-weekly.png",
+    aspectRatio: 2.5,
     link: "https://www.laweekly.com/go-fund-yourself-where-hollywood-glitz-meets-entrepreneurial-grit/",
   },
   {
     platform: "Citybiz",
     src: "/imgs/citybiz.png",
-    link: "https://www.citybiz.co/article/653759/natasha-graziano-interviews-rory-cutaia-founder-of-verb-technology-nasdaq-verb-and-creator-of-go-fund-yourself-show-on-cheddar-tv/",
+    aspectRatio: 2.75,
+    link: "https://www.citybiz.co/?s=go+fund+yourself&post_type=post",
+  },
+  {
+    platform: "US Weekly",
+    src: "/svgs/us-weekly.svg",
+    aspectRatio: 1,
+    link: "#",
+  },
+  {
+    platform: "Grit Daily",
+    src: "/svgs/grit-daily-logo.svg",
+    aspectRatio: 3.25,
+    link: "https://gritdaily.com/?s=go+fund+yourself",
+  },
+  // {
+  //   platform: "Around Boca",
+  //   src: "/imgs/around-boca.png",
+  //   link: "#",
+  // },
+  {
+    platform: "Apple News",
+    src: "/svgs/apple-news.svg",
+    aspectRatio: 2.75,
+    link: "#",
   },
 ];
 
@@ -22,20 +47,26 @@ const FeaturedIn = () => {
             Featured in
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-8 mt-2 gap-y-2 gap-x-8">
-          {platforms.map((item) => (
-            <div className="flex items-center">
-              <a target="_blank" href={item.link}>
-                <Image
-                  src={item.src}
-                  alt={item.platform}
-                  width={125}
-                  height={50}
-                  className="object-contain"
-                />
-              </a>
-            </div>
-          ))}
+        <div className="flex flex-wrap justify-center gap-8 mt-2 gap-y-2 gap-x-10">
+          {platforms.map((item) => {
+            return (
+              <div className="flex items-center" key={item.platform}>
+                <a target="_blank" href={item.link}>
+                  <div
+                    className="relative h-14"
+                    style={{ aspectRatio: String(item.aspectRatio) }}
+                  >
+                    <Image
+                      src={item.src}
+                      alt={item.platform}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </a>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

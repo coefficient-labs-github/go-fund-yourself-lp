@@ -45,4 +45,5 @@ const ApplySection = () => {
     </section>
   );
 };
+
 export default ApplySection;

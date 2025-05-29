@@ -2,7 +2,7 @@ import { GetStaticProps } from "next";
 import dynamic from "next/dynamic";
 import Script from "next/script";
 import ApplySection from "../components/Apply";
-import Banner from "../components/Banner";
+import CheddarBanner from "../components/CheddarBanner";
 import CustomHead from "../components/CustomHead";
 import FeaturedCompanies from "../components/FeaturedCompanies";
 import FeaturedIn from "../components/FeaturedIn";
@@ -88,7 +88,8 @@ const IndexPage = ({ episodes, companies, testimonials, error }: Props) => {
                   })(window,document,'script','dataLayer','GTM-M2TF5L6');`,
         }}
       /> */}
-      <Banner />
+      {/* <Banner /> */}
+      <CheddarBanner />
       <Hero />
       <FeaturedIn />
       <StreamingOn />

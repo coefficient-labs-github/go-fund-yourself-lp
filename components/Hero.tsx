@@ -57,7 +57,7 @@ const HeroSection = () => {
           invest in real-time—all from the comfort of your home.
         </p>
         <div className="flex flex-col justify-center mt-6 gap-y-2 gap-x-4 md:flex-row">
-          <a href="#episodes">
+          <a href="https://www.youtube.com/playlist?list=PLaK_6SY7ixVQ04RZsdCLtgz64bU0Fazol">
             <button className="px-5 w-full py-3 font-bold text-[#FF3352] bg-white rounded-full md:px-6 md:py-4">
               Watch Show
             </button>
