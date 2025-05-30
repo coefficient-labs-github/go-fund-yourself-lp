@@ -1,66 +1,122 @@
 import * as Dialog from "@radix-ui/react-dialog";
 // import { Cross2Icon } from "@radix-ui/react-icons";
-import React, { useEffect, useRef } from "react";
+import React, { ReactElement, useEffect, useRef } from "react";
 
 interface ApplyModalContentProps {
-  children: React.ReactNode;
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  // Children prop is removed as trigger is now external
 }
 
-const ApplyModalContent: React.FC<ApplyModalContentProps> = ({ children }) => {
+const ApplyModalContent: React.FC<ApplyModalContentProps> = ({
+  open,
+  onOpenChange,
+}): ReactElement | null => {
   const formContainerRef = useRef<HTMLDivElement>(null);
+  // formCreatedRef is no longer needed if we try to create every time.
 
+  console.log("ApplyModalContent: Rendered. Open state:", open);
+
+  const createHubSpotForm = () => {
+    console.log("ApplyModalContent: createHubSpotForm called.");
+
+    if (window.hbspt && window.hbspt.forms && formContainerRef.current) {
+      console.log(
+        "ApplyModalContent: HubSpot API and formContainerRef.current ARE available."
+      );
+
+      // IMPORTANT: Clear the container before creating a new form
+      formContainerRef.current.innerHTML = "";
+      console.log("ApplyModalContent: Cleared formContainerRef.innerHTML.");
+
+      let formContainerId = formContainerRef.current.id;
+      if (!formContainerId) {
+        formContainerId =
+          "hubspot-form-container-" + Math.random().toString(36).substring(7);
+        formContainerRef.current.id = formContainerId;
+        console.log(
+          "ApplyModalContent: Assigned ID to form container:",
+          formContainerId
+        );
+      }
+
+      window.hbspt.forms.create({
+        region: "na1",
+        portalId: "47163555",
+        formId: "b06ae652-46b4-4d4f-b697-feb33dded6d6",
+        target: `#${formContainerId}`,
+        onFormReady: () => {
+          console.log(
+            "ApplyModalContent: HubSpot onFormReady callback triggered."
+          );
+        },
+        onFormSubmitted: () => {
+          console.log(
+            "ApplyModalContent: HubSpot onFormSubmitted callback triggered."
+          );
+          // onOpenChange(false); // Optionally close modal on submit
+        },
+      });
+      console.log("ApplyModalContent: window.hbspt.forms.create CALLED.");
+    } else {
+      console.warn(
+        "ApplyModalContent: HubSpot API or formContainerRef.current NOT available when trying to create form."
+      );
+    }
+  };
+
+  // This useEffect is just for a one-time mount log now.
   useEffect(() => {
-    // HubSpot script is now loaded globally in _app.tsx
-
-    const checkHubSpotAndCreateForm = () => {
-      if (window.hbspt && window.hbspt.forms && formContainerRef.current) {
-        // Ensure the target div has an ID before creating the form
-        if (!formContainerRef.current.id) {
-          formContainerRef.current.id =
-            "hubspot-form-container-" + Math.random().toString(36).substring(7);
-        }
-        window.hbspt.forms.create({
-          region: "na1",
-          portalId: "47163555",
-          formId: "b06ae652-46b4-4d4f-b697-feb33dded6d6",
-          target: `#${formContainerRef.current.id}`, // Use the dynamic ID of the container
-        });
-      } else {
-        // If hbspt is not ready, or ref is null, try again shortly
-        setTimeout(checkHubSpotAndCreateForm, 100);
-      }
-    };
-
-    // Call the function to check and create the form
-    checkHubSpotAndCreateForm();
-
-    return () => {
-      if (formContainerRef.current) {
-        // Clear the container on unmount to prevent issues if the modal is reopened
-        // HubSpot might also have a specific function to destroy/remove a form instance
-        formContainerRef.current.innerHTML = "";
-      }
-    };
+    console.log(
+      "ApplyModalContent: Component Mounted (useEffect with [] deps)."
+    );
   }, []);
 
+  useEffect(() => {
+    console.log(
+      "ApplyModalContent: useEffect for 'open' prop. Current value:",
+      open
+    );
+    if (open) {
+      // Attempt to create form when modal is opened
+      // Using a short timeout to allow Radix DOM to settle.
+      const timer = setTimeout(() => {
+        if (formContainerRef.current) {
+          console.log(
+            "ApplyModalContent: Modal is open and formContainerRef IS available. Calling createHubSpotForm."
+          );
+          createHubSpotForm();
+        } else {
+          console.error(
+            "ApplyModalContent: formContainerRef is NULL even after delay when modal opened. Cannot create form."
+          );
+        }
+      }, 100); // Increased delay slightly to 100ms
+      return () => clearTimeout(timer);
+    } else {
+      console.log(
+        "ApplyModalContent: Modal is closed. Form will be recreated on next open if container was cleared."
+      );
+    }
+  }, [open]);
+
   return (
-    <Dialog.Root>
-      <Dialog.Trigger asChild>{children}</Dialog.Trigger>
+    <Dialog.Root open={open} onOpenChange={onOpenChange}>
+      {/* Dialog.Trigger is removed from here, will be in Apply.tsx */}
       <Dialog.Portal>
         <Dialog.Overlay className="bg-typeBlack/50 data-[state=open]:animate-overlayShow fixed inset-0 z-40" />
-        <Dialog.Content className="data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[500px] translate-x-[-50%] translate-y-[-50%] rounded-lg bg-primary p-6 shadow-xl focus:outline-none z-50 flex flex-col font-roboto">
+        <Dialog.Content className="data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[500px] translate-x-[-50%] translate-y-[-50%] rounded-lg bg-primary p-6 shadow-xl focus:outline-none z-50 flex flex-col">
           <Dialog.Title className="mb-2 font-grobold text-heading text-typeBlack">
             Apply to Pitch
           </Dialog.Title>
           <Dialog.Description className="mb-5 text-copy text-typeBlack/80">
             Fill out the form below to apply to pitch on Go Fund Yourself!
           </Dialog.Description>
-          {/* The ref will be used to get the ID for the HubSpot form target */}
           <div
             ref={formContainerRef}
             className="flex-grow min-h-0 pb-4 pr-1 overflow-y-auto scrollbar"
           >
-            {/* HubSpot form will be embedded here */}
+            {/* HubSpot form will be recreated here each time modal opens */}
           </div>
           <Dialog.Close asChild>
             <button

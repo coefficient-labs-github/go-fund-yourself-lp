@@ -78,7 +78,7 @@ module.exports = {
         swingLeft: "swingLeft 1s ease-in-out",
       },
       fontFamily: {
-        roboto: ["Roboto", "sans-serif"],
+        roboto: ["var(--font-roboto)", "sans-serif"],
         grobold: ["var(--font-grobold)", "serif"],
       },
       display: ["group-hover", "group-focus"],

@@ -1,7 +1,10 @@
 import Image from "next/image";
+import { useState } from "react";
 import ApplyModalContent from "./ApplyModalContent";
 
 const ApplySection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="relative pb-32 overflow-hidden" id="apply">
       <div className="absolute bottom-0 w-full bg-[#842DB4] h-1/2 -z-20" />
@@ -27,11 +30,12 @@ const ApplySection = () => {
               and gain invaluable exposure, feedback, and potential investment
               from our panel of seasoned CEOs.
             </p>
-            <ApplyModalContent>
-              <button className="block w-fit px-5 py-3 mt-6 text-white bg-[#FF3352] rounded-full md:px-6 md:py-4">
-                Apply Now
-              </button>
-            </ApplyModalContent>
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="block w-fit px-5 py-3 mt-6 text-white bg-[#FF3352] rounded-full md:px-6 md:py-4"
+            >
+              Apply Now
+            </button>
           </div>
           <img
             src="/imgs/footer-pic.jpg"
@@ -40,6 +44,7 @@ const ApplySection = () => {
           />
         </div>
       </div>
+      <ApplyModalContent open={isModalOpen} onOpenChange={setIsModalOpen} />
     </section>
   );
 };

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-grobold: "Grobold", serif;
+  /* --font-grobold: "Grobold", serif; */ /* REMOVED THIS LINE - Let next/font manage it */
   --color-primary: 255 255 255; /* Text, buttons, etc. */
   --color-secondary: 252 232 232; /* Backgrounds, borders, etc. */
   --color-typeBlack: 26 26 26; /* Text, buttons, etc. */
