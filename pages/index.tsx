@@ -1,4 +1,8 @@
+import fs from "fs";
+import matter from "gray-matter"; // For parsing markdown frontmatter
 import { GetStaticProps } from "next";
+import path from "path";
+
 import dynamic from "next/dynamic";
 import Script from "next/script";
 import ApplySection from "../components/Apply";
@@ -13,8 +17,8 @@ import MeetTheTitans from "../components/MeetTheTitans";
 import NewestEpisodes from "../components/NewestEpisodes";
 import StreamingOn from "../components/StreamingOn";
 import Testimonials from "../components/Testimonials";
-import { fetchSpreadsheetData } from "./api/sheets";
 
+// Interfaces remain the same
 export interface Episode {
   date: string;
   title: string;
@@ -45,34 +49,63 @@ interface Props {
   error?: string;
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const sheetId = "1a-6KjDAFb6IpHiCIAMz8NiFWaw2IqjSomuUcJn5TEBA";
-  const ranges = ["Episodes!A:E", "Companies!A:E", "Testimonials!A:D"];
+// Helper function to read and parse markdown files from a directory
+const getContent = <T extends object>(contentType: string): T[] => {
+  const contentDir = path.join(process.cwd(), "content", contentType);
   try {
-    const rangeData = await fetchSpreadsheetData(sheetId, ranges);
-    const getMatchingKeys = (key: string) =>
-      Object.keys(rangeData).find((item) => item.startsWith(key));
-    const episodesKey = getMatchingKeys("Episodes");
-    const companiesKey = getMatchingKeys("Companies");
-    const testimonialsKey = getMatchingKeys("Testimonials");
-    if (!episodesKey || !companiesKey || !testimonialsKey) {
-      throw new Error("Expected range keys not found in the data");
+    // Check if directory exists
+    if (!fs.existsSync(contentDir)) {
+      console.warn(
+        `Content directory not found for ${contentType}: ${contentDir}`
+      );
+      return [];
     }
-    const episodes = rangeData[episodesKey];
-    const companies = rangeData[companiesKey];
-    const testimonials = rangeData[testimonialsKey];
+    const filenames = fs.readdirSync(contentDir);
+    const items = filenames
+      .filter((filename) => filename.endsWith(".md"))
+      .map((filename) => {
+        const filePath = path.join(contentDir, filename);
+        const fileContents = fs.readFileSync(filePath, "utf8");
+        const { data } = matter(fileContents); // Parse frontmatter
+        return data as T;
+      });
+    return items;
+  } catch (error) {
+    console.warn(
+      `Could not read content for ${contentType}:`,
+      error instanceof Error ? error.message : String(error)
+    );
+    return [];
+  }
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  try {
+    const episodes = getContent<Episode>("episodes");
+    const companies = getContent<Company>("companies");
+    const testimonials = getContent<Testimonial>("testimonials");
+
+    // Optional: Sort episodes by date if your date format is consistent and sortable
+    // Example for YYYY-MM-DD. Your current "Month Dayth Year" requires robust parsing.
+    // A more robust way to sort dates like "May 9th 2025" would be needed:
+    // episodes.sort((a, b) => {
+    //   const dateA = new Date(a.date.replace(/(\\d+)(st|nd|rd|th)/, \"$1\")); // Attempt to make it parsable
+    //   const dateB = new Date(b.date.replace(/(\\d+)(st|nd|rd|th)/, \"$1\"));
+    //   return dateB.getTime() - dateA.getTime();
+    // });
+
     return {
       props: { episodes, companies, testimonials },
       revalidate: 3600, // Revalidate after 1 hour (3600 seconds)
     };
   } catch (error) {
-    console.error("Error in getStaticProps:", error);
+    console.error("Error in getStaticProps reading markdown content:", error);
     return {
       props: {
         error:
           error instanceof Error
             ? error.message
-            : String(error || "An unknown error occurred"),
+            : String(error || "An unknown error occurred reading content"),
       },
     };
   }
