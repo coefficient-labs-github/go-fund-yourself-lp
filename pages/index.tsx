@@ -42,7 +42,7 @@ interface Props {
   episodes?: Episode[];
   companies?: Company[];
   testimonials?: Testimonial[];
-  error?: Error;
+  error?: string;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -66,14 +66,28 @@ export const getStaticProps: GetStaticProps = async () => {
       revalidate: 3600, // Revalidate after 1 hour (3600 seconds)
     };
   } catch (error) {
-    return { props: { error } };
+    console.error("Error in getStaticProps:", error);
+    return {
+      props: {
+        error:
+          error instanceof Error
+            ? error.message
+            : String(error || "An unknown error occurred"),
+      },
+    };
   }
 };
 
 const IndexPage = ({ episodes, companies, testimonials, error }: Props) => {
   if (error) {
-    console.log("Error::", error);
-    return <div>500 Server Error</div>;
+    console.log("Error passed to page component::", error);
+    return (
+      <div>
+        <h1>Error Loading Page Data</h1>
+        <p>{error}</p>
+        <p>Please try again later or contact support if the issue persists.</p>
+      </div>
+    );
   }
   return (
     <div>
