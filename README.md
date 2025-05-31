@@ -180,8 +180,6 @@ The following environment variables are important for the Netlify build process:
 - **`NPM_FLAGS`**
   - **Value:** `--include=dev`
   - **Reason:** Tells `npm install` on Netlify to install packages from `devDependencies` in addition to `dependencies`. This is crucial because tools like TypeScript and Tailwind CSS, while listed as `devDependencies`, are required during the `next build` process for production.
-- **`GOOGLE_SERVICE_ACCOUNT_EMAIL`** / **`GOOGLE_PRIVATE_KEY`**
-  - **Note:** These were relevant when the site was fetching data from Google Sheets. They are **no longer actively used** by `pages/index.tsx` as it now reads from local Markdown files. Keep them if other parts of the application (or future features) might use Google APIs, otherwise, they could potentially be removed from Netlify's environment if confirmed unused.
 
 ## 9. Deployment
 
