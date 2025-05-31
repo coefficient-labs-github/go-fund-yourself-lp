@@ -26,6 +26,11 @@ export const platforms = [
     src: "/svgs/GoFundYourself-Streaming-Youtube.svg",
     link: "https://www.youtube.com/@GoFundYourselfShow",
   },
+  {
+    platform: "Lookhu",
+    src: "/imgs/lookhu.png",
+    link: "https://lookhu.tv/channel/go-fund-yourself.html",
+  },
 ];
 
 const StreamingOn = () => {
