@@ -10,7 +10,7 @@ const CheddarBanner = () => {
     >
       <span>Streaming on</span>
       <Image
-        src="/svgs/cheddar-logo.svg"
+        src="/img/cheddar-logo.svg"
         alt="Cheddar TV"
         width={100}
         height={20}

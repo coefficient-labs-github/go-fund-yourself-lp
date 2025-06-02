@@ -21,19 +21,19 @@ const HowItWorks = () => {
               headline: "Stream the Episode",
               description:
                 "Entrepreneurs present their companies to our CEO Titans and to the world!",
-              imgSrc: "/imgs/step-1.webp",
+              imgSrc: "/img/step-1.webp",
             },
             {
               headline: "Titans ask the tough Questions",
               description:
                 "Our seasoned CEO Titans dive deep, asking the hard-hitting questions that matter most to investors, ensuring transparency and clarity.",
-              imgSrc: "/imgs/step-2.webp",
+              imgSrc: "/img/step-2.webp",
             },
             {
               headline: "Ready to Invest?",
               description:
                 "Click the Invest Now button on screen or in the description to decide for yourself what companies you want to bet on!",
-              imgSrc: "/imgs/step-3.webp",
+              imgSrc: "/img/step-3.webp",
             },
           ].map((step, index) => (
             <div

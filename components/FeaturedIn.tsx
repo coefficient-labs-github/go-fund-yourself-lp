@@ -3,36 +3,36 @@ import Image from "next/image";
 export const platforms = [
   {
     platform: "La Weekly",
-    src: "/imgs/la-weekly.png",
+    src: "/img/la-weekly.png",
     aspectRatio: 2.5,
     link: "https://www.laweekly.com/go-fund-yourself-where-hollywood-glitz-meets-entrepreneurial-grit/",
   },
   {
     platform: "Citybiz",
-    src: "/imgs/citybiz.png",
+    src: "/img/citybiz.png",
     aspectRatio: 2.75,
     link: "https://www.citybiz.co/?s=go+fund+yourself&post_type=post",
   },
   {
     platform: "US Weekly",
-    src: "/svgs/us-weekly.svg",
+    src: "/img/us-weekly.svg",
     aspectRatio: 1,
     link: "#",
   },
   {
     platform: "Grit Daily",
-    src: "/svgs/grit-daily-logo.svg",
+    src: "/img/grit-daily-logo.svg",
     aspectRatio: 3.25,
     link: "https://gritdaily.com/?s=go+fund+yourself",
   },
   // {
   //   platform: "Around Boca",
-  //   src: "/imgs/around-boca.png",
+  //   src: "/img/around-boca.png",
   //   link: "#",
   // },
   {
     platform: "Apple News",
-    src: "/svgs/apple-news.svg",
+    src: "/img/apple-news.svg",
     aspectRatio: 2.75,
     link: "#",
   },

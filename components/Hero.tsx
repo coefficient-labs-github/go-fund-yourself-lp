@@ -27,7 +27,7 @@ const HeroSection = () => {
   return (
     <section className="relative text-white" id="hero">
       <Image
-        src="/imgs/hero-bg.svg"
+        src="/img/hero-bg.svg"
         alt="Background Image"
         fill
         className="object-cover object-bottom w-full pb-24 sm:pb-40 md:pb-64 -z-10"
@@ -45,7 +45,7 @@ const HeroSection = () => {
           ))}
         </nav>
         <Image
-          src="/imgs/logo.svg"
+          src="/img/logo.svg"
           alt="Go Fund Yourself Logo"
           width={400}
           height={400}
@@ -71,7 +71,7 @@ const HeroSection = () => {
         <video
           src="https://client-lp-assets.s3.amazonaws.com/Sizzle+Reel.mp4"
           className="z-20 w-full max-w-6xl mt-12 bg-white cursor-pointer rounded-3xl"
-          poster="/imgs/GoFundYourself-Thumbnail.jpg"
+          poster="/img/GoFundYourself-Thumbnail.jpg"
           preload="none"
           controls
           onClick={(e) => (e.target as HTMLVideoElement).play()}

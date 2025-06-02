@@ -13,7 +13,7 @@ const titans = [
     position: "Founder & CEO @ Verb",
     description:
       "From successful New York City attorney to telecom disruptor, investor, and serial entrepreneur who sold his first start-up for more than $200 million; he's currently founder and CEO of NASDAQ-listed Verb Technology Company, and MARKET.live, a tech start-up disrupting the livestream shopping sector.",
-    imageSrc: "/imgs/rory.png",
+    imageSrc: "/img/rory.png",
     color: "#0024be",
     social: [
       {
@@ -40,7 +40,7 @@ const titans = [
     position: "Co-Founder @ Sport 1 Marketing",
     description:
       "Former CEO of Leigh Steinberg Sports and Entertainment and current Chairman of the Napolean Hill Institute, David Meltzer is an accomplished author, investor, philanthropist, and business coach and one of the most sought-after inspirational and motivational speakers at the world's biggest business, sports, technology, and motivational events.",
-    imageSrc: "/imgs/david.png",
+    imageSrc: "/img/david.png",
     color: "#fce62c",
     social: [
       { platform: "facebook", url: "https://www.facebook.com/davidmeltzer11/" },
@@ -64,7 +64,7 @@ const titans = [
     position: "CEO @ BAM Coaching",
     description:
       "A well-respected thought leader in solar, home services, and digital lead-gen, CEO of multiple multi-million-dollar companies, a successful author, motivational speaker, and host of the popular Jayson Waller Unleashed Podcast, he brings his own brand of BAM to business problem solving.",
-    imageSrc: "/imgs/jayson.png",
+    imageSrc: "/img/jayson.png",
     color: "#fc3053",
     social: [
       {

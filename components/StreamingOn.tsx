@@ -3,32 +3,32 @@ import Image from "next/image";
 export const platforms = [
   {
     platform: "Cheddar TV",
-    src: "/svgs/cheddar-logo.svg",
+    src: "/img/cheddar-logo.svg",
     link: "https://www.youtube.com/playlist?list=PLaK_6SY7ixVQ04RZsdCLtgz64bU0Fazol",
   },
   {
     platform: "Facebook",
-    src: "/svgs/GoFundYourself-Facebook-Streaming.svg",
+    src: "/img/GoFundYourself-Facebook-Streaming.svg",
     link: "https://www.facebook.com/profile.php?id=61563865485948",
   },
   {
     platform: "Instagram",
-    src: "/svgs/GoFundYourself-Instagram-Streaming.svg",
+    src: "/img/GoFundYourself-Instagram-Streaming.svg",
     link: "https://www.instagram.com/gofundyourselfshow?igsh=MTBpMXdpaDV6OGEwZQ==",
   },
   {
     platform: "LinkedIn",
-    src: "/svgs/GoFundYourself-LinkedIn-Streaming.svg",
+    src: "/img/GoFundYourself-LinkedIn-Streaming.svg",
     link: "https://www.linkedin.com/company/go-fund-yourself-show",
   },
   {
     platform: "YouTube",
-    src: "/svgs/GoFundYourself-Streaming-Youtube.svg",
+    src: "/img/GoFundYourself-Streaming-Youtube.svg",
     link: "https://www.youtube.com/@GoFundYourselfShow",
   },
   {
     platform: "Lookhu",
-    src: "/imgs/lookhu.png",
+    src: "/img/lookhu.png",
     link: "https://lookhu.tv/channel/go-fund-yourself.html",
   },
 ];

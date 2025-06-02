@@ -10,7 +10,7 @@ const ApplySection = () => {
       <div className="absolute bottom-0 w-full bg-[#842DB4] h-1/2 -z-20" />
       <div className="relative px-6 mx-auto text-center max-w-8xl md:text-left">
         <Image
-          src="/imgs/footer-shape.svg"
+          src="/img/footer-shape.svg"
           alt="Apply to Pitch"
           width={400}
           height={400}
@@ -38,7 +38,7 @@ const ApplySection = () => {
             </button>
           </div>
           <img
-            src="/imgs/footer-pic.jpg"
+            src="/img/footer-pic.jpg"
             alt="Apply to Pitch"
             className="absolute bottom-0 right-0 object-cover object-top w-full lg:object-contain lg:object-right-bottom h-[45%] lg:h-full"
           />

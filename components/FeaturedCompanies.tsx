@@ -28,7 +28,7 @@ const FeaturedCompanies = ({ companies }) => {
         </div>
         <div
           ref={containerRef}
-          className={`grid gap-4 mt-6 lg:grid-cols-3 md:grid-cols-2 overflow-hidden transition-max-height duration-500 ease-in-out xl:grid-cols-4`}
+          className={`grid gap-4 mt-6 lg:grid-cols-3 sm:grid-cols-2 overflow-hidden transition-max-height duration-500 ease-in-out xl:grid-cols-4`}
           style={{ maxHeight }}
         >
           {companies.map((company, index) => (
@@ -38,13 +38,14 @@ const FeaturedCompanies = ({ companies }) => {
             >
               <div className="relative w-full aspect-video">
                 <Image
-                  src={company.logo || "/imgs/placeholder.png"}
+                  src={`/${company.logo}` || "/img/placeholder.png"}
                   alt={company.name}
                   fill
-                  className="object-cover"
-                  onError={(e) => {
-                    e.currentTarget.src = "/imgs/placeholder.png";
-                  }}
+                  className="object-contain"
+                  // onError={(e) => {
+                  //   console.log("Error loading image", e);
+                  //   e.currentTarget.src = "/img/placeholder.png";
+                  // }}
                 />
               </div>
               <div className="p-4">

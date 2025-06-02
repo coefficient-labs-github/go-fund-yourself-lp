@@ -64,7 +64,7 @@ const NewestEpisodes = ({ episodes }) => {
                 <div className="relative">
                   <div className="aspect-video">
                     <Image
-                      src={episode.image || "/imgs/episode-coming-soon.png"}
+                      src={episode.image || "/img/episode-coming-soon.png"}
                       alt={episode.title}
                       className="object-cover"
                       fill

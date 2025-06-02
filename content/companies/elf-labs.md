@@ -1,5 +1,5 @@
 ---
-name: Eimg/
+name: Elf Labs
 logo: img/elflabs_logo.jpeg
 description: Marrying the most profitable Character IP in history to the
   Patented Technology IP of the future
