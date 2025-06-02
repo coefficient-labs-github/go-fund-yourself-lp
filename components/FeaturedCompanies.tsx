@@ -38,14 +38,16 @@ const FeaturedCompanies = ({ companies }) => {
             >
               <div className="relative w-full aspect-video">
                 <Image
-                  src={`/${company.logo}` || "/img/placeholder.png"}
+                  src={
+                    company.logo ? `/${company.logo}` : "/img/placeholder.png"
+                  }
                   alt={company.name}
                   fill
                   className="object-contain"
-                  // onError={(e) => {
-                  //   console.log("Error loading image", e);
-                  //   e.currentTarget.src = "/img/placeholder.png";
-                  // }}
+                  onError={(e) => {
+                    console.log("Error loading image", e);
+                    e.currentTarget.src = "/img/placeholder.png";
+                  }}
                 />
               </div>
               <div className="p-4">

@@ -52,7 +52,11 @@ const Testimonials = ({ testimonials }) => {
                   >
                     <div className="lg:block hidden relative w-32 lg:w-48 aspect-[200_/_236]">
                       <Image
-                        src={`/${testimonial.picture}`}
+                        src={
+                          testimonial.picture
+                            ? `/${testimonial.picture}`
+                            : "/img/placeholder.png"
+                        }
                         alt={testimonial.name}
                         fill
                         className="object-cover rounded-lg"
@@ -79,7 +83,11 @@ const Testimonials = ({ testimonials }) => {
                       <div className="flex gap-4 mt-4">
                         <div className="relative w-16 lg:hidden aspect-square">
                           <Image
-                            src={`/${testimonial.picture}`}
+                            src={
+                              testimonial.picture
+                                ? `/${testimonial.picture}`
+                                : "/img/placeholder.png"
+                            }
                             alt={testimonial.name}
                             fill
                             className="object-cover rounded-lg"
