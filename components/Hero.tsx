@@ -1,4 +1,5 @@
 import Image from "next/image";
+import HLSPlayer from "./HlsPlayer";
 
 const navItems = [
   {
@@ -68,14 +69,22 @@ const HeroSection = () => {
             </button>
           </a>
         </div>
-        <video
-          src="https://client-lp-assets.s3.amazonaws.com/Sizzle+Reel.mp4"
+        <HLSPlayer
+          src="/gfy-sizzle/master.m3u8"
           className="z-20 w-full max-w-6xl mt-12 bg-white cursor-pointer rounded-3xl"
           poster="/img/GoFundYourself-Thumbnail.jpg"
           preload="none"
           controls
           onClick={(e) => (e.target as HTMLVideoElement).play()}
         />
+        {/* <video
+          src="https://client-lp-assets.s3.amazonaws.com/Sizzle+Reel.mp4"
+          className="z-20 w-full max-w-6xl mt-12 bg-white cursor-pointer rounded-3xl"
+          poster="/img/GoFundYourself-Thumbnail.jpg"
+          preload="none"
+          controls
+          onClick={(e) => (e.target as HTMLVideoElement).play()}
+        /> */}
       </div>
     </section>
   );

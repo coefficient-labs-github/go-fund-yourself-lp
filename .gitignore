@@ -35,3 +35,5 @@ yarn-error.log*
 next-env.d.ts
 
 /public/gfy-tease-hls
+# Local Netlify folder
+.netlify
