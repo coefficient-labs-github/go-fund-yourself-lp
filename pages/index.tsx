@@ -85,14 +85,12 @@ export const getStaticProps: GetStaticProps = async () => {
     const companies = getContent<Company>("companies");
     const testimonials = getContent<Testimonial>("testimonials");
 
-    // Optional: Sort episodes by date if your date format is consistent and sortable
-    // Example for YYYY-MM-DD. Your current "Month Dayth Year" requires robust parsing.
-    // A more robust way to sort dates like "May 9th 2025" would be needed:
-    // episodes.sort((a, b) => {
-    //   const dateA = new Date(a.date.replace(/(\\d+)(st|nd|rd|th)/, \"$1\")); // Attempt to make it parsable
-    //   const dateB = new Date(b.date.replace(/(\\d+)(st|nd|rd|th)/, \"$1\"));
-    //   return dateB.getTime() - dateA.getTime();
-    // });
+    // Sort episodes by date in descending order
+    episodes.sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateB.getTime() - dateA.getTime();
+    });
 
     return {
       props: { episodes, companies, testimonials },
