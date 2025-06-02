@@ -124,7 +124,11 @@ const IndexPage = ({ episodes, companies, testimonials, error }: Props) => {
   }
   return (
     <div>
-      <CustomHead />
+      <CustomHead
+        title="Home"
+        description="Welcome to Go Fund Yourself, the premier reality TV show where innovative entrepreneurs pitch their groundbreaking ideas to seasoned titans of industry. Discover new startups, watch compelling pitches, and explore investment opportunities."
+        ogUrl="/"
+      />
       {/* <Script
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
