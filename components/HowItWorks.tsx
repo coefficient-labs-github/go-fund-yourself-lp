@@ -38,7 +38,7 @@ const HowItWorks = () => {
           ].map((step, index) => (
             <div
               key={index}
-              className="flex flex-col items-center max-w-xl p-4 overflow-hidden text-center rounded-lg shadow-lg md:p-8"
+              className="flex flex-col items-center max-w-xl p-4 overflow-hidden text-center border rounded-lg shadow-lg md:p-8"
             >
               <Image
                 src={step.imgSrc}

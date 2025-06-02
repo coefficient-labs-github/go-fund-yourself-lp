@@ -34,9 +34,14 @@ const FeaturedCompanies = ({ companies }) => {
           {companies.map((company, index) => (
             <div
               key={index}
-              className="overflow-hidden bg-white rounded-lg shadow-lg"
+              className="overflow-hidden bg-white border rounded-lg shadow-lg"
             >
-              <div className="relative w-full aspect-video">
+              <div
+                className="relative w-full aspect-video"
+                style={{
+                  backgroundColor: company.imageBackgroundColor || "#F3F4F6",
+                }}
+              >
                 <Image
                   src={
                     company.logo ? `/${company.logo}` : "/img/placeholder.png"

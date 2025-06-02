@@ -49,18 +49,6 @@ const NewestEpisodes: React.FC<NewestEpisodesProps> = ({ episodes }) => {
           Newest Episodes
         </h3>
         <div className="flex items-center space-x-4">
-          <a
-            href={YOUTUBE_PLAYLIST_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button
-              type="button"
-              className="px-4 py-2 text-sm font-medium text-white bg-[#FF0000] rounded-md shadow-sm hover:bg-red-700"
-            >
-              Watch Full Season on YouTube
-            </button>
-          </a>
           <div className="relative inline-block text-left">
             <button
               type="button"
@@ -90,7 +78,7 @@ const NewestEpisodes: React.FC<NewestEpisodesProps> = ({ episodes }) => {
           {episodes.map((episode, index) => (
             <div
               key={index}
-              className="overflow-hidden bg-white rounded-lg shadow-lg w-72"
+              className="flex flex-col overflow-hidden bg-white border rounded-lg shadow-lg w-72"
             >
               <a
                 href={episode.link || YOUTUBE_PLAYLIST_URL}
@@ -106,26 +94,37 @@ const NewestEpisodes: React.FC<NewestEpisodesProps> = ({ episodes }) => {
                       fill
                     />
                   </div>
-                  <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 bg-gray-900 opacity-0 hover:opacity-75">
-                    <span className="text-4xl text-white">
-                      <i className="fas fa-play-circle"></i>
-                    </span>
+                  {/* Play Button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-12 h-12 text-white drop-shadow-md"
+                      viewBox="0 0 24 24"
+                    >
+                      <path fill="currentColor" d="M8 5v14l11-7z" />
+                    </svg>
                   </div>
                 </div>
               </a>
-              <div className="p-6">
+              <div className="flex flex-col justify-between flex-grow p-6 border gap-y-2">
                 <p
                   className={`text-sm ${
-                    episode.link ? "text-red-600" : "text-gray-500"
+                    episode.link ? "text-[#FF3352]" : "text-gray-500"
                   }`}
                 >
                   {formatDate(episode.date)}
                 </p>
-                <h3 className="mt-2 font-bold md:text-lg">{episode.title}</h3>
-                <p className="h-12 mt-3 text-gray-500 truncate">
-                  {episode.description}
-                </p>
-                <div className="mt-6">
+                <h3 className="text-lg font-bold sm:text-xl">
+                  {episode.title}
+                </h3>
+                <div className="relative flex-grow overflow-hidden max-h-24">
+                  <p className="text-gray-500">{episode.description}</p>
+                  <div
+                    className="absolute bottom-0 left-0 right-0 h-8 pointer-events-none bg-gradient-to-b from-transparent to-white"
+                    aria-hidden="true"
+                  ></div>
+                </div>
+                <div className="mt-4">
                   {episode.link ? (
                     <a
                       href={episode.link}

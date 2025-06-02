@@ -90,7 +90,7 @@ const titans = [
 const Judge = ({ judge, index }) => {
   return (
     <div
-      className={`flex flex-col px-6 py-6 md:px-12 md:py-12 gap-y-10 gap-x-16 bg-white shadow-xl items-center rounded-2xl ${
+      className={`border flex flex-col px-6 py-6 md:px-12 md:py-12 gap-y-10 gap-x-16 bg-white shadow-xl items-center rounded-2xl ${
         index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
       }`}
     >

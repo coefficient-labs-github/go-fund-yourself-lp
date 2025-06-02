@@ -33,6 +33,7 @@ export interface Company {
   description: string;
   episodeLink: string;
   investLink: string;
+  imageBackgroundColor?: string; // Optional: e.g., '#FFFFFF', 'bg-gray-800'
 }
 
 export interface Testimonial {

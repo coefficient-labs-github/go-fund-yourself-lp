@@ -48,7 +48,7 @@ const Testimonials = ({ testimonials }) => {
                 .map((testimonial, index) => (
                   <div
                     key={index}
-                    className="grid w-full gap-4 max-w-sm lg:max-w-xl xl:max-w-2xl grid-cols-1 lg:grid-cols-[auto_1fr] p-6 bg-white rounded-lg shadow-lg shrink-0"
+                    className="grid border w-full gap-4 max-w-sm lg:max-w-xl xl:max-w-2xl grid-cols-1 lg:grid-cols-[auto_1fr] p-6 bg-white rounded-lg shadow-lg shrink-0"
                   >
                     <div className="lg:block hidden relative w-32 lg:w-48 aspect-[200_/_236]">
                       <Image

@@ -23,6 +23,11 @@ collections:
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Logo", name: "logo", widget: "image" }
+      - {
+          label: "Image Background Color",
+          name: "imageBackgroundColor",
+          widget: "string",
+        }
       - { label: "Description", name: "description", widget: "markdown" }
       - { label: "Episode Link", name: "episodeLink", widget: "string" }
       - { label: "Invest Link", name: "investLink", widget: "string" }
