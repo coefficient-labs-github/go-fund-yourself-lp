@@ -15,7 +15,7 @@ const HowItWorks = () => {
             A Simple, Engaging, and Interactive Investment Experience
           </p>
         </div>
-        <div className="grid grid-cols-1 mt-6 justify-items-center gap-y-10 lg:grid-cols-3 gap-x-6">
+        <div className="grid grid-cols-1 mt-6 justify-items-center gap-y-10 md:grid-cols-3 gap-x-6">
           {[
             {
               headline: "Stream the Episode",
