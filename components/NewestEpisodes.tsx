@@ -1,6 +1,42 @@
 import Image from "next/image";
 
-const NewestEpisodes = ({ episodes }) => {
+// Define the type for a single episode
+interface Episode {
+  date: string;
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
+// Define the props type for the NewestEpisodes component
+interface NewestEpisodesProps {
+  episodes: Episode[];
+}
+
+// Helper function to format the date
+const formatDate = (dateString: string): string => {
+  const date = new Date(dateString);
+  const day = date.getUTCDate();
+  const month = date.toLocaleString("default", {
+    month: "long",
+    timeZone: "UTC",
+  });
+  const year = date.getUTCFullYear();
+
+  let daySuffix = "th";
+  if (day === 1 || day === 21 || day === 31) {
+    daySuffix = "st";
+  } else if (day === 2 || day === 22) {
+    daySuffix = "nd";
+  } else if (day === 3 || day === 23) {
+    daySuffix = "rd";
+  }
+
+  return `${month} ${day}${daySuffix}, ${year}`;
+};
+
+const NewestEpisodes: React.FC<NewestEpisodesProps> = ({ episodes }) => {
   const YOUTUBE_PLAYLIST_URL =
     "https://www.youtube.com/playlist?list=PLaK_6SY7ixVQ04RZsdCLtgz64bU0Fazol"; // Added placeholder
   return (
@@ -8,7 +44,7 @@ const NewestEpisodes = ({ episodes }) => {
       id="episodes"
       className="flex flex-col items-center justify-center py-10 lg:py-12"
     >
-      <div className="flex justify-between w-full px-4 mb-4 max-w-7xl 2xl:max-w-7xl items-center">
+      <div className="flex items-center justify-between w-full px-4 mb-4 max-w-7xl 2xl:max-w-7xl">
         <h3 className="text-xl font-extrabold md:text-3xl xl:text-4xl">
           Newest Episodes
         </h3>
@@ -83,10 +119,10 @@ const NewestEpisodes = ({ episodes }) => {
                     episode.link ? "text-red-600" : "text-gray-500"
                   }`}
                 >
-                  {episode.date}
+                  {formatDate(episode.date)}
                 </p>
                 <h3 className="mt-2 font-bold md:text-lg">{episode.title}</h3>
-                <p className="mt-3 text-gray-500 truncate h-12">
+                <p className="h-12 mt-3 text-gray-500 truncate">
                   {episode.description}
                 </p>
                 <div className="mt-6">
@@ -101,7 +137,7 @@ const NewestEpisodes = ({ episodes }) => {
                       </button>
                     </a>
                   ) : (
-                    <button className="px-4 py-2 text-gray-500 bg-gray-200 rounded-full w-full cursor-not-allowed">
+                    <button className="w-full px-4 py-2 text-gray-500 bg-gray-200 rounded-full cursor-not-allowed">
                       Coming Soon
                     </button>
                   )}
