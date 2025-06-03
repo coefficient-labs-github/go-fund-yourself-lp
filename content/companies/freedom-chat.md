@@ -1,7 +1,8 @@
 ---
 name: Freedom Chat
-logo: "img/freedom-chat-channels-eric.png"
+logo: img/untitled-design-1-.png
+imageBackgroundColor: None
 description: Freedom Chat provides encrypted messaging for private conversations.
 episodeLink: https://www.youtube.com/watch?v=DVLog3jHlIY
-investLink: ""
+investLink: https://republic.com/freedom-chat
 ---
