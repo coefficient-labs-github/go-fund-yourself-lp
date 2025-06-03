@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { platforms } from "./FeaturedIn";
 
 const links = [
@@ -8,6 +7,11 @@ const links = [
   { text: "Companies", href: "#companies" },
   { text: "Reviews", href: "#reviews" },
   { text: "Apply", href: "#apply" },
+  {
+    text: "Live on Lookhu",
+    href: "https://lookhu.tv/channel/go-fund-yourself",
+    target: "_blank",
+  },
 ];
 
 const Footer = () => {
@@ -25,7 +29,11 @@ const Footer = () => {
         <ul className="px-6 list-none lg:text-lg gap-y-4 gap-x-20">
           {links.map((link, index) => (
             <li key={index} className="mx-0">
-              <a href={link.href} className="hover:underline">
+              <a
+                href={link.href}
+                className="hover:underline"
+                target={link.target}
+              >
                 {link.text}
               </a>
             </li>
